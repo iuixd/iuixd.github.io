@@ -45,6 +45,11 @@ const Navbar = () => {
           opacity.set(pos.opacity);
         });
       }
+    } else {
+      // User is on a non-menu route like /srikumar (home)
+      left.set(0);
+      width.set(0);
+      opacity.set(0); // Hide the indicator
     }
   }, [location.pathname]);
 
