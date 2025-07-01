@@ -41,7 +41,7 @@ function Home() {
                 x-bind:class="{'bg-turquoise-500 opacity-0': !scrolledFromTop, 'bg-turquoise-500 opacity-50': scrolledFromTop}" x-transiton></div>
           
       <div className="flex flex-col items-center relative transition-all duration-200 ease-in-out">
-          <Navbar />
+          
           <div className="text-white flex flex-col self-auto w-[1024px] pt-60 h-auto static">
             <a href="#" className="mx-24 self-start relative z-100 transition-all duration-200 ease-in-out transition duration-600"
             x-bind:class="{'relative': !scrolledFromTop, 'sticky top-3.5': scrolledFromTop}" x-transition>
@@ -229,7 +229,7 @@ function Home() {
                       </p>
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Thinking, Product Strategy, UX/UI Design, Data Analysis, Led Design Team</p>
-                      <a href="https://www.dropbox.com/scl/fi/0f7q3ne3xyg5zzoobv6ee/Case-Study-04-ColorToken-XShield-and-Visualizer.pdf?rlkey=ek6nq2viunabuprid6l18qqcg&st=f9dvkire&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
+                      <a href="https://www.dropbox.com/scl/fi/pnqrjbkm0zv0f8hfeew1j/Case-Study-04-Zero-trust-Network-Security-Solution.pdf?rlkey=v5s0wbgwphxtvehyahvlymrrf&st=ztiylinz&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
                         Read more 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -251,6 +251,13 @@ function Home() {
                       </p>
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Thinking, Product Strategy, UX/UI Design, Data Analysis, Led Design Team</p>
+                      <a href="https://www.dropbox.com/scl/fi/8exq440g7csym7ceiomna/Case-Study-05-ColorToken-XShield-Dashboard.pdf?rlkey=x114gvby1eda4wg2mhdj935hm&st=hcpp4usr&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
+                        Read more 
+                        <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
+                          <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </a>
                     </div>
                 </div>
 

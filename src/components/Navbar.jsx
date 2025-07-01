@@ -111,7 +111,7 @@ const Navbar = () => {
                     opacity.set(pos.opacity);
                   }
                 }}
-                className={`focus:outline-none focus:ring-2 focus:ring-white rounded ${
+                className={`focus:outline-none ${
                   location.pathname === item.path
                     ? "text-turquoise-900 font-semibold scale-105"
                     : "text-turquoise-900 hover:text-turquoise-900"
