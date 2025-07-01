@@ -81,7 +81,7 @@ function Home() {
             <div className="flex flex-row w-full px-16">
               <div className="flex flex-col size-[55%] mr-12">
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <a href="https://www.youtube.com/watch?v=63SdhdrYhao" className="absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 hover:opacity-100 hover:w-17 hover:h-17  transition flex flex-col items-center justify-center cursor-pointer" target="_blank">
                         <svg className="ml-1 h-12 w-12 hover:w-13 hover:h-13 fill-turquoise-900" viewBox="0 0 16 16">
@@ -122,7 +122,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <img src={thumbnailCBM} className="w-4xl rounded-lg" alt="Thumbnail of RCM and CBM AI Solutions" />
                     </div>
@@ -155,7 +155,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <img src={LumenaiLogo} className="w-4xl rounded-lg" alt="Thumbnail of Lumen AI Logo Animation" />
                     </div>
@@ -176,7 +176,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <a href="https://www.youtube.com/watch?v=cMCYiHNBtq4" className="absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 hover:opacity-100 hover:w-17 hover:h-17 transition flex flex-col items-center justify-center cursor-pointer" target="_blank">
                         <svg className="ml-1 h-12 w-12 hover:w-13 hover:h-13 fill-turquoise-900" viewBox="0 0 16 16">
@@ -199,7 +199,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <a href="https://www.youtube.com/watch?v=UwCw4N5_6SI" className="absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 hover:opacity-100 hover:w-17 hover:h-17  transition flex flex-col items-center justify-center cursor-pointer" target="_blank">
                         <svg className="ml-1 h-12 w-12 hover:w-13 hover:h-13 fill-turquoise-900" viewBox="0 0 16 16">
@@ -218,7 +218,7 @@ function Home() {
                       </p>
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">User Research, Product Design, Design System</p>
-                      <a href="https://www.dropbox.com/scl/fi/gy74x7sxabsu9ok8mlgkl/Case-Study-03-Automated-Data-Privacy-Platform.pdf?rlkey=c2vaet98myxpxrcg2vkines99&st=c60i4iy7&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
+                      <a href="https://www.dropbox.com/scl/fi/twc10nxot3rp3otwmdc4x/Case-Study-03-Data-Security-Privacy-Automation.pdf?rlkey=4z15ur965rbhoo65bm6rz9u8z&st=orq5zy13&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
                         Read more 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -228,7 +228,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <img src={thumbnailUnifiedDashboard} className="w-4xl rounded-lg" alt="Thumbnail of Unified Dashboard" />
                     </div>
@@ -253,7 +253,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <a href="https://www.youtube.com/watch?v=uW1a5iQ7u1Q&t=1s" className="absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 hover:opacity-100  hover:w-17 hover:h-17 transition flex flex-col items-center justify-center cursor-pointer" target="_blank">
                         <svg className="ml-1 h-12 w-12 hover:w-13 hover:h-13 fill-turquoise-900" viewBox="0 0 16 16">
@@ -282,7 +282,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className="group flex flex-row p-8 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
+                <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
                     <div className="mr-8 relative flex flex-col items-center justify-center">
                       <a href="https://www.youtube.com/watch?v=rYPZIdsFbAc&t=1s" className="absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 hover:opacity-100  hover:w-17 hover:h-17 transition flex flex-col items-center justify-center cursor-pointer" target="_blank">
                         <svg className="ml-1 h-12 w-12 hover:w-13 hover:h-13 fill-turquoise-900" viewBox="0 0 16 16">
