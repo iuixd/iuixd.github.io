@@ -113,7 +113,7 @@ function Home() {
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Strategy, User Research, Product Design, Design System</p>
                       <a href="https://www.dropbox.com/scl/fi/3syi8lbwbmvndim3g541i/Case-Study-01-Wealth-App-AI-Driven-Experience.pdf?rlkey=f9n95i0p5qsgip12221sefwaz&st=wvd0dudl&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
-                        Read more 
+                        Case Study 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -146,7 +146,7 @@ function Home() {
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Team Management, Design Strategy, User Research, Product Design, Support Design System</p>
                       <a href="https://www.dropbox.com/scl/fi/6fjmboffcqennvyzhhi3t/Case-Study-02-Automate-and-Optimize-RCM-with-CBM-Integration.pdf?rlkey=gdx7yozogic5x2gq3eockvhdi&st=9u6c6ym7&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
-                        Read more 
+                        Case Study 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -219,7 +219,7 @@ function Home() {
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">User Research, Product Design, Design System</p>
                       <a href="https://www.dropbox.com/scl/fi/twc10nxot3rp3otwmdc4x/Case-Study-03-Data-Security-Privacy-Automation.pdf?rlkey=4z15ur965rbhoo65bm6rz9u8z&st=orq5zy13&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
-                        Read more 
+                        Case Study 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -244,7 +244,7 @@ function Home() {
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Thinking, Product Strategy, UX/UI Design, Data Analysis, Led Design Team</p>
                       <a href="https://www.dropbox.com/scl/fi/8exq440g7csym7ceiomna/Case-Study-05-ColorToken-XShield-Dashboard.pdf?rlkey=x114gvby1eda4wg2mhdj935hm&st=hcpp4usr&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
-                        Read more 
+                        Case Study 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -273,7 +273,7 @@ function Home() {
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Thinking, Product Strategy, UX/UI Design, Data Analysis, Led Design Team</p>
                       <a href="https://www.dropbox.com/scl/fi/pnqrjbkm0zv0f8hfeew1j/Case-Study-04-Zero-trust-Network-Security-Solution.pdf?rlkey=v5s0wbgwphxtvehyahvlymrrf&st=ztiylinz&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
-                        Read more 
+                        Case Study 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -302,7 +302,7 @@ function Home() {
                       <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
                       <p className="text-[13px]">Design Brief, Product Strategy, User Flow, UI/UX Design</p>
                       <a href="https://www.dropbox.com/scl/fi/cvwbwioxa0r199o4v8am1/Case-Study-05-TakeMeHome-App.pdf?rlkey=idaqm9rsxkbhsnipzq2m7uthd&st=fbrd5dj4&dl=0" className="flex flex-row text-[13px] py-4 items-center underline cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold" target="_blank">
-                        Read more 
+                        Case Study 
                         <svg className="ml-2 h-3 w-3 font-semibold stroke-turquoise-800" viewBox="0 0 16 16">
                           <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                           <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
