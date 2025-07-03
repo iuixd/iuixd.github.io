@@ -7,6 +7,7 @@ import thumbnailDataPrivacy from '../assets/thumbnailDataPrivacy.png';
 import thumbnailPetAdoption from '../assets/thumbnailPetAdoption.png';
 import thumbnailZeroTrust from '../assets/thumbnailZeroTrust.png';
 import thumbnailUnifiedDashboard from '../assets/thumbnailUnifiedDashboard.png';
+import userResearch from '../assets/userResearch.png';
 
 const ProjectCard = () => {
   return (
@@ -93,7 +94,7 @@ const ProjectCard = () => {
         <div className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default">
           <div className="mr-8 relative flex flex-col items-center justify-center">
             <img
-              src={thumbnailCBM}
+              src={userResearch}
               className="w-4xl rounded-lg"
               alt="Thumbnail of RCM and CBM AI Solutions"
             />
