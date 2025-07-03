@@ -104,23 +104,11 @@ const ProjectCard = () => {
               Oct 2024
             </div>
             <h2 className="text-lg font-semibold leading-tight">
-              Automate and Optimize RCM with CBM Integration
+              User Research Activity: Automate and Optimize RCM with CBM Integration
             </h2>
             <p className="text-turquoise-900 mt-3 text-[13px]">
-              Maximo IBM's platform for managing the lifecycle, performance and
-              maintenance of critical assets in industries like maintenance,
-              energy oil & gas, transportation and more.
+              Conducted user research as the primary activity to inform the automation and optimization of Reliability-Centered Maintenance (RCM) through integrated Condition-Based Monitoring (CBM) capabilities within IBM Maximo.
             </p>
-            <h3 className="text-turquoise-900 mt-3 text-[13px]">
-              It includes tools for:
-            </h3>
-
-            <ul className="text-turquoise-900 mt-3 ml-4 text-[13px] list-disc">
-              <li>Work and maintenance management</li>
-              <li>Reliability (RCM) and condition-based monitoring (CBM)</li>
-              <li>Inventory and Procurement</li>
-              <li>Asset health insights and AI-driven predictions</li>
-            </ul>
 
             <h4 className="text-[13px] mt-3 font-medium">Responsibilities</h4>
             <p className="text-[13px]">
