@@ -16,10 +16,10 @@ const Navbar = () => {
   const springOpacity = useSpring(opacity, { stiffness: 400, damping: 30 });
 
   const navItems = [
-    { label: 'About', path: '/about' },
-    { label: 'Articles', path: '/articles' },
-    { label: 'GitHub', path: '/github' },
-    { label: 'Contact', path: '/contact' },
+    { label: "About", path: "/about" },
+    { label: "Articles", path: "/articles" },
+    { label: "GitHub", path: "/github" },
+    { label: "Contact", path: "/contact" },
   ];
 
   const calculatePosition = (el) => {
