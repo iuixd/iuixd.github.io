@@ -5,7 +5,7 @@
 }
 
 .download-btn {
-    @apply inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-turquoise-200 font-medium text-turquoise-800 hover:text-turquoise-900 hover:bg-turquoise-50 transition mt-6 w-full;
+    @apply inline-flex mt-6 w-full items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-turquoise-200 font-medium text-turquoise-800 hover:text-turquoise-900 hover:bg-turquoise-50 transition;
 }
 
 .work-section {
@@ -25,5 +25,5 @@
 }
 
 .work-duration {
-    @apply text-turquoise-800 mt-1 leading-tight text-[11px] w-[212px] align-text-bottom text-right
+    @apply text-turquoise-800 mt-1 leading-tight text-[11px] w-[134px] align-text-bottom text-right
 }

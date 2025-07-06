@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import thumbnailWealthMgmt from "../assets/thumbnailWealthMgmt.png";
 import thumbnailLumenAI from "../assets/thumbnailLumenAI.png";
 import LumenaiLogo from "../assets/LumenaiLogo.gif";
@@ -214,7 +215,7 @@ const projects = [
 
 const ProjectCard = () => {
   return (
-    <div className="flex flex-col size-[55%] mr-12">
+    <div className="flex flex-col size-[60%] mr-12">
       {projects.map(
         (
           {
@@ -237,7 +238,7 @@ const ProjectCard = () => {
           return (
             <div
               key={`project-${index}`}
-              className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-500 ease-in-out hover:bg-turquoise-300 cursor-default"
+              className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-100 ease-in-out hover:bg-turquoise-300 cursor-default"
             >
               <div className="mr-8 relative flex flex-col items-center justify-center">
                 {showVideoLink && (
@@ -258,7 +259,7 @@ const ProjectCard = () => {
 
                 <img
                   src={thumbnailMap[thumbnail]}
-                  className="w-4xl rounded-lg"
+                  className="w-200 rounded-lg"
                   alt={`Thumbnail of ${titleText}`}
                 />
               </div>
@@ -277,9 +278,11 @@ const ProjectCard = () => {
                 <p className="text-[13px]">{responsibilityContent}</p>
 
                 {showCaseStudy ? (
-                  <a
-                    href={casestudyLink}
-                    className="flex flex-row text-[13px] py-4 items-center font-bold text-[#3943B7] cursor-pointer transition hover:translate-x-1 hover:scale-102 hover:font-bold hover:underline"
+                  <motion.a
+                    href={casestudyLink} 
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.1 }}
+                    className="flex flex-row w-fit text-[13px] px-1 py-2 my-4 rounded-md items-center font-bold text-[#3943B7] cursor-pointer transition  hover:font-bold hover:underline"
                     target="_blank"
                   >
                     {casestudyLabel}
@@ -300,7 +303,7 @@ const ProjectCard = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </a>
+                  </motion.a>
                 ) : (
                   <p className="text-[13px] py-4">
                     <i>Design process available upon request</i>
