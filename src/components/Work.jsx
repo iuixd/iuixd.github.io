@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Consultant from "../assets/Consultant.svg";
 import IBMLogo from "../assets/IBMLogo.svg";
 import targetLogo from "../assets/targetLogo.svg";
@@ -125,7 +126,8 @@ const Work = () => (
       </h2>
 
       {jobs.map(({ companyName, designation, duration, logo, alt, customSize }) => (
-        <div key={`${companyName}-${duration}`} className="work-wrapper">
+        <motion.div key={`${companyName}-${duration}`}
+          className="work-wrapper cursor-default">
           <div className="work-item">
             <div className="mr-2 items-center align-middle">
               <img
@@ -134,16 +136,18 @@ const Work = () => (
                 alt={alt}
               />
             </div>
-            <div className="text-[12px] w-[200px]">
+            <div className="text-[12px] w-[194px]">
               <p className="font-semibold">{companyName}</p>
               <p className="text-turquoise-800">{designation}</p>
             </div>
           </div>
           <div className="work-duration">{duration}</div>
-        </div>
+        </motion.div>
       ))}
 
-      <a
+      <motion.a
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.1 }}
         className="group download-btn"
         href="https://www.dropbox.com/scl/fi/nkq0e28tzyotnzwdglgpg/Srikumar-Krishnan-Kutty-Resume.docx?rlkey=ek3mdehpjyx2jyyj3lvjgzqyk&e=1&st=dadeqmjx&dl=0"
         target="_blank"
@@ -163,7 +167,7 @@ const Work = () => (
             strokeLinejoin="round"
           />
         </svg>
-      </a>
+      </motion.a>
     </div>
   </div>
 );
