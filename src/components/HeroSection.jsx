@@ -24,15 +24,16 @@ const Hero = () => {
           x-transition
         />
       </a>
-      <div className="mx-24 w-[810px] font-bold font-bold text-[3.2em] leading-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0]">
-        Product designer, design leader and amateur developer
+      <div className="mx-24 w-[680px] font-bold font-bold text-[3.2em] leading-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0]">
+        Product designer, design leader, vibe coder, and amateur developer
         <span className="text-turquoise-500">.</span>
       </div>
-      <div className="mx-24 w-[810px] text-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0]">
-        I'm Srikumar, an experienced designer based in Bangalore, India. I am
-        passionate about crafting user-centric and human-AI experiences, and I
-        specialize in bringing bold ideas to life from concept to execution.
-      </div>
+      <p className="mx-24 w-[720px] text-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0]">
+        I'm Srikumar, an experienced designer based in Bangalore, India. I am passionate about crafting user-centric and human AI experiences and I specialize in bringing bold ideas to life from concept to execution.
+      </p>
+      <p className="mx-24 w-[720px] text-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0]">
+        I also explore Vibe Coding, blending creativity with code to shape interactive and expressive digital experiences.
+      </p>
 
       <SocialLinks />
     </>

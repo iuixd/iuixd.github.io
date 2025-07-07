@@ -15,7 +15,7 @@ function Home() {
         <VideoBg />
 
         <div className="flex flex-col items-center relative transition-all duration-200 ease-in-out">
-          <div className="text-white flex flex-col self-auto w-[1200px] pt-60 h-auto static">
+          <div className="text-white flex flex-col self-auto w-[1200px] pt-40 h-auto static">
             
             <HeroSection />
             
