@@ -4,7 +4,7 @@ import thumbnailWealthMgmt from "../assets/thumbnailWealthMgmt.png";
 import thumbnailLumenAI from "../assets/thumbnailLumenAI.png";
 import LumenaiLogo from "../assets/LumenaiLogo.gif";
 import thumbnailDataPrivacy from "../assets/thumbnailDataPrivacy-2.png";
-import thumbnailPetAdoption from "../assets/thumbnailPetAdoption.png";
+import thumbnailPetAdoption from "../assets/thumbnailPetAdoption-2.png";
 import thumbnailZeroTrust from "../assets/thumbnailZeroTrust-2.png";
 import thumbnailUnifiedDashboard from "../assets/thumbnailUnifiedDashboard-2.png";
 import userResearch from "../assets/userResearch.png";
