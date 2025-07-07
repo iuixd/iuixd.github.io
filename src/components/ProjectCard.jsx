@@ -107,7 +107,6 @@ const projects = [
       <>
         <div>
           <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">Logo Design</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Visual Communication</span>
           <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design Collaboration</span>
           <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Animation</span>
         </div>
