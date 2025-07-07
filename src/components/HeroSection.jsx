@@ -12,7 +12,7 @@ const Hero = () => {
     <>
       <a
         href="#"
-        className="mx-24 self-start relative z-100 transition-all duration-600 ease-in-out"
+        className="social-link"
         x-bind:class="{'relative': !scrolledFromTop, 'sticky top-3.5': scrolledFromTop}"
         x-transition
       >

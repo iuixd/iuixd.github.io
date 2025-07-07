@@ -14,13 +14,13 @@ function Home() {
 
         <VideoBg />
 
-        <div className="flex flex-col items-center relative transition-all duration-200 ease-in-out">
-          <div className="text-white flex flex-col self-auto w-[1200px] pt-40 h-auto static">
+        <div className="body-wrapper">
+          <div className="body-container">
             
             <HeroSection />
             
-            <div className="mt-20 w-full py-16 flex flex-col items-center justify-center bg-turquoise-400">
-              <div className="mb-14">
+            <div className="container">
+              <div className="cert-wrapper">
                 <img
                   src={certBadges}
                   className="w-2xl"
@@ -28,14 +28,14 @@ function Home() {
                 />
               </div>
 
-              <div className="flex flex-row w-full px-8">
+              <div className="project-work-wrapper">
 
                 <ProjectCard />
                 <Work />
 
               </div>
             </div>
-            <div className="w-full h-18 flex flex-col items-center justify-center text-[12px] text-turquoise-500 bg-turquoise-900 font">
+            <div className="footer">
               © 2025 srikumar.design
             </div>
           </div>
