@@ -22,7 +22,7 @@ const thumbnailMap = {
 
 const projects = [
   {
-    thumbnail: "thumbnailWealthMgmt",
+    thumbnail: "userResearch",
     youtubeLink: "https://www.youtube.com/watch?v=63SdhdrYhao",
     date: "May 2025",
     title: (
@@ -49,8 +49,15 @@ const projects = [
       </>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent:
-      "Design Strategy, User Research, Product Design, Design System",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink:
       "https://www.dropbox.com/scl/fi/3syi8lbwbmvndim3g541i/Case-Study-01-Wealth-App-AI-Driven-Experience.pdf?rlkey=f9n95i0p5qsgip12221sefwaz&st=wvd0dudl&dl=0",
@@ -71,8 +78,17 @@ const projects = [
         </p>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent:
-      "Design Team Management, Design Strategy, User Research, Product Design, Support Design System",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
+          <span class="inline-flex items-center rounded-md bg-indigo-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yeindigollow-800 ring-1 ring-indigo-700/20 ring-inset">Design Team Management</span>
+          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink:
       "https://www.dropbox.com/scl/fi/6fjmboffcqennvyzhhi3t/Case-Study-02-Automate-and-Optimize-RCM-with-CBM-Integration.pdf?rlkey=gdx7yozogic5x2gq3eockvhdi&st=9u6c6ym7&dl=0",
@@ -94,8 +110,16 @@ const projects = [
       </>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent:
-      "Logo Design, Branding, Visual Communication, Animation, Design Collaboration",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">Logo Design</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Visual Communication</span>
+          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design Collaboration</span>
+          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Animation</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink: null,
   },
@@ -115,7 +139,15 @@ const projects = [
       </p>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent: "User Research, Product Design, Design System",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink: null,
   },
@@ -135,7 +167,15 @@ const projects = [
       </p>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent: "User Research, Product Design, Design System",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink:
       "https://www.dropbox.com/scl/fi/twc10nxot3rp3otwmdc4x/Case-Study-03-Data-Security-Privacy-Automation.pdf?rlkey=4z15ur965rbhoo65bm6rz9u8z&st=orq5zy13&dl=0",
@@ -161,8 +201,15 @@ const projects = [
       </p>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent:
-      "Design Thinking, Product Strategy, UX/UI Design, Data Analysis, Led Design Team",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink:
       "https://www.dropbox.com/scl/fi/8exq440g7csym7ceiomna/Case-Study-05-ColorToken-XShield-Dashboard.pdf?rlkey=x114gvby1eda4wg2mhdj935hm&st=hcpp4usr&dl=0",
@@ -183,8 +230,15 @@ const projects = [
       </p>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent:
-      "Design Thinking, Product Strategy, UX/UI Design, Data Analysis, Led Design Team",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink:
       "https://www.dropbox.com/scl/fi/pnqrjbkm0zv0f8hfeew1j/Case-Study-04-Zero-trust-Network-Security-Solution.pdf?rlkey=v5s0wbgwphxtvehyahvlymrrf&st=ztiylinz&dl=0",
@@ -205,8 +259,15 @@ const projects = [
       </p>
     ),
     responsibilityLabel: "Responsibilities",
-    responsibilityContent:
-      "Design Brief, Product Strategy, User Flow, UI/UX Design",
+    responsibilityContent: (
+      <>
+        <div>
+          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
+          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
+          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
+        </div>
+      </>
+    ),
     casestudyLabel: "Case Study",
     casestudyLink:
       "https://www.dropbox.com/scl/fi/cvwbwioxa0r199o4v8am1/Case-Study-05-TakeMeHome-App.pdf?rlkey=idaqm9rsxkbhsnipzq2m7uthd&st=fbrd5dj4&dl=0",

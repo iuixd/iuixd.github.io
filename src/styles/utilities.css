@@ -5,7 +5,7 @@
 }
 
 .download-btn {
-    @apply inline-flex mt-6 w-full items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-turquoise-200 font-medium text-turquoise-800 hover:text-turquoise-900 hover:bg-turquoise-50 transition;
+    @apply inline-flex mt-6 w-full items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-medium bg-white-20  text-turquoise-700 hover:text-turquoise-900 hover:bg-white hover:bg-turquoise-50 transition;
 }
 
 .work-section {
