@@ -39,13 +39,6 @@ const projects = [
         <p className="text-turquoise-900 mt-3 text-[13px]">
           The goal is to support wealth customers in making smarter financial decisions by combining AI-driven insights with human advisor collaboration.
         </p>
-        <h3 className="text-turquoise-900 mt-3 text-[13px]">Scope:</h3>
-        <ul className="text-turquoise-900 mt-3 ml-4 text-[13px] list-disc">
-          <li>AI Assistant integration</li>
-          <li>Daily/weekly nudges</li>
-          <li>Insight transparency & user feedback</li>
-          <li>Actionable recommendations</li>
-        </ul>
       </>
     ),
     responsibilityLabel: "Responsibilities",
@@ -301,7 +294,7 @@ const ProjectCard = () => {
               key={`project-${index}`}
               className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-100 ease-in-out hover:bg-turquoise-300 cursor-default"
             >
-              <div className="mr-8 relative flex flex-col items-center justify-center">
+              <div className="relative flex flex-col items-center justify-center h-fit mt-3 mr-8 p-2 rounded-lg bg-white-20 group-hover:bg-turquoise-300 ">
                 {showVideoLink && (
                   <a
                     href={youtubeLink}
