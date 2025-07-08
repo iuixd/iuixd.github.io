@@ -74,7 +74,7 @@ const projects = [
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
           <span class="card-badge card-badge-blue">Design System</span>
-          <span class="card-badge card-badge-indigo">Design Team Management</span>
+          <span class="card-badge card-badge-indigo">Managed Design Team</span>
           <span class="card-badge card-badge-purple">Design Strategy</span>
       </>
     ),
@@ -271,6 +271,7 @@ const ProjectCard = () => {
         ) => {
           const showVideoLink = youtubeLink && youtubeLink !== null;
           const showCaseStudy = casestudyLink && casestudyLink !== null;
+          const isLumenLogo = "LumenaiLogo";
 
           return (
             <div
@@ -296,7 +297,7 @@ const ProjectCard = () => {
 
                 <img
                   src={thumbnailMap[thumbnail]}
-                  className="w-200 rounded-lg"
+                  className={isLumenLogo === "LumenaiLogo" ? "w-150 rounded-lg" : "w-200 rounded-lg"}  
                   alt={`Thumbnail of ${titleText}`}
                 />
               </div>
