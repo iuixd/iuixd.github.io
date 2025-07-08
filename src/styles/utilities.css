@@ -141,7 +141,7 @@
   }
 
   .work-section {
-    @apply flex flex-col size-[45%] sm:size-fit md:size-fit sm:mt-10 md:mt-10 sm:p-10 md:p-10 lg:p-6 rounded-lg border border-white/40;
+    @apply flex flex-col size-[45%] sm:size-fit md:size-fit sm:mt-10 md:mt-10 lg:mt-0 sm:p-10 md:p-10 lg:p-6 rounded-lg border border-white/40;
   }
 
   .work-header {
