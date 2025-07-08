@@ -63,7 +63,7 @@ const socials = [
 const SocialLinks = () => {
   return (
     <>
-      <div className="mx-24 mt-6 flex gap-6">
+      <div className="min-[360px]:mx-[2rem] md:mx-24 lg:mx-24 lg:mx-24 mt-6 flex gap-6">
         {socials.map(({ label, href, svg }) => (
           <motion.a
             key={label}
