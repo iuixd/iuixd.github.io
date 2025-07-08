@@ -125,11 +125,11 @@
   }
 
   .hero-heading {
-      @apply mx-24 sm:w-[450px] md:w-[700px] lg:w-[750px] xl:w-[950px] px-0 py-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] text-shadow-lg;
+      @apply mx-24 sm:w-[450px] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 sm:text-[1.5rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] text-shadow-lg;
   }
 
   .hero-paragraph {
-      @apply mx-24 sm:w-[450px] md:w-[700px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] text-shadow-lg;
+      @apply mx-24 sm:w-[450px] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] text-shadow-lg;
   }
 
   .hero-paragraph-link {
