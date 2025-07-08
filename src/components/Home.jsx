@@ -19,7 +19,7 @@ function Home() {
             
             <HeroSection />
             
-            <div className="container">
+            <div className="content-wrapper">
               <div className="cert-wrapper">
                 <img
                   src={certBadges}

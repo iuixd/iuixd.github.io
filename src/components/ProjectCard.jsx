@@ -241,7 +241,7 @@ const projects = [
 
 const ProjectCard = () => {
   return (
-    <div className="flex flex-col size-[60%] mr-12">
+    <div className="flex flex-col sm:mr-0 md:mr-0 lg:mr-12 sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%] sm:items-center md:items-center sm:justify-center md:justify-center lg:items-normal lg:justify-normal">
       {projects.map(
         (
           {
@@ -286,7 +286,7 @@ const ProjectCard = () => {
 
                 <img
                   src={thumbnailMap[thumbnail]}
-                  className={isLumenLogo === "LumenaiLogo" ? "w-150 rounded-lg" : "w-200 rounded-lg"}  
+                  className={isLumenLogo === "LumenaiLogo" ? "lg:w-150 xl:w-150 rounded-lg" : "lg:w-120 xl:w-200 rounded-lg"}  
                   alt={`Thumbnail of ${titleText}`}
                 />
               </div>
