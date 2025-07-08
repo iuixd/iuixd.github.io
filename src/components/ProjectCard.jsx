@@ -26,17 +26,17 @@ const projects = [
     youtubeLink: "https://www.youtube.com/watch?v=63SdhdrYhao",
     date: "May 2025",
     title: (
-      <h2 className="text-lg font-semibold leading-tight">
+      <h2 className="card-content-title">
         Smart Wealth, Smarter Guidance AI Solution
       </h2>
     ),
     titleText: "Smart Wealth, Smarter Guidance AI Solution",
     mainContent: (
       <>
-        <p className="text-turquoise-900 mt-3 text-[13px]">
+        <p className="card-content card-content-paragraph">
           Users often find personal finance tools overwhelming, fragmented, and impersonal. They seek proactive, transparent, and easy-to-act-on insights to help them make smarter financial decisions with confidence.
         </p>
-        <p className="text-turquoise-900 mt-3 text-[13px]">
+        <p className="card-content card-content-paragraph">
           The goal is to support wealth customers in making smarter financial decisions by combining AI-driven insights with human advisor collaboration.
         </p>
       </>
@@ -44,11 +44,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-blue">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -60,26 +58,24 @@ const projects = [
     youtubeLink: null,
     date: "Oct 2024",
     title: (
-      <h2 className="text-lg font-semibold leading-tight">
+      <h2 className="card-content-title">
         User Research to Automate and Optimize RCM through CBM Integration in IBM Maximo
       </h2>
     ),
     titleText: "User Research to Automate and Optimize RCM through CBM Integration in IBM Maximo",
     mainContent: (
-        <p className="text-turquoise-900 mt-3 text-[13px]">
+        <p className="card-content card-content-paragraph">
           Conducted primary and secondary user research to inform the automation and optimization of Reliability-Centered Maintenance (RCM) through integrated Condition-Based Monitoring (CBM) capabilities within IBM Maximo.
         </p>
     ),
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
-          <span class="inline-flex items-center rounded-md bg-indigo-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yeindigollow-800 ring-1 ring-indigo-700/20 ring-inset">Design Team Management</span>
-          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-blue">Design System</span>
+          <span class="card-badge card-badge-indigo">Design Team Management</span>
+          <span class="card-badge card-badge-purple">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -90,14 +86,14 @@ const projects = [
     thumbnail: "LumenaiLogo",
     youtubeLink: null,
     date: "June 2023",
-    title: <h2 className="text-lg font-semibold leading-tight">Logo Design</h2>,
+    title: <h2 className="card-content-title">Logo Design</h2>,
     titleText: "Logo Design",
     mainContent: (
       <>
-        <p className="text-turquoise-900 mt-3 text-[13px]">
+        <p className="card-content card-content-paragraph">
           Lumen AI, an enterprise-grade AI/ML data extraction tool, is represented through a modern logo symbolizing innovation, precision, and automation.
         </p>
-        <p className="text-turquoise-900 mt-3 text-[13px]">
+        <p className="card-content card-content-paragraph">
           A radiant light motif reflects its power to illuminate insights from complex data, with gradient tones conveying depth and intelligence.
         </p>
       </>
@@ -105,11 +101,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">Logo Design</span>
-          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design Collaboration</span>
-          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Animation</span>
-        </div>
+          <span class="card-badge card-badge-yellow">Logo Design</span>
+          <span class="card-badge card-badge-blue">Design Collaboration</span>
+          <span class="card-badge card-badge-purple">Animation</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -120,24 +114,22 @@ const projects = [
     youtubeLink: "https://www.youtube.com/watch?v=cMCYiHNBtq4",
     date: "Dec 2023",
     title: (
-      <h2 className="text-lg font-semibold leading-tight">
+      <h2 className="card-content-title">
         Lumen AI Solutions
       </h2>
     ),
     titleText: "Lumen AI Solutions",
     mainContent: (
-      <p className="text-turquoise-900 mt-3 text-[13px]">
+      <p className="card-content card-content-paragraph">
         Lumen AI simplifies document workflows with an intuitive interface powered by AI. Its features such as data extraction, validation and summarization help users process documents faster with accuracy and ease.
       </p>
     ),
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-blue">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -148,24 +140,22 @@ const projects = [
     youtubeLink: "https://www.youtube.com/watch?v=UwCw4N5_6SI",
     date: "Jan 2021",
     title: (
-      <h2 className="text-lg font-semibold leading-tight">
+      <h2 className="card-content-title">
         Data security & privacy automation
       </h2>
     ),
     titleText: "Data security & privacy automation",
     mainContent: (
-      <p className="text-turquoise-900 mt-3 text-[13px]">
+      <p className="card-content card-content-paragraph">
         Help a data privacy and protection team in getting full visibility into data privacy risks and providing full control on PII security and risk remediation.
       </p>
     ),
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-blue-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-blue-800 ring-1 ring-blue-700/20 ring-inset">Design System</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-blue">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -178,7 +168,7 @@ const projects = [
     date: "Mar 2020",
     title: (
       <>
-        <h2 className="text-lg font-semibold leading-tight">
+        <h2 className="card-content-title">
           Unified Dashboard
         </h2>
         <h3 className="text-[13px] font-medium text-turquoise-900 mt-1 leading-tight">
@@ -188,18 +178,16 @@ const projects = [
     ),
     titleText: "Unified Dashboard",
     mainContent: (
-      <p className="text-turquoise-900 mt-3 text-[13px]">
+      <p className="card-content card-content-paragraph">
         Designed dashboard to provide actionable security insights of the application groups, assets and network access for admin users to act-on.
       </p>
     ),
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-purple">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -211,24 +199,22 @@ const projects = [
     youtubeLink: "https://www.youtube.com/watch?v=uW1a5iQ7u1Q&t=1s",
     date: "Dec 2018",
     title: (
-        <h2 className="text-lg font-semibold leading-tight">
+        <h2 className="card-content-title">
           Zero-trust Network Security
         </h2>
     ),
     titleText: "Zero-trust Network Security",
     mainContent: (
-      <p className="text-turquoise-900 mt-3 text-[13px]">
+      <p className="card-content card-content-paragraph">
         Redesign visibility of workload protection, applications flows with all network access to improve security monitoring and operational excellence.
       </p>
     ),
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-purple">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -240,24 +226,22 @@ const projects = [
     youtubeLink: "https://www.youtube.com/watch?v=rYPZIdsFbAc&t=1s",
     date: "Mar 2020",
     title: (
-        <h2 className="text-lg font-semibold leading-tight">
+        <h2 className="card-content-title">
           Pet Adoption App
         </h2>
     ),
     titleText: "Pet Adoption App",
     mainContent: (
-      <p className="text-turquoise-900 mt-3 text-[13px]">
+      <p className="card-content card-content-paragraph">
         In India many pets are currently in shelters and pet-homes. Designed a mobile app that will help people looking for a new pet to connect with a right pet for them.
       </p>
     ),
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-        <div>
-          <span class="inline-flex items-center rounded-md bg-yellow-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-yellow-700/20 ring-inset">User Research</span>
-          <span class="inline-flex items-center rounded-md bg-green-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-green-800 ring-1 ring-green-700/20 ring-inset">Product Design</span>
-          <span class="inline-flex items-center rounded-md bg-purple-80p mr-1 mt-1 px-2 py-1 text-xs font-medium text-purple-800 ring-1 ring-purple-700/20 ring-inset">Design Strategy</span>
-        </div>
+          <span class="card-badge card-badge-yellow">User Research</span>
+          <span class="card-badge card-badge-green">Product Design</span>
+          <span class="card-badge card-badge-purple">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -291,18 +275,18 @@ const ProjectCard = () => {
           return (
             <div
               key={`project-${index}`}
-              className="group flex flex-row px-8 py-2 rounded-lg overflow-hidden w-full text-turquoise-900 transition-colors duration-100 ease-in-out hover:bg-turquoise-300 cursor-default"
+              className="card-wrapper"
             >
-              <div className="relative flex flex-col items-center justify-center h-fit mt-3 mr-8 p-2 rounded-lg bg-white-20 group-hover:bg-turquoise-300 ">
+              <div className="card-thumbnail-wrapper">
                 {showVideoLink && (
                   <a
                     href={youtubeLink}
-                    className="absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 hover:opacity-100 hover:w-17 hover:h-17 transition flex flex-col items-center justify-center cursor-pointer"
+                    className="video-play-btn"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <svg
-                      className="ml-1 h-12 w-12 hover:w-13 hover:h-13 fill-turquoise-900"
+                      className="video-play-icon"
                       viewBox="0 0 16 16"
                     >
                       <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
@@ -317,25 +301,25 @@ const ProjectCard = () => {
                 />
               </div>
 
-              <div className="w-350 opacity-90 group-hover:opacity-100 transition">
-                <div className="text-turquoise-900 my-3 pl-2 leading-3 text-[13px] border-l-1 border-turquoise-900">
+              <div className="card-content-wrapper">
+                <div className="card-content card-content-date">
                   {date}
                 </div>
                 {title}
 
                 {mainContent}
 
-                <h4 className="text-[13px] mt-3 font-medium">
+                <h4 className="card-content card-content-subtitle">
                   {responsibilityLabel}
                 </h4>
-                <p className="text-[13px]">{responsibilityContent}</p>
+                <div>{responsibilityContent}</div>
 
                 {showCaseStudy ? (
                   <motion.a
                     href={casestudyLink} 
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 0.1 }}
-                    className="flex flex-row w-fit text-[13px] px-1 py-2 my-4 rounded-md items-center font-bold text-[#3943B7] cursor-pointer transition  hover:font-bold hover:underline"
+                    className="card-content-link"
                     target="_blank"
                   >
                     {casestudyLabel}
@@ -358,7 +342,7 @@ const ProjectCard = () => {
                     </svg>
                   </motion.a>
                 ) : (
-                  <p className="text-[13px] py-4">
+                  <p className="card-content card-content-footer">
                     <i>Design process available upon request</i>
                   </p>
                 )}

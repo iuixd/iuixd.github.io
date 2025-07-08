@@ -4,75 +4,25 @@
 @theme {
   --font-poppins: Poppins, sans-serif;
 
-  --color-white-20: oklch(1 0 0 / 20%);
-  --color-white-40: oklch(1 0 0 / 40%);
-  --color-white-60: oklch(1 0 0 / 60%);
-  --color-white-80: oklch(1 0 0 / 80%);
-
-  --color-black-20: oklch(0 0 0 / 20%);
-  --color-black-40: oklch(0 0 0 / 40%);
-  --color-black-60: oklch(0 0 0 / 60%);
-  --color-black-80: oklch(0 0 0 / 80%);
-
   --color-turquoise-50: oklch(0.9685 0.02 200.65);
-  --color-turquoise-50-20: oklch(0.9685 0.02 200.65 / 20%);
-  --color-turquoise-50-40: oklch(0.9685 0.02 200.65 / 40%);
-  --color-turquoise-50-60: oklch(0.9685 0.02 200.65 / 60%);
-  --color-turquoise-50-80: oklch(0.9685 0.02 200.65 / 80%);
 
   --color-turquoise-100: oklch(0.9348 0.0394 200.42);
-  --color-turquoise-100-20: oklch(0.9348 0.0394 200.42 / 20%);
-  --color-turquoise-100-40: oklch(0.9348 0.0394 200.42 / 40%);
-  --color-turquoise-100-60: oklch(0.9348 0.0394 200.42 / 60%);
-  --color-turquoise-100-80: oklch(0.9348 0.0394 200.42 / 80%);
 
   --color-turquoise-200: oklch(0.8761 0.0758 198.98);
-  --color-turquoise-200-20: oklch(0.8761 0.0758 198.98 / 20%);
-  --color-turquoise-200-40: oklch(0.8761 0.0758 198.98 / 40%);
-  --color-turquoise-200-60: oklch(0.8761 0.0758 198.98 / 60%);
-  --color-turquoise-200-80: oklch(0.8761 0.0758 198.98 / 80%);
 
   --color-turquoise-300: oklch(0.8205 0.1042 198.41);
-  --color-turquoise-300-20: oklch(0.8205 0.1042 198.41 / 20%);
-  --color-turquoise-300-40: oklch(0.8205 0.1042 198.41 / 40%);
-  --color-turquoise-300-60: oklch(0.8205 0.1042 198.41 / 60%);
-  --color-turquoise-300-80: oklch(0.8205 0.1042 198.41 / 80%);
 
   --color-turquoise-400: oklch(0.7747 0.1217 198.3);
-  --color-turquoise-400-20: oklch(0.7747 0.1217 198.3 / 20%);
-  --color-turquoise-400-40: oklch(0.7747 0.1217 198.3 / 40%);
-  --color-turquoise-400-60: oklch(0.7747 0.1217 198.3 / 60%);
-  --color-turquoise-400-80: oklch(0.7747 0.1217 198.3 / 80%);
 
   --color-turquoise-500: oklch(0.7339 0.124768 199.4425);
-  --color-turquoise-500-20: oklch(0.7339 0.124768 199.4425 / 20%);
-  --color-turquoise-500-40: oklch(0.7339 0.124768 199.4425 / 40%);
-  --color-turquoise-500-60: oklch(0.7339 0.124768 199.4425 / 60%);
-  --color-turquoise-500-80: oklch(0.7339 0.124768 199.4425 / 80%);
 
   --color-turquoise-600: oklch(0.6232 0.105957 198.8623);
-  --color-turquoise-600-20: oklch(0.6232 0.105957 198.8623 / 20%);
-  --color-turquoise-600-40: oklch(0.6232 0.105957 198.8623 / 40%);
-  --color-turquoise-600-60: oklch(0.6232 0.105957 198.8623 / 60%);
-  --color-turquoise-600-80: oklch(0.6232 0.105957 198.8623 / 80%);
 
   --color-turquoise-700: oklch(0.5046 0.085784 199.0335);
-  --color-turquoise-700-20: oklch(0.5046 0.085784 199.0335 / 20%);
-  --color-turquoise-700-40: oklch(0.5046 0.085784 199.0335 / 40%);
-  --color-turquoise-700-60: oklch(0.5046 0.085784 199.0335 / 60%);
-  --color-turquoise-700-80: oklch(0.5046 0.085784 199.0335 / 80%);
 
   --color-turquoise-800: oklch(0.3818 0.0649 199.3);
-  --color-turquoise-800-20: oklch(0.3818 0.0649 199.3 / 20%);
-  --color-turquoise-800-40: oklch(0.3818 0.0649 199.3 / 40%);
-  --color-turquoise-800-60: oklch(0.3818 0.0649 199.3 / 60%);
-  --color-turquoise-800-80: oklch(0.3818 0.0649 199.3 / 80%);
 
   --color-turquoise-900: oklch(0.2442 0.0415 200.06);
-  --color-turquoise-900-20: oklch(0.2442 0.0415 200.06 / 20%);
-  --color-turquoise-900-40: oklch(0.2442 0.0415 200.06 / 40%);
-  --color-turquoise-900-60: oklch(0.2442 0.0415 200.06 / 60%);
-  --color-turquoise-900-80: oklch(0.2442 0.0415 200.06 / 80%);
 
   --color-yellow-80p: oklch(0.973 0.071 103.193 / 80%);
   --color-green-80p: oklch(0.962 0.044 156.743 / 80%);

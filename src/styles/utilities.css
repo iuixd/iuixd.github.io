@@ -1,65 +1,150 @@
+@import "tailwindcss";
+
 @tailwind components;
 
-.social-link {
-  @apply mx-24 self-start relative z-100 transition-all duration-600 ease-in-out;
-}
+@layer components {
 
-.btn-social {
-  @apply -m-1 p-3 rounded-[100px] border-1 border-white-40 hover:bg-turquoise-50 transition;
-}
+  /* === Reusable Base Components === */
 
-.body-wrapper {
-  @apply flex flex-col items-center relative transition-all duration-200 ease-in-out;
-}
+  .card-badge {
+    @apply inline-flex items-center px-2 py-1 mt-1 mr-1 text-xs font-medium rounded-md ring-1 ring-inset;
+  }
 
-.body-container {
-  @apply text-white flex flex-col self-auto w-[1200px] pt-40 h-auto static;
-}
+  .btn-social {
+    @apply -m-1 p-3 rounded-full border border-white/40 hover:bg-turquoise-50 transition;
+  }
 
-.cert-wrapper {
-  @apply mb-14;
-}
+  .card-content {
+    @apply text-[13px] text-turquoise-900;
+  }
 
-.project-work-wrapper {
-  @apply flex flex-row w-full px-8;
-}
+  .card-content-title {
+    @apply text-lg font-semibold leading-tight;
+  }
 
-.container {
-  @apply mt-20 w-full py-16 flex flex-col items-center justify-center bg-turquoise-400;
-}
+  .video-play-btn {
+    @apply absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 flex items-center justify-center cursor-pointer
+          transition hover:opacity-100 hover:w-17 hover:h-17;
+  }
 
-.hero-heading {
-    @apply mx-24 w-[680px] font-bold text-[3.2em] leading-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0];
-}
+  .video-play-icon {
+    @apply ml-1 w-12 h-12 fill-turquoise-900 hover:w-13 hover:h-13;
+  }
 
-.hero-paragraph {
-    @apply mx-24 w-[720px] text-[1.1em] px-[0] py-4 [text-shadow:0_0_1px_#151c1cf0];
-}
+  .download-btn {
+    @apply inline-flex w-full mt-6 px-3 py-2 text-sm font-medium items-center justify-center gap-2 rounded-md bg-white/20 text-turquoise-700 hover:text-turquoise-900 hover:bg-white hover:bg-turquoise-50 transition outline-offset-2 active:transition-none;
+  }
 
-.download-btn {
-    @apply inline-flex mt-6 w-full items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none font-medium bg-white-20  text-turquoise-700 hover:text-turquoise-900 hover:bg-white hover:bg-turquoise-50 transition;
-}
+   /* === Composed Utility Classes Using Base Components === */
 
-.work-section {
-    @apply flex flex-col size-[45%] rounded-lg p-6 border-1 border-white-40;
-}
+  .card-badge-yellow {
+    @apply bg-yellow-80p text-yellow-800 ring-yellow-700/20;
+  }
 
-.work-header {
+  .card-badge-green {
+    @apply bg-green-80p text-green-800 ring-green-700/20;
+  }
+
+  .card-badge-blue {
+    @apply bg-blue-80p text-blue-800 ring-blue-700/20;
+  }
+
+  .card-badge-indigo {
+    @apply bg-indigo-80p text-indigo-800 ring-indigo-700/20;
+  }
+
+  .card-badge-purple {
+    @apply bg-purple-80p text-purple-800 ring-purple-700/20;
+  }
+
+  .card-content-link {
+    @apply flex w-fit px-1 py-2 my-4 text-[13px] font-bold text-[#3943B7] items-center rounded-md cursor-pointer transition hover:underline;
+  }
+
+  .card-wrapper {
+    @apply relative flex flex-row w-full px-8 py-2 rounded-lg overflow-hidden text-turquoise-900 cursor-default
+          before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0
+          before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out
+          hover:before:w-[calc(100%+1rem)];
+  }
+
+  .card-content-wrapper {
+    @apply w-350 text-turquoise-900 opacity-90 group-hover:opacity-100 transition;
+  }
+
+  .card-content-date {
+    @apply pl-2 my-3 leading-3 border-l border-turquoise-900;
+  }
+
+  .card-content-paragraph {
+    @apply mt-3;
+  }
+
+  .card-content-subtitle {
+    @apply mt-3 font-medium;
+  }
+
+  .card-content-footer {
+    @apply py-4;
+  }
+
+  .social-link {
+    @apply relative z-100 self-start mx-24 transition-all duration-600 ease-in-out;
+  }
+
+  .body-wrapper {
+    @apply relative flex flex-col items-center transition-all duration-200 ease-in-out;
+  }
+
+  .body-container {
+    @apply static flex flex-col pt-40 w-[1200px] text-white;
+  }
+
+  .cert-wrapper {
+    @apply mb-14;
+  }
+
+  .project-work-wrapper {
+    @apply flex flex-row w-full px-8;
+  }
+
+  .container {
+    @apply mt-20 w-full py-16 flex flex-col items-center justify-center bg-turquoise-400;
+  }
+
+  .hero-heading {
+      @apply mx-24 w-[680px] px-0 py-4 text-[3.2em] font-bold leading-[1.1em];
+  }
+
+  .hero-paragraph {
+      @apply mx-24 w-[720px] px-0 py-4 text-[1.1em];
+  }
+
+  .card-thumbnail-wrapper {
+    @apply relative flex flex-col items-center justify-center mt-3 mr-8 p-2 h-fit rounded-lg bg-white/20 group-hover:bg-turquoise-300;
+  }
+
+  .work-section {
+    @apply flex flex-col size-[45%] p-6 rounded-lg border border-white/40;
+  }
+
+  .work-header {
     @apply flex flex-row text-lg font-semibold leading-tight text-turquoise-900;
-}
+  }
 
-.work-wrapper {
-    @apply flex flex-row m-auto mt-6 items-center align-middle;
-}
+  .work-wrapper {
+    @apply flex flex-row m-auto mt-6 items-center;
+  }
 
-.work-item {
-    @apply flex flex-row text-turquoise-900 text-[13px] font-medium m-auto mr-4 items-center align-middle;
-}
+  .work-item {
+    @apply flex flex-row m-auto mr-4 text-[13px] font-medium text-turquoise-900 items-center;
+  }
 
-.work-duration {
-    @apply text-turquoise-800 mt-1 leading-tight text-[11px] w-[134px] align-text-bottom text-right;
-}
+  .work-duration {
+    @apply mt-1 w-[134px] text-right text-[11px] leading-tight text-turquoise-800 align-text-bottom;
+  }
 
-.footer {
+  .footer {
     @apply w-full h-18 flex flex-col items-center justify-center text-[12px] text-turquoise-500 bg-turquoise-900;
+  }
 }
