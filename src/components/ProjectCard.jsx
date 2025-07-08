@@ -71,7 +71,6 @@ const projects = [
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-blue">Team Collaboration</span>
           <span class="card-badge card-badge-indigo">Managed Team</span>
-          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -180,7 +179,6 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -207,7 +205,6 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -234,7 +231,6 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
