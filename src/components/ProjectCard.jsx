@@ -34,10 +34,7 @@ const projects = [
     mainContent: (
       <>
         <p className="card-content card-content-paragraph">
-          Users often find personal finance tools overwhelming, fragmented, and impersonal. They seek proactive, transparent, and easy-to-act-on insights to help them make smarter financial decisions with confidence.
-        </p>
-        <p className="card-content card-content-paragraph">
-          The goal is to support wealth customers in making smarter financial decisions by combining AI-driven insights with human advisor collaboration.
+          Wealth customers often find personal finance tools overwhelming and impersonal. They seek clear, actionable insights. The goal is to empower them with AI-driven guidance enhanced by human advisor collaboration to support smarter financial decisions.
         </p>
       </>
     ),
@@ -46,7 +43,7 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-blue">Design System</span>
+          <span class="card-badge card-badge-red">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -72,10 +69,9 @@ const projects = [
     responsibilityContent: (
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
-          <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-blue">Design System</span>
-          <span class="card-badge card-badge-indigo">Managed Design Team</span>
-          <span class="card-badge card-badge-purple">Design Strategy</span>
+          <span class="card-badge card-badge-blue">Team Collaboration</span>
+          <span class="card-badge card-badge-indigo">Managed Team</span>
+          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -91,10 +87,7 @@ const projects = [
     mainContent: (
       <>
         <p className="card-content card-content-paragraph">
-          Lumen AI, an enterprise-grade AI/ML data extraction tool, is represented through a modern logo symbolizing innovation, precision, and automation.
-        </p>
-        <p className="card-content card-content-paragraph">
-          A radiant light motif reflects its power to illuminate insights from complex data, with gradient tones conveying depth and intelligence.
+          Lumen AI’s modern logo symbolizes innovation, precision, and automation, using a radiant light motif and gradient tones to reflect its ability to illuminate insights from complex data.
         </p>
       </>
     ),
@@ -102,7 +95,7 @@ const projects = [
     responsibilityContent: (
       <>
           <span class="card-badge card-badge-yellow">Logo Design</span>
-          <span class="card-badge card-badge-blue">Design Collaboration</span>
+          <span class="card-badge card-badge-blue">Team Collaboration</span>
           <span class="card-badge card-badge-purple">Animation</span>
       </>
     ),
@@ -129,7 +122,7 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-blue">Design System</span>
+          <span class="card-badge card-badge-red">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -155,7 +148,7 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-blue">Design System</span>
+          <span class="card-badge card-badge-red">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -187,7 +180,7 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-purple">Design Strategy</span>
+          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -214,7 +207,7 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-purple">Design Strategy</span>
+          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -241,7 +234,7 @@ const projects = [
       <>
           <span class="card-badge card-badge-yellow">User Research</span>
           <span class="card-badge card-badge-green">Product Design</span>
-          <span class="card-badge card-badge-purple">Design Strategy</span>
+          <span class="card-badge card-badge-pink">Design Strategy</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -316,16 +309,14 @@ const ProjectCard = () => {
                 <div>{responsibilityContent}</div>
 
                 {showCaseStudy ? (
-                  <motion.a
+                  <a
                     href={casestudyLink} 
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.1 }}
-                    className="card-content-link"
+                    className="card-content card-content-link"
                     target="_blank"
                   >
                     {casestudyLabel}
                     <svg
-                      className="ml-2 h-3 w-3 font-semibold stroke-[#3943B7]"
+                      className="ml-2 h-3 w-3 font-semibold"
                       viewBox="0 0 16 16"
                     >
                       <path
@@ -341,7 +332,7 @@ const ProjectCard = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </motion.a>
+                  </a>
                 ) : (
                   <p className="card-content card-content-footer">
                     <i>Design process available upon request</i>

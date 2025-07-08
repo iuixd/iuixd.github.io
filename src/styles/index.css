@@ -24,6 +24,7 @@
 
   --color-turquoise-900: oklch(0.2442 0.0415 200.06);
 
+  --color-gray-80p: oklch(0.985 0.002 247.839 / 80%);
   --color-yellow-80p: oklch(0.973 0.071 103.193 / 80%);
   --color-green-80p: oklch(0.962 0.044 156.743 / 80%);
   --color-blue-80p: oklch(0.932 0.032 255.585 / 80%);
