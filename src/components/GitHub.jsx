@@ -17,10 +17,10 @@ const GitHub = () => {
       ></div>
 
       <div className="relative flex flex-col items-center">
-        <div className="static flex flex-col self-auto min-[360px]:w-full md:w-[1024px] h-auto text-white ">
+        <div className="static flex flex-col self-auto min-[360px]:w-full md:w-full lg:w-[1024px] h-auto text-white ">
           <Link
             to="/"
-            className="min-[360px]:mx-[10%] md:mx-0 mt-[12px] self-start relative z-101"
+            className="min-[360px]:ml-[46px] sm:ml-[90px] md:ml-[6px] mt-[12px] self-start relative z-101"
           >
             <img
               src={myPhoto}
