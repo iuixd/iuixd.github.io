@@ -11,7 +11,7 @@ const VideoBg = () => {
           loop
           muted
           className="
-            min-[360px]:invisible sm:invisible -z-10 object-cover bg-[50%] bg-cover w-full h-full m-auto absolute"
+            min-[360px]:invisible sm:visible -z-10 object-cover bg-[50%] bg-cover w-full h-full m-auto absolute"
         ></video>
       </div>
       <div
