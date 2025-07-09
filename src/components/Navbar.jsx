@@ -16,10 +16,10 @@ const Navbar = () => {
   const springOpacity = useSpring(opacity, { stiffness: 400, damping: 30 });
 
   const navItems = [
-    { label: 'About', path: '/srikumar/about' },
-    { label: 'Articles', path: '/srikumar/articles' },
-    { label: 'GitHub', path: '/srikumar/github' },
-    { label: 'Contact', path: '/srikumar/contact' },
+    { label: 'About', path: '/about' },
+    { label: 'Articles', path: '/articles' },
+    { label: 'GitHub', path: '/github' },
+    { label: 'Contact', path: '/contact' },
   ];
 
   const calculatePosition = (el) => {
@@ -79,7 +79,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed z-100 top-0 w-full"
+      className="nav-container transition-all duration-300 ease-in-out"
+      x-data="{ scrolledFromTop: false }"
+      x-init="
+        window.addEventListener('scroll', () => {
+          scrolledFromTop = window.scrollY > 180;
+        });
+      "
+      x-bind:class="$store.page.name === 'home' ? 
+        (scrolledFromTop ? 'min-[240px]:pl-[96px]' : 'md:pl-auto') : 'min-[240px]:pl-[96px]'"
+      x-transition
       role="navigation"
       aria-label="Main navigation"
       aria-labelledby="main-navigation-label"
@@ -87,12 +96,12 @@ const Navbar = () => {
       <h2 id="main-navigation-label" className="sr-only">
         Primary navigation
       </h2>
-      <div className="flex justify-center items-center mt-2 mb-2">
+      <div className="nav-wrapper">
         <ul
           ref={navRef}
           onMouseLeave={handleMouseLeave}
           role="menubar"
-          className="relative flex items-center px-4 rounded-[8px] font-medium border border-[rgba(255,255,255,0.20)] bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.20)_0%,_rgba(255,_255,_255,_0.00)_100%)] backdrop-filter backdrop-blur-[21px]"
+          className="nav-menubar"
             x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}" x-transition
         >
           {navItems.map((item) => (
@@ -101,7 +110,7 @@ const Navbar = () => {
               ref={(el) => (itemRefs.current[item.path] = el)}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="relative z-100 mr-3 px-3 py-4 text-sm font-normal cursor-pointer transition-all duration-300"
+              className="nav-menuitem"
             >
               <Link
                 to={item.path}

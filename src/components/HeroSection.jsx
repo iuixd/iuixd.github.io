@@ -3,17 +3,19 @@ import SocialLinks from './SocialLinks';
 import myPhoto from '../assets/myPhoto.png';
 import Alpine from 'alpinejs';
 
-window.Alpine = Alpine;
- 
-Alpine.start();
+window.Alpine = Alpine
+
+Alpine.store('page', { name: '' })
+
+Alpine.start()
 
 const Hero = () => {
   return (
     <>
       <a
         href="#"
-        className="social-link"
-        x-bind:class="{'relative': !scrolledFromTop, 'sticky top-3.5': scrolledFromTop}"
+        className="photo-link"
+        x-bind:class="{'relative': !scrolledFromTop, 'sticky top-[12px]': scrolledFromTop}"
         x-transition
       >
         <img

@@ -14,7 +14,11 @@ function Home() {
 
         <VideoBg />
 
-        <div className="body-wrapper">
+        <div className="body-wrapper"
+          data-page-name="home"
+          x-data="{ pageName: $root.dataset.pageName }" 
+          x-init="$store.page.name = pageName" 
+        >
           <div className="body-container">
             
             <HeroSection />
