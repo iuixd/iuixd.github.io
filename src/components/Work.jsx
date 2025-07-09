@@ -114,7 +114,7 @@ const jobs = [
 
 const Work = () => (
   <div className="work-section">
-    <div className="min-[400px]:w-fit sm:w-fit md:w-fit lg:w-auto">
+    <div className="min-[360px]:w-fit sm:w-fit md:w-fit lg:w-auto">
       <h2 className="work-header">
         <svg
           className="h-5 w-5 mr-2 fill-turquoise-800 group-hover:fill-turquoise-500 transition"
@@ -136,7 +136,7 @@ const Work = () => (
                 alt={alt}
               />
             </div>
-            <div className="sm:text-[14px] md:text-[14px] lg:text-[12px] min-[400px]:w-[200px] sm:w-[250px] md:w-[250px] lg:w-[194px]">
+            <div className="sm:text-[14px] md:text-[14px] lg:text-[12px] min-[360px]:w-[200px] sm:w-[250px] md:w-[250px] lg:w-[194px]">
               <p className="font-semibold">{companyName}</p>
               <p className="text-turquoise-800">{designation}</p>
             </div>

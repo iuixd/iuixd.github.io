@@ -87,7 +87,7 @@ const Navbar = () => {
         });
       "
       x-bind:class="$store.page.name === 'home' ? 
-        (scrolledFromTop ? 'min-[240px]:pl-[96px]' : 'md:pl-auto') : 'min-[240px]:pl-[96px]'"
+        (scrolledFromTop ? 'min-[360px]:pl-[96px]' : 'md:pl-auto') : 'min-[360px]:pl-[96px]'"
       x-transition
       role="navigation"
       aria-label="Main navigation"

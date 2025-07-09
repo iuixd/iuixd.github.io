@@ -241,7 +241,7 @@ const projects = [
 
 const ProjectCard = () => {
   return (
-    <div className="flex flex-col min-[400px]:mr-0 sm:mr-0 md:mr-0 lg:mr-12 min-[320px]:size-[100%] sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%] sm:items-center md:items-center sm:justify-center md:justify-center lg:items-normal lg:justify-normal">
+    <div className="flex flex-col min-[360px]:mr-0 sm:mr-0 md:mr-0 lg:mr-12 min-[320px]:size-[100%] sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%] sm:items-center md:items-center sm:justify-center md:justify-center lg:items-normal lg:justify-normal">
       {projects.map(
         (
           {
