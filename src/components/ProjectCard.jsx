@@ -23,7 +23,7 @@ const thumbnailMap = {
 const projects = [
   {
     thumbnail: "userResearch",
-    youtubeLink: "https://www.youtube.com/watch?v=63SdhdrYhao",
+    youtubeLink: null,
     date: "May 2025",
     title: (
       <h2 className="card-content-title">
