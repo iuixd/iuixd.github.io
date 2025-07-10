@@ -26,7 +26,6 @@ const Articles = () => {
               src={myPhoto}
               className="w-12 h-12"
               alt="Srikumar's Photo"
-              x-transition="true"
             />
           </Link>
         </div>

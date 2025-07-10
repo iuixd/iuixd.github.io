@@ -16,14 +16,11 @@ const Hero = () => {
         href="#"
         className="photo-link"
         x-bind:class="{'relative': !scrolledFromTop, 'sticky top-[12px]': scrolledFromTop}"
-        x-transition
       >
         <img
           src={myPhoto}
           className="w-24 h-24"
           x-bind:class="{'w-24 h-24': !scrolledFromTop, 'w-12 h-12': scrolledFromTop}"
-          alt="Srikumar's Photo"
-          x-transition
         />
       </a>
       <div className="hero-heading">
