@@ -113,11 +113,11 @@ const jobs = [
 ];
 
 const Work = () => (
-  <div className="work-section">
-    <div className="min-[360px]:w-fit sm:w-fit md:w-fit lg:w-auto">
+  <div className="work-section-wrapper">
+    <div className="work-section">
       <h2 className="work-header">
         <svg
-          className="h-5 w-5 mr-2 fill-turquoise-800 group-hover:fill-turquoise-500 transition"
+          className="work-header-icon"
           viewBox="0 0 16 16"
         >
           <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -158,7 +158,7 @@ const Work = () => (
           viewBox="0 0 16 16"
           fill="none"
           aria-hidden="true"
-          className="h-4 w-4 stroke-turquoise-700 transition group-hover:stroke-turquoise-900"
+          className="download-btn-icon"
         >
           <path
             d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"

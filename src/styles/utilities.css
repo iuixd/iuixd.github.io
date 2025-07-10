@@ -4,6 +4,12 @@
 
 @layer components {
 
+  .set-base-style {
+    @apply font-poppins min-[360px]:bg-turquoise-500 md:bg-turquoise-200;
+  }
+
+
+
   /* === Reusable Base Components === */
 
   .card-badge {
@@ -22,6 +28,14 @@
     @apply min-[360px]:text-[0.9rem] sm:text-[1rem] md:text-[1rem] xl:text-[1.1rem] font-semibold leading-tight;
   }
 
+  .video-bg-wrapper {
+    @apply justify-center self-auto items-center w-full min-h-screen mt-0 flex absolute bg-[linear-gradient(to_bottom,_rgba(0,_192,_199,_0.5),_rgba(0,_192,_199,_0.5))];
+  }
+
+  .video-bg {
+    @apply min-[360px]:invisible sm:visible -z-10 object-cover bg-[50%] bg-cover w-full h-full m-auto absolute;
+  }
+
   .video-play-btn {
     @apply absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 flex items-center justify-center cursor-pointer
           transition hover:opacity-100 hover:w-17 hover:h-17;
@@ -31,11 +45,11 @@
     @apply ml-1 w-12 h-12 fill-turquoise-900 hover:w-13 hover:h-13;
   }
 
-  .download-btn {
-    @apply inline-flex w-full mt-6 px-3 py-2 text-sm font-medium items-center justify-center gap-2 rounded-md bg-white/20 text-turquoise-700 hover:text-turquoise-900 hover:bg-white hover:bg-turquoise-50 transition outline-offset-2 active:transition-none;
-  }
-
    /* === Composed Utility Classes Using Base Components === */
+
+   .nav-scrolltop-bar {
+    @apply fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0;
+   }
 
    .nav-container {
     @apply fixed z-100 top-0 w-full;
@@ -51,6 +65,10 @@
 
    .nav-menuitem {
     @apply relative z-100 mr-3 px-3 py-4 text-sm font-normal cursor-pointer transition-all duration-300;
+   }
+
+   .nav-active-itembg {
+    @apply absolute z-50 h-7 rounded-full bg-white shadow-lg;
    }
 
   .card-badge-gray {
@@ -89,14 +107,27 @@
     @apply flex w-fit px-1 py-2 my-4 font-medium items-center rounded-md text-turquoise-900 cursor-pointer underline hover:no-underline transition ;
   }
 
+  .project-card {
+    @apply flex flex-col min-[360px]:mr-0 sm:mr-0 md:mr-0 lg:mr-12 min-[320px]:size-[100%] sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%] sm:items-center md:items-center sm:justify-center md:justify-center lg:items-start lg:justify-normal;
+  }
+
   .card-wrapper {
     @apply relative flex min-[360px]:flex-col md:flex-row w-full min-[360px]:px-4 sm:px-4 lg:px-4 xl:px-8 py-2 rounded-lg overflow-hidden text-turquoise-900 cursor-default
           before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0
           before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out
           hover:before:w-[calc(100%+1rem)];
   }
+
   .card-thumbnail-wrapper {
     @apply relative flex flex-col items-center justify-center mt-3 min-[360px]:mr-0 sm:mr-8 md:mr-8 lg:mr-4 xl:mr-8 p-2 w-fit h-fit rounded-lg bg-white/20 group-hover:bg-turquoise-300;
+  }
+
+  .card-thumbnail-img {
+    @apply md:w-120 xl:w-200 rounded-lg;
+  }
+
+  .card-link-icon {
+    @apply ml-2 h-3 w-3 font-semibold;
   }
 
   .card-content-wrapper {
@@ -171,12 +202,20 @@
       @apply text-turquoise-900 underline hover:no-underline;
   }
 
-  .work-section {
+  .work-section-wrapper {
     @apply flex flex-col size-[45%] min-[360px]:size-full sm:size-full md:size-fit sm:mt-10 md:mt-10 lg:mt-0 min-[360px]:p-6  sm:p-10 md:p-10 lg:p-6 rounded-lg border border-white/40;
+  }
+
+  .work-section {
+    @apply min-[360px]:w-fit sm:w-fit md:w-fit lg:w-auto;
   }
 
   .work-header {
     @apply flex flex-row text-[1.1rem] font-semibold leading-tight text-turquoise-900;
+  }
+
+  .work-header-icon {
+    @apply h-5 w-5 mr-2 fill-turquoise-800 group-hover:fill-turquoise-500 transition;
   }
 
   .work-wrapper {
@@ -194,6 +233,14 @@
     min-[360px]:text-left md:text-right 
     min-[360px]:text-[12px] sm:text-[14px] md:text-[14px] lg:text-[11px] 
     leading-tight text-turquoise-800 align-text-bottom;
+  }
+
+  .download-btn {
+    @apply inline-flex w-full mt-6 px-3 py-2 text-sm font-medium items-center justify-center gap-2 rounded-md bg-white/20 text-turquoise-700 hover:text-turquoise-900 hover:bg-white hover:bg-turquoise-50 transition outline-offset-2 active:transition-none;
+  }
+
+  .download-btn-icon {
+    @apply h-4 w-4 stroke-turquoise-700 transition group-hover:stroke-turquoise-900;
   }
 
   .footer {

@@ -88,7 +88,6 @@ const Navbar = () => {
       "
       x-bind:class="$store.page.name === 'home' ? 
         (scrolledFromTop ? 'min-[360px]:pl-[96px]' : 'md:pl-auto') : 'min-[360px]:pl-[96px]'"
-      x-transition
       role="navigation"
       aria-label="Main navigation"
       aria-labelledby="main-navigation-label"
@@ -102,7 +101,7 @@ const Navbar = () => {
           onMouseLeave={handleMouseLeave}
           role="menubar"
           className="nav-menubar"
-            x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}" x-transition
+            x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}"
         >
           {navItems.map((item) => (
             <li
@@ -146,7 +145,7 @@ const Navbar = () => {
               opacity: springOpacity,
               top: "12px",
             }}
-            className="absolute z-50 h-7 rounded-full bg-white shadow-lg"
+            className="nav-active-itembg"
             layout
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
           />
