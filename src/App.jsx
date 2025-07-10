@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import Articles from "./components/Articles";
+import DesignLab from "./components/DesignLab";
 import GitHub from "./components/GitHub";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "articles",
-        element: <Articles />,
+        path: "design-lab",
+        element: <DesignLab />,
       },
       {
         path: "github",

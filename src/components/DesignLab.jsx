@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 import myPhoto from "../assets/myPhoto.png";
 import thumbnailCBM from "../assets/thumbnailCBM.png";
 import Consultant from "../assets/Consultant.svg";
 
-const Articles = () => {
+const DesignLab = () => {
   return (
     <>
       <div
@@ -61,4 +61,4 @@ const Articles = () => {
   );
 };
 
-export default Articles;
+export default DesignLab;
