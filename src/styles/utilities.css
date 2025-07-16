@@ -187,7 +187,7 @@
   }
 
   .sub-backhome-link {
-    @apply flex w-12 h-12  min-[360px]:ml-[46px] sm:ml-[90px] items-center justify-center bg-turquoise-100/40  hover:bg-turquoise-100/60 rounded-full transition-colors duration-150 ease-in-out cursor-pointer;
+    @apply flex w-10 h-10  min-[360px]:ml-[46px] sm:ml-[100px] items-center justify-center bg-turquoise-100/40  hover:bg-turquoise-100/60 rounded-full transition-colors duration-150 ease-in-out cursor-pointer;
   }
 
   .hero-heading {
