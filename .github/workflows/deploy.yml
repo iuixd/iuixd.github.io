@@ -2,5 +2,5 @@
     uses: peaceiris/actions-gh-pages@v3
     with:
     github_token: ${{ secrets.GITHUB_TOKEN }}
-    publish_dir: ./public # or your output directory
-    cname: yourdomain.com
+    publish_dir: ./dist # or your output directory
+    cname: www.srikumar.design
