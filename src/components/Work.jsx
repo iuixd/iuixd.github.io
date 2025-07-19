@@ -52,7 +52,6 @@ const jobs = [
     duration: "Aug 2022 to Apr 2023",
     logo: "targetLogo",
     alt: "Target Logo",
-    customSize: "h-7", // Target has different height
   },
   {
     companyName: "Innominds Software Pvt Ltd",
@@ -132,7 +131,7 @@ const Work = () => (
             <div className="mr-2 items-center align-middle">
               <img
                 src={logoMap[logo]}
-                className={`w-8 ${customSize || "h-8"}`}
+                className="w-8 h-8"
                 alt={alt}
               />
             </div>
