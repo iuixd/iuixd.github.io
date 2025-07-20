@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Reveal from './Reveal';
 import HeroSection from './HeroSection';
 import ProjectCard from './ProjectCard';
 import VideoBg from './VideoBg';
@@ -25,11 +26,13 @@ function Home() {
             
             <div className="content-wrapper">
               <div className="cert-wrapper">
+              <Reveal>
                 <img
                   src={certBadges}
                   className="w-2xl"
                   alt="Srikumar's Certificates"
                 />
+              </Reveal>
               </div>
 
               <div className="project-work-wrapper">

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
+import Reveal from './Reveal';
 
 const Navbar = () => {
   
@@ -107,6 +108,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   };
 
   return (
+    <Reveal>
     <nav
       className={`nav-container transition-all duration-300 ease-in-out z-101 ${isMenuOpen ? 'max-[550px]:z-101' : 'max-[550px]:z-3'} `}
       x-data="{ scrolledFromTop: false }"
@@ -209,6 +211,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
         )}
       </div>
     </nav>
+    </Reveal>
   );
 };
 

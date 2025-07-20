@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Reveal from './Reveal';
 import thumbnailWealthMgmt from "../assets/thumbnailWealthMgmt.png";
 import thumbnailLumenAI from "../assets/thumbnailLumenAI.png";
 import LumenaiLogo from "../assets/LumenaiLogo.gif";
@@ -263,6 +264,7 @@ const ProjectCard = () => {
           const isLumenLogo = "LumenaiLogo";
 
           return (
+            <Reveal key={`project-${index}`}>
             <div
               key={`project-${index}`}
               className="card-wrapper"
@@ -336,6 +338,7 @@ const ProjectCard = () => {
                 )}
               </div>
             </div>
+            </Reveal>
           );
         }
       )}

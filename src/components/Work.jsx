@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Reveal from './Reveal';
 import Consultant from "../assets/Consultant.svg";
 import IBMLogo from "../assets/IBMLogo.svg";
 import targetLogo from "../assets/targetLogo.svg";
@@ -113,6 +114,7 @@ const jobs = [
 
 const Work = () => (
   <section className="work-section">
+      <Reveal>
       <h2 className="work-header">
         <svg
           className="work-header-icon"
@@ -122,9 +124,11 @@ const Work = () => (
         </svg>
         Work
       </h2>
+      </Reveal>
 
-      <div class="work-list">
+      <div className="work-list">
         {jobs.map(({ companyName, designation, duration, logo, alt, customSize }) => (
+          <Reveal key={`work-${duration}`}>
           <motion.div key={`${companyName}-${duration}`}
             className="work-wrapper cursor-default overflow-hidden">
             <div className="work-item">
@@ -142,9 +146,10 @@ const Work = () => (
             </div>
             <div className="work-duration">{duration}</div>
           </motion.div>
+          </Reveal>
       ))}
       </div>
-
+      <Reveal>
       <motion.a
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.1 }}
@@ -168,6 +173,7 @@ const Work = () => (
           />
         </svg>
       </motion.a>
+      </Reveal>
   </section>
 );
 

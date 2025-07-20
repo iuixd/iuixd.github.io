@@ -2,6 +2,7 @@ import React from "react";
 import SocialLinks from './SocialLinks';
 import myPhoto from '../assets/myPhoto.png';
 import Alpine from 'alpinejs';
+import Reveal from './Reveal';
 
 window.Alpine = Alpine
 
@@ -17,12 +18,15 @@ const Hero = () => {
         className="photo-link"
         x-bind:class="{'relative': !scrolledFromTop, 'sticky top-[12px]': scrolledFromTop}"
       >
+      <Reveal>
         <img
           src={myPhoto}
           className="w-24 h-24"
           x-bind:class="{'w-24 h-24': !scrolledFromTop, 'w-12 h-12': scrolledFromTop}"
         />
+      </Reveal>
       </a>
+      <Reveal>
       <div className="hero-heading">
         Product designer, vibe coder, and amateur developer
         <span className="text-turquoise-500">.</span>
@@ -38,6 +42,7 @@ const Hero = () => {
       </p>
 
       <SocialLinks />
+      </Reveal>
     </>
   );
 };
