@@ -29,7 +29,7 @@ const VideoBg = () => {
 
   return (
     <>
-      {!isMobile && (
+      {screenWidth > 768 && (
         <div className="video-bg-wrapper">
           <video src={videoBg} autoPlay loop muted className="video-bg"></video>
         </div>
