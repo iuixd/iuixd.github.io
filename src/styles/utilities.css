@@ -5,7 +5,7 @@
 @layer components {
 
   .set-base-style {
-    @apply font-poppins min-[360px]:bg-turquoise-500 md:bg-turquoise-200;
+    @apply font-poppins min-[200px]:bg-turquoise-500 min-[768px]:bg-turquoise-200;
   }
 
 
@@ -33,7 +33,7 @@
   }
 
   .video-bg {
-    @apply min-[360px]:invisible sm:visible -z-10 object-cover bg-[50%] bg-cover w-full h-full m-auto absolute;
+    @apply min-[240px]:invisible min-[768px]:visible -z-10 object-cover bg-[50%] bg-cover w-full h-full m-auto absolute;
   }
 
   .video-play-btn {
@@ -56,11 +56,15 @@
    }
 
    .nav-wrapper {
-    @apply flex justify-center items-center mt-2 mb-2;
+    @apply flex min-[200px]:justify-end min-[550px]:justify-center min-[550px]:items-center mt-2 mb-2;
    }
 
    .nav-menubar {
-    @apply relative flex items-center px-4 rounded-[8px] font-medium border border-[rgba(255,255,255,0.20)] bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.20)_0%,_rgba(255,_255,_255,_0.00)_100%)] backdrop-filter backdrop-blur-[21px];
+    @apply relative flex items-center min-[550px]:px-4 rounded-[8px] font-medium border border-[rgba(255,255,255,0.20)] 
+    
+    min-[550px]:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.20)_0%,_rgba(255,_255,_255,_0.00)_100%)] min-[550px]:backdrop-filter backdrop-blur-[21px]
+    max-[550px]:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.60)_0%,_rgba(255,_255,_255,_0.00)_100%)] max-[550px]:backdrop-filter backdrop-blur-[21px]
+    max-[550px]:drop-shadow-xl;
    }
 
    .nav-menuitem {
@@ -175,7 +179,7 @@
   }
 
   .content-wrapper {
-    @apply min-[360px]:mt-4 md:mt-20 w-full py-16 flex flex-col items-center justify-center bg-turquoise-400;
+    @apply min-[360px]:mt-14 md:mt-20 w-full py-16 flex flex-col items-center justify-center bg-turquoise-400;
   }
 
   .subpage-body-container {
@@ -187,7 +191,7 @@
   }
 
   .sub-backhome-link {
-    @apply flex w-10 h-10  min-[360px]:ml-[46px] sm:ml-[100px] items-center justify-center bg-turquoise-100/40  hover:bg-turquoise-100/60 rounded-full transition-colors duration-150 ease-in-out cursor-pointer;
+    @apply flex w-10 h-10 max-[550px]:ml-[52px] sm:ml-[100px] items-center justify-center max-[550px]:z-11 bg-turquoise-100/40  hover:bg-turquoise-100/60 rounded-full transition-colors duration-150 ease-in-out cursor-pointer;
   }
 
   .hero-heading {

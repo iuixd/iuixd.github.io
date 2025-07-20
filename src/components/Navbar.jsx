@@ -3,6 +3,29 @@ import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  
+const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 550); // initialize correctly
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      setScreenWidth(width);
+      setScreenHeight(height);
+      setIsMobile(width <= 550); 
+    };
+
+    // Initial check (in case resize hasn't occurred)
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const location = useLocation();
   const navRef = useRef(null);
   const itemRefs = useRef({});
@@ -77,17 +100,30 @@ const Navbar = () => {
     }
   };
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav
-      className="nav-container transition-all duration-300 ease-in-out"
+      className={`nav-container transition-all duration-300 ease-in-out z-101 ${isMenuOpen ? 'max-[550px]:z-101' : 'max-[550px]:z-3'} `}
       x-data="{ scrolledFromTop: false }"
       x-init="
         window.addEventListener('scroll', () => {
           scrolledFromTop = window.scrollY > 180;
         });
       "
-      x-bind:class="$store.page.name === 'home' ? 
-        (scrolledFromTop ? 'min-[360px]:pl-[96px]' : 'md:pl-auto') : 'min-[360px]:pl-[96px]'"
+      x-bind:class="$store.page.name === 'home' 
+        ? (scrolledFromTop 
+          ? (window.innerWidth >= 550 
+            ? 'pl-[96px]' 
+            : 'pl-auto')
+          : 'md:pl-auto') 
+        : (window.innerWidth >= 550 
+            ? 'pl-[96px]' 
+            : 'pl-auto')"
       role="navigation"
       aria-label="Main navigation"
       aria-labelledby="main-navigation-label"
@@ -95,13 +131,13 @@ const Navbar = () => {
       <h2 id="main-navigation-label" className="sr-only">
         Primary navigation
       </h2>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper ">
         <ul
           ref={navRef}
           onMouseLeave={handleMouseLeave}
           role="menubar"
-          className="nav-menubar"
-            x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}"
+          className={`nav-menubar ${isMenuOpen ? 'max-[550px]:opacity-100' : 'max-[550px]:opacity-0'} max-[550px]:mr-[16px] max-[550px]:mt-[50px] max-[550px]:flex-col max-[550px]:w-[300px] w-auto min-[550px]:flex-row`}
+          x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}"
         >
           {navItems.map((item) => (
             <li
@@ -109,7 +145,8 @@ const Navbar = () => {
               ref={(el) => (itemRefs.current[item.path] = el)}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="nav-menuitem"
+              className="nav-menuitem max-[550px]:text-center"
+              onClick={toggleMenu}
             >
               <Link
                 to={item.path}
@@ -137,19 +174,39 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-
-          <motion.li
-            style={{
-              left: springLeft,
-              width: springWidth,
-              opacity: springOpacity,
-              top: "12px",
-            }}
-            className="nav-active-itembg"
-            layout
-            transition={{ type: "spring", stiffness: 400, damping: 30 }}
-          />
+          {screenWidth >= 550 && (
+            <motion.li
+              style={{
+                left: springLeft,
+                width: springWidth,
+                opacity: springOpacity,
+                top: "12px",
+              }}
+              className="nav-active-itembg"
+              layout
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            />
+          )}
         </ul>
+        
+        {isMobile && (
+          <button className="absolute group mt-2 mr-4 p-1 rounded-md border border-white/40 hover:bg-turquoise-50 cursor-pointer transition"
+           onClick={toggleMenu}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-list fill-turquoise-50 group-hover:fill-turquoise-900"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </button>
+        )}
       </div>
     </nav>
   );

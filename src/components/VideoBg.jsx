@@ -18,7 +18,12 @@ const VideoBg = () => {
       </div>
       <div
         className="nav-scrolltop-bar"
-        x-bind:class="{'bg-turquoise-500 opacity-0': !scrolledFromTop, 'bg-turquoise-500 opacity-50': scrolledFromTop}"
+        x-bind:class="
+        !scrolledFromTop 
+          ? 'bg-turquoise-500 opacity-0' 
+          : (window.innerWidth >= 550 
+              ? 'bg-turquoise-500 opacity-50' 
+              : 'bg-turquoise-500 opacity-90')"
       ></div>
     </>
   )};
