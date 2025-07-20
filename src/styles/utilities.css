@@ -72,7 +72,7 @@
    }
 
    .nav-active-itembg {
-    @apply absolute z-50 h-7 rounded-full bg-white shadow-lg;
+    @apply absolute z-50 h-7 rounded-full bg-violet-500-50p shadow-lg;
    }
 
   .card-badge-gray {
@@ -108,7 +108,7 @@
   }
 
   .card-content-link {
-    @apply flex w-fit px-1 py-2 my-4 font-medium items-center rounded-md text-turquoise-900 cursor-pointer underline hover:no-underline transition ;
+    @apply flex w-fit px-1 py-2 my-4 font-medium items-center rounded-md text-violet-500 cursor-pointer underline hover:no-underline transition ;
   }
 
   .project-card {
@@ -203,7 +203,7 @@
   }
 
   .hero-paragraph-link {
-      @apply text-turquoise-900 underline hover:no-underline;
+      @apply text-violet-500 underline hover:no-underline;
   }
 
   .work-section-wrapper {
@@ -240,11 +240,11 @@
   }
 
   .download-btn {
-    @apply inline-flex w-full mt-6 px-3 py-2 text-sm font-medium items-center justify-center gap-2 rounded-md bg-white/20 text-turquoise-700 hover:text-turquoise-900 hover:bg-white hover:bg-turquoise-50 transition outline-offset-2 active:transition-none;
+    @apply inline-flex w-full mt-6 px-3 py-2 text-sm font-medium items-center justify-center gap-2 rounded-md bg-violet-500-20p text-violet-700 hover:text-violet-50 hover:bg-violet-500 transition outline-offset-2 active:transition-none;
   }
 
   .download-btn-icon {
-    @apply h-4 w-4 stroke-turquoise-700 transition group-hover:stroke-turquoise-900;
+    @apply h-4 w-4 stroke-violet-700 transition group-hover:stroke-violet-50;
   }
 
   .footer {

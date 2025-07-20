@@ -145,7 +145,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
               ref={(el) => (itemRefs.current[item.path] = el)}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="nav-menuitem max-[550px]:text-center"
+              className="group nav-menuitem max-[550px]:text-center"
               onClick={toggleMenu}
             >
               <Link
@@ -163,8 +163,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 }}
                 className={`focus:outline-none ${
                   location.pathname === item.path
-                    ? "text-turquoise-900 font-semibold scale-105"
-                    : "text-turquoise-900 hover:text-turquoise-900"
+                    ? "text-violet-900 font-semibold scale-105"
+                    : "text-turquoise-900 group-hover:text-violet-900 group-hover:font-semibold"
                 }`}
                 aria-current={
                   location.pathname === item.path ? "page" : undefined
