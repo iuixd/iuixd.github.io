@@ -312,7 +312,7 @@ const ProjectCard = () => {
                   >
                     {casestudyLabel}
                     <svg
-                      className="card-link-icon"
+                      className="card-link-icon fill-violet-500"
                       viewBox="0 0 16 16"
                     >
                       <path

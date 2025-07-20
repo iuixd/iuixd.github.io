@@ -112,8 +112,7 @@ const jobs = [
 ];
 
 const Work = () => (
-  <div className="work-section-wrapper">
-    <div className="work-section">
+  <section className="work-section">
       <h2 className="work-header">
         <svg
           className="work-header-icon"
@@ -124,25 +123,27 @@ const Work = () => (
         Work
       </h2>
 
-      {jobs.map(({ companyName, designation, duration, logo, alt, customSize }) => (
-        <motion.div key={`${companyName}-${duration}`}
-          className="work-wrapper cursor-default">
-          <div className="work-item">
-            <div className="mr-2 items-center align-middle">
-              <img
-                src={logoMap[logo]}
-                className="w-8 h-8"
-                alt={alt}
-              />
+      <div class="work-list">
+        {jobs.map(({ companyName, designation, duration, logo, alt, customSize }) => (
+          <motion.div key={`${companyName}-${duration}`}
+            className="work-wrapper cursor-default overflow-hidden">
+            <div className="work-item">
+              <div className="mr-2 items-center align-middle">
+                <img
+                  src={logoMap[logo]}
+                  className="w-8 h-8"
+                  alt={alt}
+                />
+              </div>
+              <div className="sm:text-[14px] md:text-[14px] lg:text-[12px] max-[550px]:w-[150px] min-[550px]:w-[220px] lg:w-[180px]">
+                <p className="font-semibold">{companyName}</p>
+                <p className="text-turquoise-800">{designation}</p>
+              </div>
             </div>
-            <div className="sm:text-[14px] md:text-[14px] lg:text-[12px] min-[360px]:w-[200px] sm:w-[250px] md:w-[250px] lg:w-[194px]">
-              <p className="font-semibold">{companyName}</p>
-              <p className="text-turquoise-800">{designation}</p>
-            </div>
-          </div>
-          <div className="work-duration">{duration}</div>
-        </motion.div>
+            <div className="work-duration">{duration}</div>
+          </motion.div>
       ))}
+      </div>
 
       <motion.a
         whileHover={{ scale: 1.05 }}
@@ -167,8 +168,7 @@ const Work = () => (
           />
         </svg>
       </motion.a>
-    </div>
-  </div>
+  </section>
 );
 
 export default Work;

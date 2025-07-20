@@ -197,7 +197,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
               width="28"
               height="28"
               fill="currentColor"
-              class="bi bi-list fill-turquoise-50 group-hover:fill-turquoise-900"
+              className="bi bi-list fill-turquoise-50 group-hover:fill-turquoise-900"
               viewBox="0 0 16 16"
             >
               <path
