@@ -13,7 +13,7 @@
   /* === Reusable Base Components === */
 
   .card-badge {
-    @apply inline-flex items-center px-2 py-1 mt-1 mr-1 text-xs font-medium rounded-md ring-1 ring-inset;
+    @apply inline-flex items-center px-2 py-1 mt-1 mr-1 text-xs tracking-wide font-medium rounded-full bg-turquoise-50/50 text-turquoise-900;
   }
 
   .btn-social {

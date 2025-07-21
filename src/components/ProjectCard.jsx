@@ -42,9 +42,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-green">Product Design</span>
-          <span className="card-badge card-badge-red">Design System</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Product Design</span>
+          <span className="card-badge">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -69,9 +69,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-blue">Team Collaboration</span>
-          <span className="card-badge card-badge-indigo">Managed Team</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Team Collaboration</span>
+          <span className="card-badge">Managed Team</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -94,9 +94,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">Logo Design</span>
-          <span className="card-badge card-badge-blue">Team Collaboration</span>
-          <span className="card-badge card-badge-purple">Animation</span>
+          <span className="card-badge">Logo Design</span>
+          <span className="card-badge">Team Collaboration</span>
+          <span className="card-badge">Animation</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -120,9 +120,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-green">Product Design</span>
-          <span className="card-badge card-badge-red">Design System</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Product Design</span>
+          <span className="card-badge">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -146,9 +146,9 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-green">Product Design</span>
-          <span className="card-badge card-badge-red">Design System</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Product Design</span>
+          <span className="card-badge">Design System</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -178,8 +178,8 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-green">Product Design</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Product Design</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -204,8 +204,8 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-green">Product Design</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Product Design</span>
       </>
     ),
     casestudyLabel: "Case Study",
@@ -230,8 +230,8 @@ const projects = [
     responsibilityLabel: "Responsibilities",
     responsibilityContent: (
       <>
-          <span className="card-badge card-badge-yellow">User Research</span>
-          <span className="card-badge card-badge-green">Product Design</span>
+          <span className="card-badge">User Research</span>
+          <span className="card-badge">Product Design</span>
       </>
     ),
     casestudyLabel: "Case Study",
