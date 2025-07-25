@@ -34,7 +34,7 @@ const socials = [
   },
   {
     label: "GitHub",
-    href: "https://iuixd.github.io/srikumar-portfolio",
+    href: "https://github.com/iuixd",
     svg: (
       <svg
         viewBox="0 0 16 16"
