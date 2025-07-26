@@ -34,13 +34,12 @@ function Home() {
                 />
               </Reveal>
               </div>
-
-              <div className="project-work-wrapper">
-
+              
+              <section id="projects-and-works" className=''>
                 <ProjectCard />
                 <Work />
+              </section>
 
-              </div>
             </div>
             <div className="footer">
               © 2025 srikumar.design

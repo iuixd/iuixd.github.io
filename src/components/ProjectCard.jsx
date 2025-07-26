@@ -242,7 +242,7 @@ const projects = [
 
 const ProjectCard = () => {
   return (
-    <div className="project-card">
+    <section id="projects" className="project-card">
       {projects.map(
         (
           {
@@ -342,7 +342,7 @@ const ProjectCard = () => {
           );
         }
       )}
-    </div>
+    </section>
   );
 };
 

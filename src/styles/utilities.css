@@ -108,8 +108,8 @@
   }
 
   .project-card {
-    @apply flex flex-col min-[360px]:mr-0 sm:mr-0 md:mr-0 lg:mr-12 
-    min-[320px]:size-[100%] sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%]
+    @apply flex flex-col w-full
+    /*min-[320px]:size-[100%] sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%]*/
     sm:items-center md:items-center sm:justify-center md:justify-center lg:items-start lg:justify-normal;
   }
 
@@ -197,23 +197,22 @@
   }
 
   .hero-heading {
-      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] sm:text-shadow-lg;
+      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] min-[360px]:text-shadow-md min-md:text-shadow-lg;
   }
 
   .hero-paragraph {
-      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] sm:text-shadow-lg;
+      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] min-[360px]:text-shadow-md min-md:text-shadow-lg;
   }
 
   .hero-paragraph-link {
       @apply text-violet-500 underline hover:no-underline;
   }
 
-  .work-section-wrapper {
-    @apply flex flex-col size-[45%] min-[360px]:size-full sm:size-full md:size-fit sm:mt-10 md:mt-10 lg:mt-0 min-[360px]:p-6 sm:p-10 md:p-10 lg:p-6 rounded-lg border border-white/40;
+  .projects-and-works {
+    @apply relative w-full grid min-[360px]:grid-cols-1 lg:grid-cols-[60%_auto] gap-6 px-6 justify-items-stretch;
   }
-
-  .work-section {
-    @apply w-full min-[360px]:px-4 sm:px-6 md:px-6 lg:px-4 min-[360px]:py-6 sm:py-10 md:py-10 lg:py-6 rounded-lg border border-white/40;
+  .work-cards {
+    @apply h-fit min-[360px]:px-4 sm:px-6 md:px-6 lg:px-4 min-[360px]:py-6 sm:py-10 md:py-10 lg:py-6 rounded-lg border border-white/40;
   }
 
   .work-header {
@@ -224,28 +223,23 @@
     @apply flex flex-col;
   }
 
-  .work-item {
-    @apply relative flex flex-row sm:m-0 md:m-0 lg:m-auto xl:m-auto mr-4 text-[13px] min-[360px]:pl-3 sm:pl-5 md:pl-5 lg:pl-3 font-medium text-turquoise-900 items-center;
-  }
-
   .work-header-icon {
     @apply h-5 w-5 mr-2 fill-turquoise-800 group-hover:fill-turquoise-500 transition;
   }
 
   .work-wrapper {
-    @apply relative flex flex-row m-auto my-1 py-2 md:items-center rounded-lg
+    @apply relative grid grid-cols-[56%_auto] gap-2 justify-items-start my-1 p-2 rounded-lg
           before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0
           before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out
           hover:before:w-[calc(100%+1rem)];
   }
 
+  .work {
+    @apply relative flex flex-row justify-self-start w-full text-[14px] font-medium text-turquoise-900 items-center;
+  }
+
   .work-duration {
-    @apply relative mt-1 
-    min-[360px]:w-auto sm:w-[200px] lg:w-[140px] 
-    min-[360px]:ml-[40px] md:ml-0
-    min-[360px]:pr-3 sm:pr-5 md:pr-5 lg:pr-3 
-    min-[360px]:text-left md:text-right 
-    min-[360px]:text-[12px] sm:text-[14px] md:text-[14px] lg:text-[11px] 
+    @apply relative flex items-center justify-self-end text-[14px]
     leading-tight text-turquoise-800 align-text-bottom;
   }
 

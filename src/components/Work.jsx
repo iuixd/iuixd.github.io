@@ -113,7 +113,7 @@ const jobs = [
 ];
 
 const Work = () => (
-  <section className="work-section">
+  <section id="works" className="work-cards">
       <Reveal>
       <h2 className="work-header">
         <svg
@@ -129,9 +129,9 @@ const Work = () => (
       <div className="work-list">
         {jobs.map(({ companyName, designation, duration, logo, alt, customSize }) => (
           <Reveal key={`work-${duration}`}>
-          <motion.div key={`${companyName}-${duration}`}
+          <motion.div key={`${companyName}-${duration}`} id="work-item"
             className="work-wrapper cursor-default overflow-hidden">
-            <div className="work-item">
+            <div className="work">
               <div className="mr-2 items-center align-middle">
                 <img
                   src={logoMap[logo]}
@@ -139,7 +139,7 @@ const Work = () => (
                   alt={alt}
                 />
               </div>
-              <div className="sm:text-[14px] md:text-[14px] lg:text-[12px] max-[550px]:w-[150px] min-[550px]:w-[220px] lg:w-[180px]">
+              <div id="work-duration">
                 <p className="font-semibold">{companyName}</p>
                 <p className="text-turquoise-800">{designation}</p>
               </div>
