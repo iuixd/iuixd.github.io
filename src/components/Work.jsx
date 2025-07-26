@@ -139,7 +139,7 @@ const Work = () => (
                   alt={alt}
                 />
               </div>
-              <div id="work-duration">
+              <div>
                 <p className="font-semibold">{companyName}</p>
                 <p className="text-turquoise-800">{designation}</p>
               </div>
