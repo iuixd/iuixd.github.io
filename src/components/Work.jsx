@@ -176,5 +176,5 @@ const Work = () => (
       </Reveal>
   </section>
 );
-
 export default Work;
+
