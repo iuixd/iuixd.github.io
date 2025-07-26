@@ -197,11 +197,11 @@
   }
 
   .hero-heading {
-      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] min-[360px]:text-shadow-md min-md:text-shadow-lg;
+      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] min-[200px]:text-shadow-md min-md:text-shadow-lg;
   }
 
   .hero-paragraph {
-      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] min-[360px]:text-shadow-md min-md:text-shadow-lg;
+      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] min-[200px]:text-shadow-md min-md:text-shadow-lg;
   }
 
   .hero-paragraph-link {
@@ -228,7 +228,7 @@
   }
 
   .work-wrapper {
-    @apply relative grid grid-cols-[56%_auto] gap-2 justify-items-start my-1 p-2 rounded-lg
+    @apply relative grid max-[768px]:grid-cols-1 sm:grid-cols-[56%_auto] gap-2 justify-items-start my-1 p-2 rounded-lg
           before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0
           before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out
           hover:before:w-[calc(100%+1rem)];
