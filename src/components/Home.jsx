@@ -35,7 +35,7 @@ function Home() {
               </Reveal>
               </div>
               
-              <section id="projects-and-works" className=''>
+              <section id="projects-and-works" className='projects-and-works'>
                 <ProjectCard />
                 <Work />
               </section>
