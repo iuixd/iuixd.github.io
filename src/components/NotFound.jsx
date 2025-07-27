@@ -14,25 +14,27 @@ const NotFound = () => {
     <>
       <div class="flex h-screen items-center justify-center text-turquoise-900">
         <div class="text-center">
-          <img src={myPhoto} className="w-16 h-16 mb-10 mx-auto" />
-          <p className="">The page you're looking for can't be found.</p>
-          <p className="mt-2 text-9xl">404</p>
+          <div className="flex items-center pb-6">
+            <p className="flex items-center">
+              <span className="mr-1 text-4xl font-bold">404</span> <div class="border-l border-turquoise-900 h-6 mx-4"></div> Page not found.
+            </p>
+          </div>
 
-          <div className="group sub-content-wrapper h-full items-center justify-center transition-all duration-300 ease-in-out">
+          <div className="flex items-center justify-center transition-all duration-300 ease-in-out">
             <Link
               to="#"
               onClick={(e) => {
                 e.preventDefault();
                 window.history.back();
               }}
-              className="group flex w-fit h-12 px-4 text-xs font-medium group-hover:font-semibold items-center justify-center text-turquoise-600 group-hover:text-turquoise-900 bg-turquoise-100/40  group-hover:bg-turquoise-100/60 rounded-full transition-colors duration-150 ease-in-out cursor-pointer"
+              className="group flex w-fit h-12 pl-4 pr-5 text-sm font-medium group-hover:font-semibold items-center justify-center text-violet-700 hover:text-white border border-violet-500/20 hover:bg-violet-500 rounded-full transition-colors duration-150 ease-in-out cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
                 fill="currentColor"
-                className="w-5 h-5 mr-2 fill-turquoise-600 group-hover:fill-turquoise-900"
+                className="w-5 h-5 mr-2 fill-violet-700 group-hover:fill-white"
                 viewBox="0 0 16 16"
               >
                 <path
