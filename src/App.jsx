@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import DesignLab from "./components/DesignLab";
+import VibeDesign from "./components/VibeDesigns";
 import GitHub from "./components/GitHub";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "design-lab",
-        element: <DesignLab />,
+        element: <VibeDesign />,
       },
       {
         path: "github",

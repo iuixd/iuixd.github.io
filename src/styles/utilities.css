@@ -37,12 +37,14 @@
   }
 
   .video-play-btn {
-    @apply absolute w-16 h-16 rounded-full bg-turquoise-300 opacity-50 flex items-center justify-center cursor-pointer
-          transition hover:opacity-100 hover:w-17 hover:h-17;
+    @apply absolute 
+            min-[360px]:w-26 min-[360px]:h-26 sm:w-16 sm:h-16 min-[360px]:hover:w-27 min-[360px]:hover:h-27 sm:hover:w-17 sm:hover:h-17 
+            rounded-full bg-violet-100/80 hover:bg-violet-500 flex items-center justify-center cursor-pointer
+          transition  ;
   }
 
   .video-play-icon {
-    @apply ml-1 w-12 h-12 fill-turquoise-900 hover:w-13 hover:h-13;
+    @apply ml-1 w-8 h-8 min-[360px]:w-18 min-[360px]:h-18 sm:w-8 sm:h-8 fill-violet-800/80;
   }
 
    /* === Composed Utility Classes Using Base Components === */

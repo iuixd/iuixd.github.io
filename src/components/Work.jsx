@@ -55,7 +55,7 @@ const jobs = [
     alt: "Target Logo",
   },
   {
-    companyName: "Innominds Software Pvt Ltd",
+    companyName: "Innominds Software",
     designation: "Senior UX Manager",
     duration: "Sep 2021 to Jul 2022",
     logo: "imLogo",
@@ -84,7 +84,7 @@ const jobs = [
   },
   {
     companyName: "DBS Bank Singapore",
-    designation: "UI UX Tech Lead Consultant",
+    designation: "UI/UX Tech Lead Consultant",
     duration: "Aug 2015 to Aug 2016",
     logo: "dbsLogo",
     alt: "DBS Bank Logo",

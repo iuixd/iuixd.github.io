@@ -273,12 +273,12 @@ const ProjectCard = () => {
                 {showVideoLink && (
                   <a
                     href={youtubeLink}
-                    className="video-play-btn"
+                    className="group video-play-btn"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <svg
-                      className="video-play-icon"
+                      className="video-play-icon group-hover:fill-white min-[360px]:group-w-18 min-[360px]:group-h-18 sm:group-hover:w-9 sm:group-hover:h-9"
                       viewBox="0 0 16 16"
                     >
                       <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
