@@ -41,8 +41,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const navItems = [
     { label: 'About', path: '/about' },
-    { label: 'Vibe-Coding Apps', path: '/vibe-coding-apps' },
     { label: 'GitHub', path: '/github' },
+    { label: 'Vibe-Coding Apps', path: '/vibe-coding-apps' },
     { label: 'Contact', path: '/contact' },
   ];
 
