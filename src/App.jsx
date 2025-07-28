@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
-import VibeDesign from "./components/VibeDesigns";
+import VibeCodingApps from "./components/VibeCodingApps";
 import GitHub from "./components/GitHub";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "design-lab",
-        element: <VibeDesign />,
+        path: "vibe-coding-apps",
+        element: <VibeCodingApps />,
       },
       {
         path: "github",

@@ -6,7 +6,7 @@ import myPhoto from "../assets/myPhoto.png";
 import thumbnailCBM from "../assets/thumbnailCBM.png";
 import Consultant from "../assets/Consultant.svg";
 
-const VibeDesigns = () => {
+const VibeCodingApps = () => {
   return (
     <>
       <div
@@ -61,4 +61,4 @@ const VibeDesigns = () => {
   );
 };
 
-export default VibeDesigns;
+export default VibeCodingApps;
