@@ -50,20 +50,27 @@ const VibeCodingApps = () => {
               <ol className="h-full border-s border-turquoise-500">
                 <li className="mb-16">
                   <div className="flex-start flex items-center pt-8">
-                    <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/50 border-3 border-turquoise-300/50"></div>
+                    <div className="-ms-[7px] me-0 h-[12px] w-[14px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
                     <p className="flex mx-6 text-sm text-turquoise-700">2025</p>
                     
                     <Reveal>
                       <a
                         href="https://leakshield.lovable.app/"
                         target="_blank"
-                        className="group flex flex-col w-[350px] h-fit p-6 items-center border border-white/70 hover:border-black/70 rounded-xl shadow-sm bg-white/20 hover:bg-turquoise-900 transition-all"
+                        className="group flex flex-col w-[350px] h-fit items-center rounded-[24px] overflow-hidden bg-turquoise-600 shadow-turquoise-900/10
+                        shadow-l hover:shadow-xl hover:scale-101 transition-all duration-300"
                       >
-                        <div className="flex flex-row justify-between items-center w-full mb-6 text-[11px] text-black/70 group-hover:text-white/50">
-                          <span className="text-left">August 1, 2025</span>
+                        <img
+                          className="w-full z-0 group-hover:scale-110 transition-transform duration-300"
+                          src="/assets/leakshield-thumbnail.webp"
+                          alt="Thubmnail to LeakShield - Vibe-Coding App"
+                        />
+                        
+                        <div className="flex flex-row z-2 justify-between items-center w-full px-4 pt-4 pb-2 text-[11px] text-black/70 bg-turquoise-600">
+                          <span className="text-left">August, 2025</span>
                           <div className="flex flex-row items-center gap-2">
                             <span className="text-right">On </span>
-                            <span className="flex flex-row items-center gap-1 font-bold text-right">
+                            <span className="flex flex-row items-center gap-[2px] font-bold text-right">
                               <img
                                 className="h-[10px]"
                                 src="/assets/lovable-logo.png"
@@ -73,19 +80,10 @@ const VibeCodingApps = () => {
                             </span>
                           </div>
                         </div>
-                        <img
-                          className="w-full"
-                          src="/assets/leakshield-thumbnail.webp"
-                          alt="Thubmnail to LeakShield - Vibe-Coding App"
-                        />
-                        <div className="flex flex-col mt-6 justify-between leading-normal">
-                          <h5 className="mb-4 text-[17px] font-semibold leading-6 tracking-tight text-black group-hover:text-white">
+                        <div className="flex flex-col w-full px-4 pb-6 leading-normal">
+                          <h5 className="text-[17px] font-semibold leading-6 text-black">
                             Gas Leak & Pipeline Monitoring App
                           </h5>
-                          <p className="text-[13px] font-normal text-black/70 group-hover:text-white/50">
-                            Real-time UX for gas leak and pipeline safety monitoring in
-                            control centers.
-                          </p>
                         </div>
                       </a>
                     </Reveal>
