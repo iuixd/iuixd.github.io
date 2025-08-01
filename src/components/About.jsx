@@ -16,7 +16,7 @@ const About = () => {
         className="fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0 border-1"
       ></div>
 
-      <div className="relative flex flex-col items-center">
+      <div className="relative flex flex-col max-[360px]:items-start min-[360px]:items-center">
         <div className="static flex flex-col self-auto min-[360px]:w-full md:w-full lg:w-[1024px] h-auto text-white">
           <Link
             to="/"
@@ -34,7 +34,8 @@ const About = () => {
       <div className="body-wrapper h-full">
         <div className="subpage-body-container">
           <div className="sub-content-wrapper h-full transition-all duration-300 ease-in-out">
-            <Link to="/" className="group sub-backhome-link">
+            <Link
+            to="/" className="group sub-backhome-link cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

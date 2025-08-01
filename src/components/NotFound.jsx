@@ -12,8 +12,8 @@ const NotFound = () => {
 
   return (
     <>
-      <div class="flex h-screen items-center justify-center text-turquoise-900">
-        <div class="text-center">
+      <div className="flex h-screen items-center justify-center text-turquoise-900">
+        <div className="text-center">
           <div className="flex items-center pb-6">
             <p className="flex items-center">
               <span className="mr-1 text-4xl font-bold">404</span> <div class="border-l border-turquoise-900 h-6 mx-4"></div> Page not found.
