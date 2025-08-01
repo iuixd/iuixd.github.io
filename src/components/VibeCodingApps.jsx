@@ -57,7 +57,7 @@ const VibeCodingApps = () => {
                       <a
                         href="https://leakshield.lovable.app/"
                         target="_blank"
-                        className="group flex flex-col w-[350px] h-fit p-6 items-center border border-white/70 hover:border-black/70 rounded-xl shadow-sm bg-white/20 hover:bg-turquoise-900"
+                        className="group flex flex-col w-[350px] h-fit p-6 items-center border border-white/70 hover:border-black/70 rounded-xl shadow-sm bg-white/20 hover:bg-turquoise-900 transition-all"
                       >
                         <div className="flex flex-row justify-between items-center w-full mb-6 text-[11px] text-black/70 group-hover:text-white/50">
                           <span className="text-left">August 1, 2025</span>

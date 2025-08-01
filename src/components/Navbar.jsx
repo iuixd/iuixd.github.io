@@ -170,8 +170,8 @@ const Navbar = () => {
                   }}
                   className={`focus:outline-none ${
                     location.pathname === item.path
-                      ? "text-violet-900 font-medium"
-                      : "text-turquoise-900 group-hover:text-violet-900"
+                      ? "font-regular"
+                      : "text-turquoise-900"
                   }`}
                   aria-current={
                     location.pathname === item.path ? "page" : undefined
