@@ -49,15 +49,17 @@ const VibeCodingApps = () => {
             <section className="flex h-full max-[550px]:pl-[52px] sm:pl-[120px] ">
               <ol className="h-full border-s border-turquoise-500">
                 <li className="ml-22 font-extrabold text-7xl">
-                  Recent <br/>
+                  <Reveal>Recent <br/>
                   <span className="opacity-60">Projects</span>
+                  </Reveal>
                 </li>
                 <li className="mb-16">
+                  <Reveal>
                   <div className="flex-start flex items-center pt-8">
-                    <div className="-ms-[7px] me-0 h-[12px] w-[14px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
+                    <div className="-ms-[7px] me-0 h-[14px] w-[14px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
                     <p className="flex mx-6 text-sm text-turquoise-700">2025</p>
                     
-                    <Reveal>
+                    
                       <a
                         href="https://leakshield.lovable.app/"
                         target="_blank"
@@ -90,8 +92,8 @@ const VibeCodingApps = () => {
                           </h5>
                         </div>
                       </a>
-                    </Reveal>
                   </div>
+                    </Reveal>
                 </li>
                 <li className="mb-16">
                   <div className="flex-start flex items-center">
