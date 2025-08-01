@@ -48,6 +48,10 @@ const VibeCodingApps = () => {
 
             <section className="flex h-full max-[550px]:pl-[52px] sm:pl-[120px] ">
               <ol className="h-full border-s border-turquoise-500">
+                <li className="ml-22 font-extrabold text-7xl">
+                  Recent <br/>
+                  <span className="opacity-60">Projects</span>
+                </li>
                 <li className="mb-16">
                   <div className="flex-start flex items-center pt-8">
                     <div className="-ms-[7px] me-0 h-[12px] w-[14px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
@@ -66,7 +70,7 @@ const VibeCodingApps = () => {
                           alt="Thubmnail to LeakShield - Vibe-Coding App"
                         />
                         
-                        <div className="flex flex-row z-2 justify-between items-center w-full px-4 pt-4 pb-2 text-[11px] text-black/70 bg-turquoise-600">
+                        <div className="flex flex-row z-2 justify-between items-center w-full px-4 pt-4 pb-2 text-[11px] text-white/70 bg-turquoise-600">
                           <span className="text-left">August, 2025</span>
                           <div className="flex flex-row items-center gap-2">
                             <span className="text-right">On </span>
@@ -81,7 +85,7 @@ const VibeCodingApps = () => {
                           </div>
                         </div>
                         <div className="flex flex-col w-full px-4 pb-6 leading-normal">
-                          <h5 className="text-[17px] font-semibold leading-6 text-black">
+                          <h5 className="text-[17px] font-semibold leading-6 text-white/90">
                             Gas Leak & Pipeline Monitoring App
                           </h5>
                         </div>
@@ -91,14 +95,14 @@ const VibeCodingApps = () => {
                 </li>
                 <li className="mb-16">
                   <div className="flex-start flex items-center">
-                    <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
-                    <p className="flex mx-6 text-sm text-turquoise-700/75">2026</p>
+                    <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/50 border-3 border-turquoise-300/50"></div>
+                    <p className="flex mx-6 text-sm text-turquoise-700/50">2026</p>
                   </div>
                 </li>
                 <li className="mb-16">
                   <div className="flex-start flex items-center">
-                    <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/50 border-3 border-turquoise-300/50"></div>
-                    <p className="flex mx-6 text-sm text-turquoise-700/50">2027</p>
+                    <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/30 border-3 border-turquoise-300/30"></div>
+                    <p className="flex mx-6 text-sm text-turquoise-700/30">2027</p>
                   </div>
                 </li>
               </ol>
