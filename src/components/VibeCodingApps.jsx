@@ -88,6 +88,7 @@ const VibeCodingApps = () => {
                         </div>
                         <div className="flex flex-col w-full px-4 pb-6 leading-normal">
                           <h5 className="text-[17px] font-semibold leading-6 text-white/90">
+                            High-performing UX for <br/> 
                             Gas Leak & Pipeline Monitoring App
                           </h5>
                         </div>
