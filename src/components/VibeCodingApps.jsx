@@ -121,7 +121,7 @@ const VibeCodingApps = () => {
                           <div
                             data-tooltip-id="figma"
                             data-tooltip-content="Figma"
-                            className="w-8 h-8 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                           >
                             <img src={figmaLogo} alt="Figma Logo" />
                           </div>
@@ -131,7 +131,7 @@ const VibeCodingApps = () => {
                           <div
                             data-tooltip-id="react"
                             data-tooltip-content="React"
-                            className="w-8 h-8 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                           >
                             <img src={reactIcon} alt="React Logo" />
                           </div>
@@ -141,7 +141,7 @@ const VibeCodingApps = () => {
                           <div
                             data-tooltip-id="tailwind"
                             data-tooltip-content="Tailwind CSS"
-                            className="w-8 h-8 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                           >
                             <img src={tailwindLogo} alt="Tailwind Logo" />
                           </div>
@@ -151,7 +151,7 @@ const VibeCodingApps = () => {
                           <div
                             data-tooltip-id="supabase"
                             data-tooltip-content="Supabase"
-                            className="w-8 h-8 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                           >
                             <img src={supabaseLogo} alt="Supabase Logo" />
                           </div>
