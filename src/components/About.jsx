@@ -51,7 +51,7 @@ const About = () => {
               </svg>
             </Link>
             <p className="h-full text-turquoise-900 font-medium size-3.5 w-full py-18 text-center justify-center">
-              Coming soon...
+              ABOUT Coming soon...
             </p>
           </div>
 
