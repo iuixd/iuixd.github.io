@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import videoBg from '../assets/videoBg.mp4';
+import videoBg from '../assets/videoBg.webm';
 import useShouldHideVideo from "./useShouldHideVideo";
 
 const VideoBg = () => {

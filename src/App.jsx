@@ -1,11 +1,12 @@
 import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
-import VibeCodingApps from "./components/VibeCodingApps";
-import GitHub from "./components/GitHub";
-import Contact from "./components/Contact";
+import { lazy, Suspense } from "react";
+const About = lazy(() => import("./components/About"));
+const VibeCodingApps = lazy(() => import("./components/VibeCodingApps"));
+const GitHub = lazy(() => import("./components/GitHub"));
+const Contact = lazy(() => import("./components/Contact"));
 import NotFound from "./components/NotFound";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";
 
 // Define layout with navbar
 const Layout = () => (
@@ -27,11 +28,19 @@ const router = createHashRouter([
       },
       {
         path: "about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "vibe-coding-apps",
-        element: <VibeCodingApps />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <VibeCodingApps />
+          </Suspense>
+        ),
       },
       {
         path: "github",
@@ -39,7 +48,11 @@ const router = createHashRouter([
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <Contact />
+          </Suspense>
+        ),
       },
     ],
   },
