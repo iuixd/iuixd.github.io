@@ -22,11 +22,7 @@ const NotFound = () => {
 
           <div className="flex items-center justify-center transition-all duration-300 ease-in-out">
             <Link
-              to="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.history.back();
-              }}
+              to="/"
               className="group flex w-fit h-12 pl-4 pr-5 text-sm font-medium group-hover:font-semibold items-center justify-center text-violet-700 hover:text-white border border-violet-500/20 hover:bg-violet-500 rounded-full transition-colors duration-150 ease-in-out cursor-pointer"
             >
               <svg
