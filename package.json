@@ -9,7 +9,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build": "vite build",
     "deploy": "gh-pages -d dist -u \"iuixd <text2sri@gmail.com>\""
   },
   "dependencies": {
@@ -19,7 +18,9 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
-    "tailwindcss": "^4.1.11"
+    "react-tooltip": "^5.29.1",
+    "tailwindcss": "^4.1.11",
+    "tailwindcss-motion": "^1.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
