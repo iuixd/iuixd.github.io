@@ -276,6 +276,7 @@ const ProjectCard = () => {
                     className="group video-play-btn"
                     target="_blank"
                     rel="noopener noreferrer"
+                     aria-label="Play video"
                   >
                     <svg
                       className="video-play-icon group-hover:fill-white min-[360px]:group-w-18 min-[360px]:group-h-18 sm:group-hover:w-9 sm:group-hover:h-9"
@@ -283,6 +284,7 @@ const ProjectCard = () => {
                     >
                       <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
                     </svg>
+                    <span className="sr-only">Play video</span>
                   </a>
                 )}
 
@@ -301,9 +303,9 @@ const ProjectCard = () => {
 
                 {mainContent}
 
-                <h4 className="card-content card-content-subtitle">
+                <h3 className="card-content card-content-subtitle">
                   {responsibilityLabel}
-                </h4>
+                </h3>
                 <div>{responsibilityContent}</div>
 
                 {showCaseStudy ? (

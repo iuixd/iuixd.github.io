@@ -140,16 +140,17 @@ const Navbar = () => {
             ref={navRef}
             onMouseLeave={handleMouseLeave}
             role="menubar"
+            aria-label="Main navigation"
             className={`relative nav-menubar ${
               isMenuOpen ? "max-[550px]:opacity-100" : "max-[550px]:opacity-0"
             } max-[550px]:mr-[16px] max-[550px]:mt-[50px] max-[550px]:flex-col max-[550px]:w-[300px] w-auto min-[550px]:flex-row`}
             x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}"
           >
-            
             {navItems.map((item) => (
               <li
                 key={item.path}
                 ref={(el) => (itemRefs.current[item.path] = el)}
+                role="none"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className="group nav-menuitem max-[550px]:text-center"

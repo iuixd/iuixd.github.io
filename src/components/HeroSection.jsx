@@ -23,6 +23,7 @@ const Hero = () => {
           src={myPhoto}
           className="w-24 h-24"
           x-bind:class="{'w-24 h-24': !scrolledFromTop, 'w-12 h-12': scrolledFromTop}"
+          alt="Srikumar's Photo"
         />
       </Reveal>
       </a>
