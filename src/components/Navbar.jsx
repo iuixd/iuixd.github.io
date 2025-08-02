@@ -193,6 +193,7 @@ const Navbar = () => {
                 className="nav-active-itembg"
                 layout
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                role="none"
               />
             )}
           </ul>
