@@ -98,7 +98,7 @@ const VibeCodingApps = () => {
 
                         <div className="flex flex-col z-2 justify-between items-center w-full px-4 py-4 pb-0 text-[11px] text-white/70 bg-turquoise-600">
                           <div className="flex flex-col pb-4 w-full leading-normal">
-                            <h1 className="text-[22px] font-semibold leading-7 text-white/90">
+                            <h1 className="text-[21px] font-semibold leading-7 tracking-wider text-white/90">
                               High-performing UX for a <br />
                               Control Center & Field App
                             </h1>
