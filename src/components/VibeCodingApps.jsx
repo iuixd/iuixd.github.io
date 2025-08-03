@@ -119,13 +119,13 @@ const VibeCodingApps = () => {
                         <div className="flex flex-row justify-start gap-2 w-full px-4 pb-4">
                           {/* Figma */}
                           <div
-                            data-tooltip-id="figma"
-                            data-tooltip-content="Figma"
+                            data-tooltip-id="lovable"
+                            data-tooltip-content="Lovable AI"
                             className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                           >
-                            <img src={figmaLogo} alt="Figma Logo" />
+                            <img src={lovableLogo} alt="Figma Logo" />
                           </div>
-                          <Tooltip id="figma" place="top" className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white" />
+                          <Tooltip id="lovable" place="top" className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white" />
 
                           {/* React */}
                           <div
