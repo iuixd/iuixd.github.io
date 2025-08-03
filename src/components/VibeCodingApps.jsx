@@ -98,9 +98,9 @@ const VibeCodingApps = () => {
 
                         <div className="flex flex-col z-2 justify-between items-center w-full px-4 py-4 pb-0 text-[11px] text-white/70 bg-turquoise-600">
                           <div className="flex flex-col pb-4 w-full leading-normal">
-                            <h1 className="text-xl font-semibold leading-7 text-white/90">
-                              High-performing UX for <br />a Control Center &
-                              Field App
+                            <h1 className="text-[22px] font-semibold leading-7 text-white/90">
+                              High-performing UX for a <br />
+                              Control Center & Field App
                             </h1>
                           </div>
                           <div className="flex flex-row justify-between items-center w-full pb-4">
@@ -161,7 +161,7 @@ const VibeCodingApps = () => {
                                 className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white"
                               />
                             </div>
-                            <span className="w-fit text-xs text-turquoise-200">
+                            <span className="w-fit text-xs text-turquoise-100">
                               Jul 2025
                             </span>
                           </div>
