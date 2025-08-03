@@ -96,66 +96,75 @@ const VibeCodingApps = () => {
                           />
                         </span>
 
-                        <div className="flex flex-row z-2 justify-between items-center w-full px-4 pt-4 pb-2 text-[11px] text-white/70 bg-turquoise-600">
-                          <span className="text-left">August, 2025</span>
-                          <div className=" flex flex-row items-center gap-2">
-                            <span className="text-right">On </span>
-                            <span className="flex flex-row items-center gap-[2px] font-bold text-right">
-                              <img
-                                className="h-[10px]"
-                                src="/assets/lovable-logo.png"
-                                alt="Lovable AI Logo"
+                        <div className="flex flex-col z-2 justify-between items-center w-full px-4 py-4 pb-0 text-[11px] text-white/70 bg-turquoise-600">
+                          <div className="flex flex-col pb-4 w-full leading-normal">
+                            <h1 className="text-xl font-semibold leading-7 text-white/90">
+                              High-performing UX for <br />a Control Center &
+                              Field App
+                            </h1>
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full pb-4">
+                            <div className="flex flex-row justify-start gap-2 w-fit">
+                              {/* Figma */}
+                              <div
+                                data-tooltip-id="lovable"
+                                data-tooltip-content="Lovable AI"
+                                className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                              >
+                                <img src={lovableLogo} alt="Figma Logo" />
+                              </div>
+                              <Tooltip
+                                id="lovable"
+                                place="top"
+                                className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white"
                               />
-                              Lovable
+
+                              {/* React */}
+                              <div
+                                data-tooltip-id="react"
+                                data-tooltip-content="React"
+                                className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                              >
+                                <img src={reactIcon} alt="React Logo" />
+                              </div>
+                              <Tooltip
+                                id="react"
+                                place="top"
+                                className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white"
+                              />
+
+                              {/* Tailwind */}
+                              <div
+                                data-tooltip-id="tailwind"
+                                data-tooltip-content="Tailwind CSS"
+                                className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                              >
+                                <img src={tailwindLogo} alt="Tailwind Logo" />
+                              </div>
+                              <Tooltip
+                                id="tailwind"
+                                place="top"
+                                className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white"
+                              />
+
+                              {/* Supabase */}
+                              <div
+                                data-tooltip-id="supabase"
+                                data-tooltip-content="Supabase"
+                                className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                              >
+                                <img src={supabaseLogo} alt="Supabase Logo" />
+                              </div>
+                              <Tooltip
+                                id="supabase"
+                                place="top"
+                                className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white"
+                              />
+                            </div>
+                            <span className="w-fit text-xs text-turquoise-200">
+                              Jul 2025
                             </span>
                           </div>
-                        </div>
-                        <div className="flex flex-col w-full px-4 pb-4 leading-normal">
-                          <h5 className="text-[17px] font-semibold leading-6 text-white/90">
-                            High-performing UX for <br />
-                            Gas Leak & Pipeline Monitoring App
-                          </h5>
-                        </div>
-                        <div className="flex flex-row justify-start gap-2 w-full px-4 pb-4">
-                          {/* Figma */}
-                          <div
-                            data-tooltip-id="lovable"
-                            data-tooltip-content="Lovable AI"
-                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
-                          >
-                            <img src={lovableLogo} alt="Figma Logo" />
-                          </div>
-                          <Tooltip id="lovable" place="top" className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white" />
-
-                          {/* React */}
-                          <div
-                            data-tooltip-id="react"
-                            data-tooltip-content="React"
-                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
-                          >
-                            <img src={reactIcon} alt="React Logo" />
-                          </div>
-                          <Tooltip id="react" place="top" className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white" />
-
-                          {/* Tailwind */}
-                          <div
-                            data-tooltip-id="tailwind"
-                            data-tooltip-content="Tailwind CSS"
-                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
-                          >
-                            <img src={tailwindLogo} alt="Tailwind Logo" />
-                          </div>
-                          <Tooltip id="tailwind" place="top" className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white" />
-
-                          {/* Supabase */}
-                          <div
-                            data-tooltip-id="supabase"
-                            data-tooltip-content="Supabase"
-                            className="w-7 h-7 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
-                          >
-                            <img src={supabaseLogo} alt="Supabase Logo" />
-                          </div>
-                          <Tooltip id="supabase" place="top" className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white" />
                         </div>
                       </a>
                     </div>
