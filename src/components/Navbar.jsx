@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import Reveal from "./Reveal";
-import myPhoto from "../assets/myPhoto.png";
+import myPhoto from "../assets/myPhoto.webp";
 
 const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);

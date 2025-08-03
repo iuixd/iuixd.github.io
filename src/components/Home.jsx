@@ -4,7 +4,7 @@ import Reveal from './Reveal';
 import HeroSection from './HeroSection';
 import ProjectCard from './ProjectCard';
 import VideoBg from './VideoBg';
-import certBadges from '../assets/certBadges.png';
+import certBadges from '../assets/certBadges.webp';
 import Work from './Work';
 
 function Home() {

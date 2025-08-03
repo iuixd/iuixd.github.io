@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import myPhoto from "../assets/myPhoto.png";
+import myPhoto from "../assets/myPhoto.webp";
 
 const NotFound = () => {
   const navigate = useNavigate();

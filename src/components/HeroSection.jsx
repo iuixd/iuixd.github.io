@@ -1,6 +1,6 @@
 import React from "react";
 import SocialLinks from './SocialLinks';
-import myPhoto from '../assets/myPhoto.png';
+import myPhoto from '../assets/myPhoto.webp';
 import Alpine from 'alpinejs';
 import Reveal from './Reveal';
 

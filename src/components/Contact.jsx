@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import myPhoto from "../assets/myPhoto.png";
-import thumbnailCBM from "../assets/thumbnailCBM.png";
+import myPhoto from "../assets/myPhoto.webp";
 import Consultant from "../assets/Consultant.svg";
 
 const Contact = () => {

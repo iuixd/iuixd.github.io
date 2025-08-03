@@ -4,7 +4,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import myPhoto from "../assets/myPhoto.png";
+import myPhoto from "../assets/myPhoto.webp";
 import linkArrw from "../assets/external-link-arrow.svg";
 import lovableLogo from "../assets/lovable-logo.svg";
 import reactIcon from "../assets/react-icon.svg";
@@ -12,8 +12,8 @@ import supabaseLogo from "../assets/supabase-logo.svg";
 import figmaLogo from "../assets/figma-logo.svg";
 import githubLogo from "../assets/github-logo.svg";
 import tailwindLogo from "../assets/tailwind-logo.svg";
-import thumbnailCBM from "../assets/thumbnailCBM.png";
 import Consultant from "../assets/Consultant.svg";
+import thumbnailLeakShield from "../assets/leakshield-thumbnail.webp";
 import Reveal from "./Reveal";
 
 const VibeCodingApps = () => {
@@ -79,7 +79,7 @@ const VibeCodingApps = () => {
                       >
                         <img
                           className="w-full z-0 group-hover:scale-110 transition-transform duration-300"
-                          src="/assets/leakshield-thumbnail.webp"
+                          src={thumbnailLeakShield}
                           alt="Thubmnail to LeakShield - Vibe-Coding App"
                         />
 

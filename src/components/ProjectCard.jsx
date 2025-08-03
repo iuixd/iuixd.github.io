@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Reveal from './Reveal';
-import thumbnailWealthMgmt from "../assets/thumbnailWealthMgmt.png";
-import thumbnailLumenAI from "../assets/thumbnailLumenAI.png";
+import thumbnailWealthMgmt from "../assets/thumbnailWealthMgmt.webp";
+import thumbnailLumenAI from "../assets/thumbnailLumenAI.webp";
 import LumenaiLogo from "../assets/LumenaiLogo.gif";
-import thumbnailDataPrivacy from "../assets/thumbnailDataPrivacy-2.png";
-import thumbnailPetAdoption from "../assets/thumbnailPetAdoption-2.png";
-import thumbnailZeroTrust from "../assets/thumbnailZeroTrust-2.png";
-import thumbnailUnifiedDashboard from "../assets/thumbnailUnifiedDashboard-2.png";
-import userResearch from "../assets/userResearch.png";
+import thumbnailDataPrivacy from "../assets/thumbnailDataPrivacy.webp";
+import thumbnailPetAdoption from "../assets/thumbnailPetAdoption.webp";
+import thumbnailZeroTrust from "../assets/thumbnailZeroTrust.webp";
+import thumbnailUnifiedDashboard from "../assets/thumbnailUnifiedDashboard.webp";
+import userResearch from "../assets/userResearch.webp";
 
 const thumbnailMap = {
   thumbnailWealthMgmt,
