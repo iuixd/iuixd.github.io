@@ -161,7 +161,7 @@ const VibeCodingApps = () => {
                                 className="!text-xs !px-2 !py-[4px] !rounded !bg-black !text-white"
                               />
                             </div>
-                            <span className="w-fit text-xs text-turquoise-100">
+                            <span className="w-fit text-xs font-light tracking-wide text-turquoise-200">
                               Jul 2025
                             </span>
                           </div>
