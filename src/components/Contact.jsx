@@ -45,7 +45,7 @@ const Contact = () => {
                 ></path>
               </svg>
             </Link>
-            <section className="flex flex-col flex-1 gap-4 text-turquoise-900 font-medium size-3.5 w-full px-60 pb-18">
+            <section className="flex flex-col flex-1 gap-4 text-turquoise-900 font-medium size-3.5 w-full px-[20%] pb-18">
               <Reveal>
                 <h1 className="mb-16 font-extrabold text-7xl text-white">
                   Contact
@@ -57,7 +57,7 @@ const Contact = () => {
               <h3 className="w-fit font-semibold text-2xl text-turquoise-900">
                 Have a project in mind?
               </h3>
-              <p className="w-2xl py-8 text-lg text-turquoise-900">
+              <p className="w-fit py-8 text-lg text-turquoise-900">
                 You can reach out via email or WhatsApp, and I'll respond within
                 48 hours.
               </p>
