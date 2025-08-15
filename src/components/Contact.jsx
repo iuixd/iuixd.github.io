@@ -73,14 +73,10 @@ const Contact = () => {
                     <h3 className="w-full font-semibold text-[20px] max-[540px]:text-[16px] text-turquoise-900">
                       <span className="w-full text-[32px] max-[540px]:text-[24px]">👋</span> Have a project in mind?
                     </h3>
-                  </Reveal>
-                  <Reveal>
                     <p className="w-[300px] max-[540px]:w-[200px] ml-13 max-[540px]:ml-[38px] my-3 text-[14px] max-[540px]:text-[12px] text-turquoise-900">
                       You can reach out via email or WhatsApp, and I'll respond
                       within 48 hours.
                     </p>
-                  </Reveal>
-                  <Reveal>
                     <ul className="text-violet-500 ml-13 max-[540px]:ml-[38px] mb-8 text-[14px] max-[540px]:text-[12px]">
                       <li className="py-1">
                         <a
