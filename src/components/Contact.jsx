@@ -75,7 +75,7 @@ const Contact = () => {
                     </h3>
                   </Reveal>
                   <Reveal>
-                    <p className="ml-13 max-[540px]:ml-[38px] my-3 text-[14px] max-[540px]:text-[12px] text-turquoise-900">
+                    <p className="w-[300px] max-[540px]:w-[200px] ml-13 max-[540px]:ml-[38px] my-3 text-[14px] max-[540px]:text-[12px] text-turquoise-900">
                       You can reach out via email or WhatsApp, and I'll respond
                       within 48 hours.
                     </p>
