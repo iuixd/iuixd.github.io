@@ -87,13 +87,9 @@ const VibeCodingApps = () => {
                           className="absolute flex justify-center items-center w-12 h-12 top-[16px] right-[24px] 
                           group-hover:motion-preset-fade-lg 
                           group-hover:-translate-y-4 group-hover:translate-x-6 transition-transform duration-300
-                          rounded-full bg-transparent group-hover:bg-violet-300/50"
+                          rounded-full bg-transparent group-hover:bg-violet-300/50 -rotate-45"
                         >
-                          <img
-                            src={linkArrw}
-                            className="w-4 h-4 group-hover:w-4 group-hover:h-4"
-                            alt="External Link Arrow Icon"
-                          />
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </span>
 
                         <div className="flex flex-col z-2 justify-between items-center w-full px-4 py-4 pb-0 text-[11px] text-white/70 bg-turquoise-600">
