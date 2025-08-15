@@ -46,18 +46,18 @@ const Contact = () => {
                 ></path>
               </svg>
             </Link>
-            <section className="text-turquoise-900 font-medium size-3.5 w-full h-fit px-[20%] max-[540px]:px-[10%] max-[540px]:mt-[30px] pb-18">
+            <section className="text-turquoise-900 font-medium size-3.5 w-full h-fit px-[20%] max-[540px]:px-[12%] max-[540px]:mt-[30px] pb-18">
               <div className="relative w-fit h-fit ">
                 <div className="z-2 w-fit h-fit">
                   <Reveal>
-                    <h1 className="mb-16 font-extrabold text-7xl text-white">
+                    <h1 className="mb-16 font-extrabold text-7xl max-[540px]:text-5xl text-white">
                       Contact
                     </h1>
                   </Reveal>
 
                   <Reveal>
-                    <div className="relative w-100 h-116 bg-[url('../assets/contact-bg.webp')] bg-no-repeat bg-cover bg-center rounded-tr-[40px] ">
-                      <h2 className="absolute left-30 top-8 z-2 w-fit mb-8 font-bold text-4xl text-turquoise-900">
+                    <div className="relative w-100 max-[540px]:w-72 h-116 max-[540px]:h-84 bg-[url('../assets/contact-bg.webp')] bg-no-repeat bg-cover bg-center rounded-tr-[40px] ">
+                      <h2 className="absolute left-30 max-[540px]:left-23 top-8 max-[540px]:top-4 z-2 w-fit mb-8 font-bold text-4xl max-[540px]:text-2xl text-turquoise-900">
                         Let's create
                         <br />
                         amazing stuff
@@ -68,20 +68,20 @@ const Contact = () => {
                   </Reveal>
                 </div>
 
-                <div className="absolute -left-[24px] top-80 z-4 w-[426px] h-fit pl-[26px] pt-[300px] rounded-bl-[40px] border-6 border-turquoise-900">
+                <div className="absolute -left-[24px] top-80 max-[540px]:top-60 z-4 w-[426px] max-[540px]:w-[312px] h-fit pl-[26px] pt-[300px] max-[540px]:pt-[230px] rounded-bl-[40px] border-6 border-turquoise-900">
                   <Reveal>
-                    <h3 className="w-full font-semibold text-[20px] text-turquoise-900">
-                      Have a project in mind?
+                    <h3 className="w-full font-semibold text-[20px] max-[540px]:text-[16px] text-turquoise-900">
+                      <span className="w-full text-[32px] max-[540px]:text-[24px]">👋</span> Have a project in mind?
                     </h3>
                   </Reveal>
                   <Reveal>
-                    <p className="w-full my-3 text-[14px] text-turquoise-900">
-                      You can reach out via email or WhatsApp,<br/>and I'll respond
+                    <p className="ml-13 max-[540px]:ml-[38px] my-3 text-[14px] max-[540px]:text-[12px] text-turquoise-900">
+                      You can reach out via email or WhatsApp, and I'll respond
                       within 48 hours.
                     </p>
                   </Reveal>
                   <Reveal>
-                    <ul className="text-violet-500 mb-8 text-[14px]">
+                    <ul className="text-violet-500 ml-13 max-[540px]:ml-[38px] mb-8 text-[14px] max-[540px]:text-[12px]">
                       <li className="py-1">
                         <a
                           href="mailto:srikumar.design@gmail.com"
