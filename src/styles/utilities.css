@@ -191,7 +191,7 @@
   }
 
   .sub-content-wrapper {
-    @apply  flex flex-col w-full h-screen min-[300px]:mt-2 md:-mt-[60px] pt-[100px]  bg-turquoise-400/40;
+    @apply  flex flex-col w-full h-screen max-[540px]:mt-[0px] md:-mt-[60px] max-[540px]:pt-[30px] pt-[100px] bg-turquoise-400/40;
   }
 
   .sub-backhome-link {
