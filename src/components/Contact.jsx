@@ -67,7 +67,7 @@ const Contact = () => {
                     </div>
                   </Reveal>
 
-                  <div className="mt-[124px] -ml-[454px] max-[540px]:-ml-[312px] z-4 w-[456px] max-[540px]:w-[312px] h-fit pl-[108px] max-[540px]:pl-[60px] pt-[250px] max-[540px]:pt-[230px] rounded-bl-[40px] border-6 border-turquoise-900">
+                  <div className="mt-[124px] -ml-[456px] max-[540px]:-ml-[312px] z-4 w-[456px] max-[540px]:w-[312px] h-fit pl-[108px] max-[540px]:pl-[60px] pt-[250px] max-[540px]:pt-[230px] rounded-bl-[40px] border-6 border-turquoise-900">
                     <Reveal>
                       <h3 className="w-full font-medium text-[20px] max-[540px]:text-[16px] text-turquoise-900">
                         <span className="w-full text-[32px] max-[540px]:text-[20px]">
