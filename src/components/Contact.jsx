@@ -30,7 +30,7 @@ const Contact = () => {
 
       <div className="body-wrapper">
         <div className="subpage-body-container">
-          <div className="sub-content-wrapper h-[1030px] transition-all duration-300 ease-in-out">
+          <div className="sub-content-wrapper transition-all duration-300 ease-in-out">
             <Link to="/" className="group sub-backhome-link cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,18 +46,18 @@ const Contact = () => {
                 ></path>
               </svg>
             </Link>
-            <section className="text-turquoise-900 font-medium size-3.5 w-full h-fit px-[20%] max-[540px]:px-[12%] max-[540px]:mt-[30px] pb-18">
-              <div className="relative w-fit h-fit ">
-                <div className="z-2 w-fit h-fit">
-                  <Reveal>
-                    <h1 className="mb-16 font-extrabold text-7xl max-[540px]:text-5xl text-white">
-                      Contact
-                    </h1>
-                  </Reveal>
+            <section className="flex flex-col text-turquoise-900 font-medium w-full h-fit px-[20%] max-[540px]:px-[12%] max-[540px]:mt-[30px]">
 
+              <div className="flex flex-col justify-center items-center">
+              <Reveal>
+                <h1 className="flex mb-16 justify-center font-extrabold text-7xl max-[540px]:text-5xl text-white">
+                  Contact
+                </h1>
+              </Reveal>
+                <div className="flex w-fit">
                   <Reveal>
-                    <div className="relative w-100 max-[540px]:w-72 h-116 max-[540px]:h-84 bg-[url('../assets/contact-bg.webp')] bg-no-repeat bg-cover bg-center rounded-tr-[40px] ">
-                      <h2 className="absolute left-30 max-[540px]:left-23 top-8 max-[540px]:top-4 z-2 w-fit mb-8 font-bold text-4xl max-[540px]:text-2xl text-turquoise-900">
+                    <div className="w-100 max-[540px]:w-72 h-88 max-[540px]:h-84 bg-[url('../assets/contact-bg.webp')] bg-no-repeat bg-cover bg-center rounded-tr-[40px] ">
+                      <h2 className="flex z-2 w-fit mb-8 pl-30 max-[540px]:pl-20 pt-4 max-[540px]:pt-7 font-black leading-8 max-[540px]:leading-6 text-[26px] max-[540px]:text-[20px] text-turquoise-900">
                         Let's create
                         <br />
                         amazing stuff
@@ -66,59 +66,59 @@ const Contact = () => {
                       </h2>
                     </div>
                   </Reveal>
-                </div>
 
-                <div className="absolute -left-[24px] top-80 max-[540px]:top-60 z-4 w-[426px] max-[540px]:w-[312px] h-fit pl-[26px] pt-[300px] max-[540px]:pt-[230px] rounded-bl-[40px] border-6 border-turquoise-900">
-                  <Reveal>
-                    <h3 className="w-full font-semibold text-[20px] max-[540px]:text-[16px] text-turquoise-900">
-                      <span className="w-full text-[32px] max-[540px]:text-[24px]">
-                        👋
-                      </span>{" "}
-                      Have a project in mind?
-                    </h3>
-                    <p className="w-[300px] max-[540px]:w-[200px] ml-13 max-[540px]:ml-[38px] my-3 text-[14px] max-[540px]:text-[12px] text-turquoise-900">
-                      You can reach out via email or WhatsApp, and I'll respond
-                      within 48 hours.
-                    </p>
-                    <ul className="text-violet-500 ml-13 max-[540px]:ml-[38px] mb-8 text-[14px] max-[540px]:text-[12px]">
-                      <li className="py-1">
-                        <a
-                          href="mailto:srikumar.design@gmail.com"
-                          className="flex flex-row gap-4 w-fit items-center cursor-pointer underline hover:no-underline"
-                        >
-                          <svg
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            viewBox="0 0 16 16"
-                            className="w-4 h-4 fill-turquoise-900"
+                  <div className="mt-[124px] -ml-[454px] max-[540px]:-ml-[312px] z-4 w-[456px] max-[540px]:w-[312px] h-fit pl-[108px] max-[540px]:pl-[60px] pt-[250px] max-[540px]:pt-[230px] rounded-bl-[40px] border-6 border-turquoise-900">
+                    <Reveal>
+                      <h3 className="w-full font-medium text-[20px] max-[540px]:text-[16px] text-turquoise-900">
+                        <span className="w-full text-[32px] max-[540px]:text-[20px]">
+                          👋
+                        </span>{" "}
+                        Have a project in mind?
+                      </h3>
+                      <p className="w-[240px] max-[540px]:w-[200px] ml-[50px] max-[540px]:ml-[32px] my-3 font-medium text-[14px] max-[540px]:text-[12px] text-turquoise-900">
+                        You can reach out via email or WhatsApp, and I'll
+                        respond within 48 hours.
+                      </p>
+                      <ul className="text-violet-500 ml-[50px] max-[540px]:ml-[32px] mb-8 text-[14px] max-[540px]:text-[12px]">
+                        <li className="py-1">
+                          <a
+                            href="mailto:srikumar.design@gmail.com"
+                            className="flex flex-row gap-4 max-[540px]:gap-2 w-fit items-center cursor-pointer underline hover:no-underline"
                           >
-                            <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882zM15 7.383l-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765z" />
-                          </svg>
-                          <span className="w-fit">
-                            srikumar.design@gmail.com
-                          </span>
-                        </a>
-                      </li>
-                      <li className="py-1">
-                        <a
-                          href="https://api.whatsapp.com/send/?phone=918605573777&text=Hello+Srikumar%2C+Let%27s+connect&type=phone_number&app_absent=0"
-                          className="flex flex-row gap-4 w-fit items-center cursor-pointer underline hover:no-underline"
-                        >
-                          <svg
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            viewBox="0 0 16 16"
-                            className="w-4 h-4 fill-turquoise-900"
+                            <svg
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              viewBox="0 0 16 16"
+                              className="w-4 h-4 fill-turquoise-900"
+                            >
+                              <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882zM15 7.383l-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765z" />
+                            </svg>
+                            <span className="w-fit">
+                              srikumar.design@gmail.com
+                            </span>
+                          </a>
+                        </li>
+                        <li className="py-1">
+                          <a
+                            href="https://api.whatsapp.com/send/?phone=918605573777&text=Hello+Srikumar%2C+Let%27s+connect&type=phone_number&app_absent=0"
+                            className="flex flex-row gap-4 max-[540px]:gap-2 w-fit items-center cursor-pointer underline hover:no-underline"
                           >
-                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                          </svg>
-                          <span className="w-fit">+(91) 86055 73777</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </Reveal>
+                            <svg
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              viewBox="0 0 16 16"
+                              className="w-4 h-4 fill-turquoise-900"
+                            >
+                              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                            </svg>
+                            <span className="w-fit">+(91) 86055 73777</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </Reveal>
+                  </div>
                 </div>
               </div>
             </section>
