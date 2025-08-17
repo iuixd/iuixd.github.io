@@ -6,6 +6,7 @@ import myPhoto from "../assets/myPhoto.webp";
 import contactBG from "../assets/contact-bg.webp";
 import Consultant from "../assets/Consultant.svg";
 import Reveal from "./Reveal";
+import Footer from './Footer';
 
 const Contact = () => {
   return (
@@ -124,7 +125,7 @@ const Contact = () => {
             </section>
           </div>
 
-          <div className="footer">© 2025 srikumar.design</div>
+          <Footer />
         </div>
       </div>
     </>

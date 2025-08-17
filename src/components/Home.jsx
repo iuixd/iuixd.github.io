@@ -6,6 +6,7 @@ import ProjectCard from './ProjectCard';
 import VideoBg from './VideoBg';
 import certBadges from '../assets/certBadges.webp';
 import Work from './Work';
+import Footer from './Footer';
 
 function Home() {
   const navigate = useNavigate();
@@ -41,9 +42,7 @@ function Home() {
               </section>
 
             </div>
-            <div className="footer">
-              © 2025 srikumar.design
-            </div>
+            <Footer />
           </div>
         </div>
       </>

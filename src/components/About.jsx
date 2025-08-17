@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/myPhoto.webp";
 import Consultant from "../assets/Consultant.svg";
+import Footer from './Footer';
 
 const About = () => {
   return (
@@ -32,7 +33,7 @@ const About = () => {
 
       <div className="body-wrapper h-full">
         <div className="subpage-body-container">
-          <div className="sub-content-wrapper h-full transition-all duration-300 ease-in-out">
+          <section className="sub-content-wrapper h-full transition-all duration-300 ease-in-out">
             <Link
             to="/" className="group sub-backhome-link cursor-pointer">
               <svg
@@ -52,9 +53,9 @@ const About = () => {
             <p className="h-full text-turquoise-900 font-medium size-3.5 w-full py-18 text-center justify-center">
               ABOUT Coming soon...
             </p>
-          </div>
+          </section>
 
-          <div className="footer">© 2025 srikumar.design</div>
+          <Footer />
         </div>
       </div>
     </>

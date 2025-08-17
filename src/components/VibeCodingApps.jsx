@@ -15,6 +15,7 @@ import tailwindLogo from "../assets/tailwind-logo.svg";
 import Consultant from "../assets/Consultant.svg";
 import thumbnailLeakShield from "../assets/leakshield-thumbnail.webp";
 import Reveal from "./Reveal";
+import Footer from './Footer';
 
 const VibeCodingApps = () => {
   return (
@@ -185,8 +186,7 @@ const VibeCodingApps = () => {
               </ol>
             </section>
           </div>
-
-          <div className="footer">© 2025 srikumar.design</div>
+          <Footer />
         </div>
       </div>
     </>

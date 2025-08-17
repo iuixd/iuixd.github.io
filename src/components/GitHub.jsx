@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/myPhoto.webp";
 import Consultant from "../assets/Consultant.svg";
+import Footer from './Footer';
 
 const GitHub = () => {
   return (
@@ -52,7 +53,7 @@ const GitHub = () => {
             </p>
           </div>
 
-          <div className="footer">© 2025 srikumar.design</div>
+          <Footer />
         </div>
       </div>
     </>
