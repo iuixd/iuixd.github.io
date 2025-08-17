@@ -6,7 +6,7 @@ import myPhoto from "../assets/myPhoto.webp";
 import contactBG from "../assets/contact-bg.webp";
 import Consultant from "../assets/Consultant.svg";
 import Reveal from "./Reveal";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 const Contact = () => {
   return (
@@ -32,29 +32,30 @@ const Contact = () => {
       <div className="body-wrapper">
         <div className="subpage-body-container">
           <div className="sub-content-wrapper transition-all duration-300 ease-in-out">
-            <Link to="/" className="group sub-backhome-link cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="w-5 h-5 fill-turquoise-600 group-hover:fill-turquoise-900"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
-                ></path>
-              </svg>
-            </Link>
+            <div>
+              <Link to="/" className="group sub-backhome-link cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="w-5 h-5 fill-turquoise-600 group-hover:fill-turquoise-900"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
+                  ></path>
+                </svg>
+              </Link>
+            </div>
             <section className="flex flex-col text-turquoise-900 font-medium w-full h-fit px-[20%] max-[540px]:px-[12%] max-[540px]:mt-[30px]">
-
               <div className="flex flex-col justify-center items-center">
-              <Reveal>
-                <h1 className="flex mb-16 justify-center font-extrabold text-7xl max-[540px]:text-5xl text-white">
-                  Contact
-                </h1>
-              </Reveal>
+                <Reveal>
+                  <h1 className="flex mb-16 justify-center font-extrabold text-7xl max-[540px]:text-5xl text-white">
+                    Contact
+                  </h1>
+                </Reveal>
                 <div className="flex w-fit">
                   <Reveal>
                     <div className="w-100 max-[540px]:w-72 h-88 max-[540px]:h-84 bg-[url('../assets/contact-bg.webp')] bg-no-repeat bg-cover bg-center rounded-tr-[40px] ">

@@ -15,7 +15,7 @@ import tailwindLogo from "../assets/tailwind-logo.svg";
 import Consultant from "../assets/Consultant.svg";
 import thumbnailLeakShield from "../assets/leakshield-thumbnail.webp";
 import Reveal from "./Reveal";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 const VibeCodingApps = () => {
   return (
@@ -41,20 +41,22 @@ const VibeCodingApps = () => {
       <div className="body-wrapper h-full">
         <div className="subpage-body-container">
           <div className="sub-content-wrapper transition-all duration-300 ease-in-out">
-            <Link to="/" className="group sub-backhome-link cursor-pointer">
-              <svg
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="w-5 h-5 fill-turquoise-600 group-hover:fill-turquoise-900"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
-                ></path>
-              </svg>
-            </Link>
+            <div>
+              <Link to="/" className="group sub-backhome-link cursor-pointer">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  className="w-5 h-5 fill-turquoise-600 group-hover:fill-turquoise-900"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
+                  ></path>
+                </svg>
+              </Link>
+            </div>
 
             <section className="flex h-full max-[550px]:pl-[52px] sm:pl-[120px] ">
               <ol className="h-full border-s border-turquoise-500">
@@ -90,7 +92,19 @@ const VibeCodingApps = () => {
                           group-hover:-translate-y-4 group-hover:translate-x-6 transition-transform duration-300
                           rounded-full bg-transparent group-hover:bg-violet-300/50 -rotate-45"
                         >
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 255, 255)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="rgb(255, 255, 255)"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
                         </span>
 
                         <div className="flex flex-col z-2 justify-between items-center w-full px-4 py-4 pb-0 text-[11px] text-white/70 bg-turquoise-600">
