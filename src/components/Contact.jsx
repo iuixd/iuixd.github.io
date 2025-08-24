@@ -52,7 +52,7 @@ const Contact = () => {
             <section className="flex flex-col text-turquoise-900 font-medium w-full h-fit px-[20%] max-[540px]:px-[12%] max-[540px]:mt-[30px]">
               <div className="flex flex-col justify-center items-center">
                 <Reveal>
-                  <h1 className="flex mb-16 justify-center font-extrabold text-7xl max-[540px]:text-5xl text-white">
+                  <h1 className="flex w-fit h-[122px] ml-[160px] mb-16 pt-[90px] pl-[34px] justify-center font-extrabold text-7xl max-[540px]:text-5xl text-white bg-[url('../assets/bauhas-shape.webp')] bg-no-repeat bg-left min-[200px]:text-shadow-md min-md:text-shadow-lg">
                     Contact
                   </h1>
                 </Reveal>
