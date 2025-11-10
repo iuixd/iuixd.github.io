@@ -154,7 +154,7 @@ const Work = () => (
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.1 }}
         className="group download-btn"
-        href="https://www.dropbox.com/scl/fi/nkq0e28tzyotnzwdglgpg/Srikumar-Krishnan-Kutty-Resume.docx?rlkey=ek3mdehpjyx2jyyj3lvjgzqyk&e=1&st=dadeqmjx&dl=0"
+        href="https://www.dropbox.com/scl/fi/1luqp9vz6rhaszasweit5/Srikumar-Krishnan-Kutty-Resume.pdf?rlkey=nw9isjm0wqf62hxzfqy6c67tr&st=a1c499e7&dl=0"
         target="_blank"
         rel="noopener noreferrer"
       >
