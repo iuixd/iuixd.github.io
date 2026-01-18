@@ -131,7 +131,7 @@ const About = () => {
                         and collaborate closely with product, engineering, and
                         business stakeholders to translate complex technical
                         requirements into simple, intuitive, and effective user
-                        experiences, that deliver measureable outcomes.
+                        experiences.
                       </p>
                       <p>
                         I ensure the design team aligns closely with design
