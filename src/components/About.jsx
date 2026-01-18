@@ -1,16 +1,30 @@
 import React from "react";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 import myPhoto from "../assets/myPhoto.webp";
+import college from "../assets/college.webp";
+import designStudio from "../assets/design-studio.webp";
+import productDesign from "../assets/product-design.webp";
+import linkArrw from "../assets/external-link-arrow.svg";
+import lovableLogo from "../assets/lovable-logo.svg";
+import reactIcon from "../assets/react-icon.svg";
+import supabaseLogo from "../assets/supabase-logo.svg";
+import figmaLogo from "../assets/figma-logo.svg";
+import githubLogo from "../assets/github-logo.svg";
+import tailwindLogo from "../assets/tailwind-logo.svg";
 import Consultant from "../assets/Consultant.svg";
+import thumbnailLeakShield from "../assets/leakshield-thumbnail.webp";
+import Reveal from "./Reveal";
 import Footer from "./Footer";
 
 const About = () => {
   return (
     <>
       <div
-        data-page-name="about"
+        data-page-name="articles"
         x-data="{ pageName: $root.dataset.pageName }"
         x-init="$store.page.name = pageName"
         className="fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0 border-1"
@@ -29,11 +43,10 @@ const About = () => {
 
       <div className="body-wrapper h-full">
         <div className="subpage-body-container">
-          <section className="sub-content-wrapper h-full transition-all duration-300 ease-in-out">
+          <div className="sub-content-wrapper transition-all duration-300 ease-in-out">
             <div>
               <Link to="/" className="group sub-backhome-link cursor-pointer">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
                   fill="currentColor"
@@ -47,11 +60,101 @@ const About = () => {
                 </svg>
               </Link>
             </div>
-            <p className="h-full text-turquoise-900 font-medium size-3.5 w-full py-18 text-center justify-center">
-              ABOUT Coming soon...
-            </p>
-          </section>
 
+            <section className="flex h-full max-[550px]:pl-[52px] sm:pl-[120px] ">
+              <ol className="h-full">
+                <li className="ml-22 font-extrabold text-7xl">
+                  <Reveal>
+                    About <br />
+                    <span className="opacity-60">Me</span>
+                  </Reveal>
+                </li>
+                <li className="mx-22 py-8 font-medium text-[18px] text-turquoise-900">
+                  <Reveal>
+                    <div className="p-8 bg-white rounded-3xl shadow-md flex flex-col gap-8">
+                      <img
+                        src={college}
+                        className="w-auto h-auto rounded-3xl"
+                        alt="Goverment College of Arts and Crafts, Chennai"
+                      />
+                      <p>
+                        I'm a Product Designer and Design Leader with a
+                        foundation in fine arts and a strong focus on designing
+                        human-centered, scalable digital products. My journey
+                        began at the{" "}
+                        <mark className="font-extrabold">
+                          Government College of Arts and Crafts, Chennai
+                        </mark>
+                        , where I developed a deep understanding of aesthetics,
+                        form, and visual storytelling. These fundamentals
+                        continue to shape my approach to design.
+                      </p>
+                    </div>
+                  </Reveal>
+                </li>
+                <li className="mx-22 py-8 font-medium text-[18px] text-turquoise-900">
+                  <Reveal>
+                    <div className="p-8 bg-white rounded-3xl shadow-md flex flex-col gap-8">
+                      <img
+                        src={designStudio}
+                        className="w-auto h-auto rounded-3xl"
+                        alt="Goverment College of Arts and Crafts, Chennai"
+                      />
+                      <p>
+                        Over the years, I have evolved from{" "}
+                        <mark className="font-extrabold">
+                          studio and visual design into user experience and
+                          product design strategy, viewing design
+                        </mark>{" "}
+                        as a structured problem-solving discipline that balances
+                        creativity with research, empathy, and business goals. I
+                        have led UX design and strategy for both early-stage and
+                        mature enterprise platforms, particularly in areas such
+                        as asset performance management, reliability
+                        engineering, and AI-powered data extraction.
+                      </p>
+                    </div>
+                  </Reveal>
+                </li>
+                <li className="mx-22 py-8 font-medium text-[18px] text-turquoise-900">
+                  <Reveal>
+                    <div className="p-8 bg-white rounded-3xl shadow-md flex flex-col gap-8">
+                      <img
+                        src={productDesign}
+                        className="w-auto h-auto rounded-3xl"
+                        alt="Goverment College of Arts and Crafts, Chennai"
+                      />
+                      <p>
+                        Designing meaningful human&ndash;AI interactions and
+                        delivering measurable outcomes are central to my work. I
+                        belive in empowering designers by creating clear vision
+                        and collaborate closely with product, engineering, and
+                        business stakeholders to translate complex technical
+                        requirements into simple, intuitive, and effective user
+                        experiences, that deliver measureable outcomes.
+                      </p>
+                      <p>
+                        I ensure the design team aligns closely with design
+                        thinking and PDLC frameworks to deliver user-centric
+                        products. I also focus on alignment with stakeholders
+                        and across disciplines, to enable design team to deliver
+                        thoughtful, user-centered outcomes.
+                      </p>
+                      <p>
+                        Beyond design, I actively invest in learning across
+                        technology, systems, and emerging tools to strengthen
+                        collaboration with engineering teams and inform better
+                        design decisions. As a leader, I value clarity,
+                        accountability, and thoughtful feedback, and I am
+                        committed to building high-performing teams that deliver
+                        with quality, ownership, and purpose.
+                      </p>
+                    </div>
+                  </Reveal>
+                </li>
+              </ol>
+            </section>
+          </div>
           <Footer />
         </div>
       </div>
