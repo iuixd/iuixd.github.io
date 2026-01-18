@@ -104,8 +104,8 @@ const About = () => {
                         Over the years, I have evolved from{" "}
                         <mark className="font-extrabold">
                           studio and visual design into user experience and
-                          product design strategy, viewing design
-                        </mark>{" "}
+                          product design strategy
+                        </mark>, viewing design
                         as a structured problem-solving discipline that balances
                         creativity with research, empathy, and business goals. I
                         have led UX design and strategy for both early-stage and
