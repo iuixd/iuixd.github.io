@@ -105,13 +105,15 @@ const About = () => {
                         <mark className="font-extrabold">
                           studio and visual design into user experience and
                           product design strategy
-                        </mark>, viewing design
-                        as a structured problem-solving discipline that balances
-                        creativity with research, empathy, and business goals. I
-                        have led UX design and strategy for both early-stage and
-                        mature enterprise platforms, particularly in areas such
-                        as asset performance management, reliability
-                        engineering, and AI-powered data extraction.
+                        </mark>
+                        , viewing design as a structured problem-solving
+                        discipline that balances creativity with research,
+                        empathy, and business goals. I have led UX design and
+                        strategy across both early-stage and mature enterprise
+                        platforms, spanning asset lifecycle and performance
+                        management, reliability-centered maintenance, zero-trust
+                        cybersecurity, AI-powered data privacy, governance and
+                        security, as well as retail and banking domains.
                       </p>
                     </div>
                   </Reveal>
