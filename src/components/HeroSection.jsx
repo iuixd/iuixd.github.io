@@ -21,7 +21,7 @@ const Hero = () => {
       <Reveal>
         <img
           src={myPhoto}
-          className="w-24 h-24"
+          className="transition-all duration-500 ease-in-out"
           x-bind:class="{'w-24 h-24': !scrolledFromTop, 'w-12 h-12': scrolledFromTop}"
           alt="Srikumar's Photo"
         />
