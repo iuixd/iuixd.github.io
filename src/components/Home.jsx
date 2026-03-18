@@ -30,7 +30,7 @@ function Home() {
               <Reveal>
                 <img
                   src={certBadges}
-                  className="w-2xl"
+                  className="w-full max-w-2xl h-auto px-4 sm:px-0 object-contain mx-auto"
                   alt="Srikumar's Certificates"
                 />
               </Reveal>

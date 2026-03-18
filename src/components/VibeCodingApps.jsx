@@ -31,7 +31,7 @@ const VibeCodingApps = () => {
         <div className="static flex flex-col self-auto min-[360px]:w-full md:w-full lg:w-[1024px] h-auto text-white">
           <Link
             to="/"
-            className="max-[550px]:ml-[50px] sm:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
+            className="max-md:ml-[50px] md:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
             <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
           </Link>
@@ -42,7 +42,7 @@ const VibeCodingApps = () => {
         <div className="subpage-body-container">
           <div className="sub-content-wrapper transition-all duration-300 ease-in-out">
             <div>
-              <Link to="/" className="group sub-backhome-link cursor-pointer">
+              <Link to="/" aria-label="Go back" className="group sub-backhome-link cursor-pointer">
                 <svg
                   width="16"
                   height="16"
@@ -58,7 +58,7 @@ const VibeCodingApps = () => {
               </Link>
             </div>
 
-            <section className="flex h-full max-[550px]:pl-[52px] sm:pl-[120px] ">
+            <section className="flex h-full max-md:pl-[52px] md:pl-[120px] ">
               <ol className="h-full border-s border-turquoise-500">
                 <li className="ml-22 font-extrabold text-7xl">
                   <Reveal>

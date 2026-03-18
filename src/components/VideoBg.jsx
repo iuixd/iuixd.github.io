@@ -7,7 +7,7 @@ const VideoBg = () => {
       
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
       const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-      const [isMobile, setIsMobile] = useState(window.innerWidth <= 550); // initialize correctly
+      const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // initialize correctly
     
       useEffect(() => {
         const handleResize = () => {
@@ -16,7 +16,7 @@ const VideoBg = () => {
     
           setScreenWidth(width);
           setScreenHeight(height);
-          setIsMobile(width <= 550); 
+          setIsMobile(width <= 768); 
         };
     
         // Initial check (in case resize hasn't occurred)
@@ -29,18 +29,16 @@ const VideoBg = () => {
 
   return (
     <>
-      {screenWidth > 768 && (
-        <div className="video-bg-wrapper">
-          <video src={videoBg} autoPlay loop muted className="video-bg"></video>
-        </div>
-      )}
+      <div className="video-bg-wrapper">
+        <video src={videoBg} autoPlay loop muted playsInline className="video-bg"></video>
+      </div>
 
       <div
         className="nav-scrolltop-bar"
         x-bind:class="
         !scrolledFromTop 
           ? 'bg-turquoise-500 opacity-0' 
-          : (window.innerWidth >= 550 
+          : (window.innerWidth >= 768 
               ? 'bg-turquoise-500 opacity-50' 
               : 'bg-turquoise-500 opacity-90')"
       ></div>

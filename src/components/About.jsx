@@ -34,7 +34,7 @@ const About = () => {
         <div className="static flex flex-col self-auto min-[360px]:w-full md:w-full lg:w-[1024px] h-auto text-white">
           <Link
             to="/"
-            className="max-[550px]:ml-[50px] sm:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
+            className="max-md:ml-[52px] md:ml-[100px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
             <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
           </Link>
@@ -45,7 +45,7 @@ const About = () => {
         <div className="subpage-body-container">
           <div className="sub-content-wrapper transition-all duration-300 ease-in-out">
             <div>
-              <Link to="/" className="group sub-backhome-link cursor-pointer">
+              <Link to="/" aria-label="Go back" className="group sub-backhome-link cursor-pointer">
                 <svg
                   width="16"
                   height="16"
@@ -61,17 +61,17 @@ const About = () => {
               </Link>
             </div>
 
-            <section className="flex h-full max-[550px]:pl-[52px] sm:pl-[120px] ">
-              <ol className="h-full">
-                <li className="ml-22 font-extrabold text-7xl">
+            <section className="flex h-full max-md:pl-[52px] max-md:pr-[20px] md:pl-[120px] pr-4 md:pr-0">
+              <ol className="h-full w-full">
+                <li className="ml-0 md:ml-22 font-extrabold text-5xl md:text-7xl mb-4 md:mb-0">
                   <Reveal>
                     About <br />
                     <span className="opacity-60">Me</span>
                   </Reveal>
                 </li>
-                <li className="mx-22 py-8 font-medium text-[18px] text-turquoise-900">
+                <li className="mx-0 md:mx-22 py-6 md:py-8 font-medium text-base md:text-[18px] text-turquoise-900">
                   <Reveal>
-                    <div className="p-8 bg-white rounded-3xl shadow-md flex flex-col gap-8">
+                    <div className="p-6 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-md flex flex-col gap-6 md:gap-8">
                       <img
                         src={college}
                         className="w-auto h-auto rounded-3xl"
@@ -92,9 +92,9 @@ const About = () => {
                     </div>
                   </Reveal>
                 </li>
-                <li className="mx-22 py-8 font-medium text-[18px] text-turquoise-900">
+                <li className="mx-0 md:mx-22 py-6 md:py-8 font-medium text-base md:text-[18px] text-turquoise-900">
                   <Reveal>
-                    <div className="p-8 bg-white rounded-3xl shadow-md flex flex-col gap-8">
+                    <div className="p-6 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-md flex flex-col gap-6 md:gap-8">
                       <img
                         src={designStudio}
                         className="w-auto h-auto rounded-3xl"
@@ -118,9 +118,9 @@ const About = () => {
                     </div>
                   </Reveal>
                 </li>
-                <li className="mx-22 py-8 font-medium text-[18px] text-turquoise-900">
+                <li className="mx-0 md:mx-22 py-6 md:py-8 font-medium text-base md:text-[18px] text-turquoise-900">
                   <Reveal>
-                    <div className="p-8 bg-white rounded-3xl shadow-md flex flex-col gap-8">
+                    <div className="p-6 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-md flex flex-col gap-6 md:gap-8">
                       <img
                         src={productDesign}
                         className="w-auto h-auto rounded-3xl"

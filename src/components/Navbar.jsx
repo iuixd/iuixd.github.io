@@ -7,7 +7,7 @@ import myPhoto from "../assets/myPhoto.webp";
 const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 550); // initialize correctly
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // initialize correctly
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
 
       setScreenWidth(width);
       setScreenHeight(height);
-      setIsMobile(width <= 550);
+      setIsMobile(width < 768);
     };
 
     // Initial check (in case resize hasn't occurred)
@@ -40,6 +40,7 @@ const Navbar = () => {
   const springOpacity = useSpring(opacity, { stiffness: 400, damping: 30 });
 
   const navItems = [
+    { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "GitHub", path: "/github" },
     { label: "Vibe-Coding Apps", path: "/vibe-coding-apps" },
@@ -108,30 +109,30 @@ const Navbar = () => {
   };
 
   return (
-    <Reveal>
-      <nav
-        className={`nav-container transition-all duration-300 ease-in-out z-101 ${
-          isMenuOpen ? "max-[550px]:z-101" : "max-[550px]:z-3"
-        } `}
-        x-data="{ scrolledFromTop: false }"
-        x-init="
+    <nav
+      className={`nav-container transition-all duration-300 ease-in-out z-[200] ${
+        isMenuOpen ? "max-md:z-[200]" : "max-md:z-3"
+      } `}
+      x-data="{ scrolledFromTop: false }"
+      x-init="
         window.addEventListener('scroll', () => {
           scrolledFromTop = window.scrollY > 180;
         });
       "
-        x-bind:class="$store.page.name === 'home' 
+      x-bind:class="$store.page.name === 'home' 
         ? (scrolledFromTop 
-          ? (window.innerWidth >= 550 
+          ? (window.innerWidth >= 768 
             ? 'pl-[96px]' 
             : 'pl-auto')
           : 'md:pl-auto') 
-        : (window.innerWidth >= 550 
+        : (window.innerWidth >= 768 
             ? 'pl-[96px]' 
             : 'pl-auto')"
-        role="navigation"
-        aria-label="Main navigation"
-        aria-labelledby="main-navigation-label"
-      >
+      role="navigation"
+      aria-label="Main navigation"
+      aria-labelledby="main-navigation-label"
+    >
+      <Reveal>
         <h2 id="main-navigation-label" className="sr-only">
           Primary navigation
         </h2>
@@ -142,8 +143,8 @@ const Navbar = () => {
             role="menubar"
             aria-label="Main navigation"
             className={`relative nav-menubar ${
-              isMenuOpen ? "max-[550px]:opacity-100" : "max-[550px]:opacity-0"
-            } max-[550px]:mr-[16px] max-[550px]:mt-[50px] max-[550px]:flex-col max-[550px]:w-[300px] w-auto min-[550px]:flex-row`}
+              isMenuOpen ? "max-md:opacity-100" : "max-md:opacity-0"
+            } max-md:mr-[16px] max-md:mt-[50px] max-md:flex-col max-md:w-[300px] w-auto md:flex-row`}
             x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}"
           >
             {navItems.map((item) => (
@@ -153,7 +154,7 @@ const Navbar = () => {
                 role="none"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                className="group nav-menuitem max-[550px]:text-center"
+                className="group nav-menuitem max-md:text-center"
                 onClick={toggleMenu}
               >
                 <Link
@@ -182,7 +183,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            {screenWidth >= 550 && (
+            {screenWidth >= 768 && (
               <motion.li
                 style={{
                   left: springLeft,
@@ -218,8 +219,8 @@ const Navbar = () => {
             </button>
           )}
         </div>
-      </nav>
-    </Reveal>
+      </Reveal>
+    </nav>
   );
 };
 

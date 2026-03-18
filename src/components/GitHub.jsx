@@ -20,7 +20,7 @@ const GitHub = () => {
         <div className="static flex flex-col self-auto min-[360px]:w-full md:w-full lg:w-[1024px] h-auto text-white">
           <Link
             to="/"
-            className="max-[550px]:ml-[50px] sm:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
+            className="max-md:ml-[50px] md:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
             <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
           </Link>
@@ -31,7 +31,7 @@ const GitHub = () => {
         <div className="subpage-body-container">
           <div className="sub-content-wrapper h-full transition-all duration-300 ease-in-out">
             <div>
-              <Link to="/" className="group sub-backhome-link cursor-pointer">
+              <Link to="/" aria-label="Go back" className="group sub-backhome-link cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
