@@ -25,11 +25,11 @@
   }
 
   .card-content {
-    @apply min-[360px]:text-[0.9rem] sm:text-[0.9rem] md:text-[0.9rem] xl:text-[1rem] text-turquoise-800;
+    @apply min-[360px]:text-[0.9rem] sm:text-[0.9rem] xl:text-[1rem] text-turquoise-800;
   }
 
   .card-content-title {
-    @apply min-[360px]:text-[0.9rem] sm:text-[1rem] md:text-[1rem] xl:text-[1.1rem] font-semibold leading-tight;
+    @apply min-[360px]:text-[0.9rem] sm:text-[1rem] xl:text-[1.1rem] font-semibold leading-tight;
   }
 
   .video-bg-wrapper {
@@ -41,45 +41,38 @@
   }
 
   .video-play-btn {
-    @apply absolute 
-            min-[360px]:w-26 min-[360px]:h-26 sm:w-16 sm:h-16 min-[360px]:hover:w-27 min-[360px]:hover:h-27 sm:hover:w-17 sm:hover:h-17 
-            rounded-full bg-violet-100/80 hover:bg-violet-500 flex items-center justify-center cursor-pointer
-          transition  ;
+    @apply absolute min-[360px]:w-26 min-[360px]:h-26 sm:w-16 sm:h-16 min-[360px]:hover:w-27 min-[360px]:hover:h-27 sm:hover:w-17 sm:hover:h-17 rounded-full bg-violet-100/80 hover:bg-violet-500 flex items-center justify-center cursor-pointer transition;
   }
 
   .video-play-icon {
     @apply ml-1 w-8 h-8 min-[360px]:w-18 min-[360px]:h-18 sm:w-8 sm:h-8 fill-violet-800/80;
   }
 
-   /* === Composed Utility Classes Using Base Components === */
+  /* === Composed Utility Classes Using Base Components === */
 
-   .nav-scrolltop-bar {
+  .nav-scrolltop-bar {
     @apply fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0;
-   }
+  }
 
-   .nav-container {
+  .nav-container {
     @apply fixed z-100 top-0 w-full;
-   }
+  }
 
-   .nav-wrapper {
+  .nav-wrapper {
     @apply flex min-[200px]:justify-end md:justify-center md:items-center mt-2 mb-2;
-   }
+  }
 
-   .nav-menubar {
-    @apply relative flex items-center md:px-4 rounded-[8px] font-medium border border-[rgba(255,255,255,0.20)] 
-    
-    md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.20)_0%,_rgba(255,_255,_255,_0.00)_100%)] md:backdrop-filter backdrop-blur-[21px]
-    max-md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.60)_0%,_rgba(255,_255,_255,_0.00)_100%)] max-md:backdrop-filter backdrop-blur-[21px]
-    max-md:drop-shadow-xl;
-   }
+  .nav-menubar {
+    @apply relative flex items-center md:px-4 rounded-[8px] font-medium border border-[rgba(255,255,255,0.20)] md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.20)_0%,_rgba(255,_255,_255,_0.00)_100%)] md:backdrop-filter backdrop-blur-[21px] max-md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.60)_0%,_rgba(255,_255,_255,_0.00)_100%)] max-md:backdrop-filter max-md:drop-shadow-xl;
+  }
 
-   .nav-menuitem {
+  .nav-menuitem {
     @apply relative z-100 mr-3 px-3 py-4 text-sm font-normal cursor-pointer transition-all duration-300;
-   }
+  }
 
-   .nav-active-itembg {
+  .nav-active-itembg {
     @apply absolute z-50 h-7 rounded-full bg-violet-500-50p shadow-lg;
-   }
+  }
 
   .card-badge-gray {
     @apply bg-gray-200 text-gray-800 ring-gray-700/20;
@@ -114,16 +107,11 @@
   }
 
   .project-card {
-    @apply flex flex-col w-full
-    /*min-[320px]:size-[100%] sm:size-[100%] md:size-[100%] lg:size-[50%] xl:size-[60%]*/
-    sm:items-center md:items-center sm:justify-center md:justify-center lg:items-start lg:justify-normal;
+    @apply flex flex-col w-full sm:items-center md:items-center sm:justify-center md:justify-center lg:items-start lg:justify-normal;
   }
 
   .card-wrapper {
-    @apply relative flex min-[360px]:flex-col md:flex-row w-full min-[360px]:px-4 sm:px-4 lg:px-4 xl:px-8 py-2 rounded-lg overflow-hidden text-turquoise-900 cursor-default
-          before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0
-          before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out
-          hover:before:w-[calc(100%+1rem)];
+    @apply relative flex min-[360px]:flex-col md:flex-row w-full min-[360px]:px-4 sm:px-4 lg:px-4 xl:px-8 py-2 rounded-lg overflow-hidden text-turquoise-900 cursor-default before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out hover:before:w-[calc(100%+1rem)];
   }
 
   .card-thumbnail-wrapper {
@@ -135,7 +123,7 @@
   }
 
   .card-content-link {
-    @apply flex w-fit px-1 py-2 my-4 font-medium items-center rounded-md text-violet-500 cursor-pointer underline hover:no-underline transition ;
+    @apply flex w-fit px-1 py-2 my-4 font-medium items-center rounded-md text-violet-500 cursor-pointer underline hover:no-underline transition;
   }
 
   .card-link-icon {
@@ -199,20 +187,21 @@
   }
 
   .hero-heading {
-      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] min-[200px]:text-shadow-md min-md:text-shadow-lg;
+    @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] text-shadow-md md:text-shadow-lg;
   }
 
   .hero-content {
-      @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] min-[200px]:text-shadow-md min-md:text-shadow-lg;
+    @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 font-normal sm:text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] xl:text-[1.5rem] text-shadow-md md:text-shadow-lg;
   }
 
   .hero-content-link {
-      @apply text-violet-500 underline hover:no-underline;
+    @apply text-violet-500 underline hover:no-underline;
   }
 
   .projects-and-works {
     @apply relative w-full grid min-[360px]:grid-cols-1 lg:grid-cols-[60%_auto] gap-6 px-6 justify-items-stretch;
   }
+
   .work-cards {
     @apply h-fit min-[360px]:px-4 sm:px-6 md:px-6 lg:px-4 min-[360px]:py-6 sm:py-10 md:py-10 lg:py-6 rounded-lg border border-white/40;
   }
@@ -230,10 +219,7 @@
   }
 
   .work-wrapper {
-    @apply relative grid grid-cols-1 md:grid-cols-[56%_auto] gap-2 md:gap-4 justify-items-start my-1 p-2 rounded-lg
-          before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0
-          before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out
-          hover:before:w-[calc(100%+1rem)];
+    @apply relative grid grid-cols-1 md:grid-cols-[56%_auto] gap-2 md:gap-4 justify-items-start my-1 p-2 rounded-lg before:content-[''] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-turquoise-300 before:transition-all before:duration-300 before:ease-in-out hover:before:w-[calc(100%+1rem)];
   }
 
   .work {
@@ -241,8 +227,7 @@
   }
 
   .work-duration {
-    @apply relative flex items-center justify-self-start md:justify-self-end text-[12px] md:text-[14px]
-    leading-tight text-turquoise-800 align-text-bottom mt-1 md:mt-0;
+    @apply relative flex items-center justify-self-start md:justify-self-end text-[12px] md:text-[14px] leading-tight text-turquoise-800 align-text-bottom mt-1 md:mt-0;
   }
 
   .download-btn {
@@ -262,10 +247,11 @@
   }
 
   .social-svg {
-    @apply block w-[var(--icon-size)] h-[var(--icon-size)] fill-violet-50 group-hover:fill-violet-500
+    @apply block w-[var(--icon-size)] h-[var(--icon-size)] fill-violet-50 group-hover:fill-violet-500;
   }
 
   .footer .social-svg {
-    @apply block w-[var(--icon-size)] h-[var(--icon-size)] fill-turquoise-100 group-hover:fill-violet-500
+    @apply block w-[var(--icon-size)] h-[var(--icon-size)] fill-turquoise-100 group-hover:fill-violet-500;
   }
+
 }

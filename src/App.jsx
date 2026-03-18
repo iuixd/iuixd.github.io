@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import { lazy, Suspense } from "react";
 const About = lazy(() => import("./components/About"));
 const VibeCodingApps = lazy(() => import("./components/VibeCodingApps"));
+const AIVideos = lazy(() => import("./components/AIVideos"));
 const GitHub = lazy(() => import("./components/GitHub"));
 const Contact = lazy(() => import("./components/Contact"));
 import NotFound from "./components/NotFound";
@@ -39,6 +40,14 @@ const router = createHashRouter([
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <VibeCodingApps />
+          </Suspense>
+        ),
+      },
+      {
+        path: "ai-videos",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <AIVideos />
           </Suspense>
         ),
       },

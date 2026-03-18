@@ -44,6 +44,7 @@ const Navbar = () => {
     { label: "About", path: "/about" },
     { label: "GitHub", path: "/github" },
     { label: "Vibe-Coding Apps", path: "/vibe-coding-apps" },
+    { label: "AI Videos", path: "/ai-videos" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -143,7 +144,7 @@ const Navbar = () => {
             role="menubar"
             aria-label="Main navigation"
             className={`relative nav-menubar ${
-              isMenuOpen ? "max-md:opacity-100" : "max-md:opacity-0"
+              isMenuOpen ? "max-md:flex" : "max-md:hidden"
             } max-md:mr-[16px] max-md:mt-[50px] max-md:flex-col max-md:w-[300px] w-auto md:flex-row`}
             x-bind:class="{'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.10)_0%,_rgba(255,_255,_255,_0.00)_100%)]': !scrolledFromTop, 'bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.50)_0%,_rgba(255,_255,_255,_0.00)_100%)]': scrolledFromTop}"
           >
@@ -155,7 +156,7 @@ const Navbar = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className="group nav-menuitem max-md:text-center"
-                onClick={toggleMenu}
+                onClick={() => setIsMenuOpen(false)}
               >
                 <Link
                   to={item.path}
