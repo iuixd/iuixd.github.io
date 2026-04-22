@@ -227,7 +227,7 @@
   }
 
   .work-duration {
-    @apply relative flex items-center justify-self-start md:justify-self-end text-[12px] md:text-[14px] leading-tight text-turquoise-800 align-text-bottom mt-1 md:mt-0;
+    @apply relative flex items-center justify-self-start md:justify-self-end text-[12px] md:text-[14px] leading-tight text-turquoise-800 align-text-bottom mt-1 md:mt-0 whitespace-nowrap;
   }
 
   .download-btn {

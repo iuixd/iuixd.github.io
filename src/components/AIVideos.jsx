@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import myPhoto from "../assets/myPhoto.webp";
+import thumbnailExplainerVideo from "../assets/thumbnailExplainerVideo.webp";
 import Footer from "./Footer";
 import Reveal from "./Reveal";
+import VideoCard from "./VideoCard";
 
 const AIVideos = () => {
   return (
     <>
       <div
-        data-page-name="ai-videos"
+        data-page-name="GenAI-Videos"
         x-data="{ pageName: $root.dataset.pageName }"
         x-init="$store.page.name = pageName"
         className="fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0 border-1"
@@ -49,17 +51,29 @@ const AIVideos = () => {
               <ol className="h-full w-full">
                 <li className="ml-0 md:ml-22 font-extrabold text-5xl md:text-7xl mb-4 md:mb-0 text-white">
                   <Reveal>
-                    AI <br />
+                    Gen AI <br />
                     <span className="opacity-60">Videos</span>
                   </Reveal>
                 </li>
                 
                 <li className="mx-0 md:mx-22 py-6 md:py-8 font-medium">
-                  <Reveal>
-                    <div className="p-6 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-md flex items-center justify-center min-h-[300px] w-full text-turquoise-900 font-sans antialiased text-center">
-                      <p className="text-sm font-medium tracking-wide opacity-80">Coming soon...</p>
-                    </div>
-                  </Reveal>
+                  <VideoCard 
+                    thumbnailSrc={thumbnailExplainerVideo}
+                    youtubeLink="https://www.youtube.com/watch?v=wZ10s6bX4X0"
+                    date="Mar 2026"
+                    title={<h2 className="card-content-title">How I Built a High-Quality Explainer Video Using AI (No Studio, Low Cost)</h2>}
+                    mainContent={<p className="card-content card-content-paragraph">Create a professional explainer video without a studio or large budget. See how Arjun Mehta (AI avatar), motion design, and editing tools come together to simplify the creation of explainer videos for complex AI-powered agentic products.</p>}
+                    responsibilityLabel="Tools used:"
+                    responsibilityContent={
+                      <>
+                          <span className="card-badge">Script &amp; Storyboard + Timeline</span>
+                          <span className="card-badge">Google Whisk for AI Avatar Clips</span>
+                          <span className="card-badge">Adobe After Effects and Premiere Pro</span>
+                      </>
+                    }
+                    casestudyLabel="View Design Approach"
+                    casestudyLink="https://www.dropbox.com/scl/fi/g1m7cdp4u8yve4k8mfh2v/Case-Study-07-How-I-Built-a-High-Quality-Explainer-Video-Using-AI.pdf?rlkey=vzcyihfka1a1ziwczbko90itj&st=du56vaq4&dl=0"
+                  />
                 </li>
               </ol>
             </section>

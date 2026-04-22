@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import Reveal from "./Reveal";
+// eslint-disable-next-line no-unused-vars
 import myPhoto from "../assets/myPhoto.webp";
 
 const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  // eslint-disable-next-line no-unused-vars
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // initialize correctly
 
@@ -44,7 +47,7 @@ const Navbar = () => {
     { label: "About", path: "/about" },
     { label: "GitHub", path: "/github" },
     { label: "Vibe-Coding Apps", path: "/vibe-coding-apps" },
-    { label: "AI Videos", path: "/ai-videos" },
+    { label: "Gen AI Videos", path: "/GenAI-Videos" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -77,6 +80,7 @@ const Navbar = () => {
       width.set(0);
       opacity.set(0); // Hide the indicator
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   const handleMouseEnter = (e) => {

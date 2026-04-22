@@ -24,5 +24,6 @@ export default defineConfig({
       },
     },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require('tailwindcss-motion')],
 });

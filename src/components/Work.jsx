@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Reveal from './Reveal';
 import Consultant from "../assets/Consultant.svg";
@@ -127,7 +128,7 @@ const Work = () => (
       </Reveal>
 
       <div className="work-list">
-        {jobs.map(({ companyName, designation, duration, logo, alt, customSize }) => (
+        {jobs.map(({ companyName, designation, duration, logo, alt }) => (
           <Reveal key={`work-${duration}`}>
           <motion.div key={`${companyName}-${duration}`} id="work-item"
             className="work-wrapper cursor-default overflow-hidden">

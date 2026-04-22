@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion, scale, useAnimation, useInView } from 'framer-motion'
 
 export default function Reveal({ children}) {

@@ -44,7 +44,7 @@ const router = createHashRouter([
         ),
       },
       {
-        path: "ai-videos",
+        path: "GenAI-Videos",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
             <AIVideos />

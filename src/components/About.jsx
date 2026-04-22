@@ -1,6 +1,7 @@
 import React from "react";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -8,14 +9,22 @@ import myPhoto from "../assets/myPhoto.webp";
 import college from "../assets/college.webp";
 import designStudio from "../assets/design-studio.webp";
 import productDesign from "../assets/product-design.webp";
+// eslint-disable-next-line no-unused-vars
 import linkArrw from "../assets/external-link-arrow.svg";
+// eslint-disable-next-line no-unused-vars
 import lovableLogo from "../assets/lovable-logo.svg";
+// eslint-disable-next-line no-unused-vars
 import reactIcon from "../assets/react-icon.svg";
+// eslint-disable-next-line no-unused-vars
 import supabaseLogo from "../assets/supabase-logo.svg";
+// eslint-disable-next-line no-unused-vars
 import figmaLogo from "../assets/figma-logo.svg";
+// eslint-disable-next-line no-unused-vars
 import githubLogo from "../assets/github-logo.svg";
+// eslint-disable-next-line no-unused-vars
 import tailwindLogo from "../assets/tailwind-logo.svg";
 import Consultant from "../assets/Consultant.svg";
+// eslint-disable-next-line no-unused-vars
 import thumbnailLeakShield from "../assets/leakshield-thumbnail.webp";
 import Reveal from "./Reveal";
 import Footer from "./Footer";

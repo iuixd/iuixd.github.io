@@ -1,8 +1,10 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/myPhoto.webp";
+// eslint-disable-next-line no-unused-vars
 import contactBG from "../assets/contact-bg.webp";
 import Consultant from "../assets/Consultant.svg";
 import Reveal from "./Reveal";

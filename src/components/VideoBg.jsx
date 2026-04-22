@@ -1,12 +1,17 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from 'react';
 import videoBg from '../assets/videoBg.webm';
+// eslint-disable-next-line no-unused-vars
 import useShouldHideVideo from "./useShouldHideVideo";
 
 const VideoBg = () => {
     //const shouldHideVideo = useShouldHideVideo();
       
+    // eslint-disable-next-line no-unused-vars
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+      // eslint-disable-next-line no-unused-vars
       const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+      // eslint-disable-next-line no-unused-vars
       const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // initialize correctly
     
       useEffect(() => {

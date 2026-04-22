@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import Reveal from './Reveal';
 import thumbnailWealthMgmt from "../assets/thumbnailWealthMgmt.webp";
@@ -87,7 +88,7 @@ const projects = [
     mainContent: (
       <>
         <p className="card-content card-content-paragraph">
-          Lumen AI’s modern logo symbolizes innovation, precision, and automation, using a radiant light motif and gradient tones to reflect its ability to illuminate insights from complex data.
+          Lumen AI's modern logo symbolizes innovation, precision, and automation, using a radiant light motif and gradient tones to reflect its ability to illuminate insights from complex data.
         </p>
       </>
     ),
@@ -134,7 +135,7 @@ const projects = [
     date: "Jan 2021",
     title: (
       <h2 className="card-content-title">
-        Data security & privacy automation
+        Data security &amp; privacy automation
       </h2>
     ),
     titleText: "Data security & privacy automation",
@@ -247,6 +248,7 @@ const ProjectCard = () => {
         (
           {
             thumbnail,
+            thumbnailClassName,
             youtubeLink,
             date,
             title,
@@ -261,6 +263,7 @@ const ProjectCard = () => {
         ) => {
           const showVideoLink = youtubeLink && youtubeLink !== null;
           const showCaseStudy = casestudyLink && casestudyLink !== null;
+          // eslint-disable-next-line no-unused-vars
           const isLumenLogo = "LumenaiLogo";
 
           return (
@@ -290,7 +293,7 @@ const ProjectCard = () => {
 
                 <img
                   src={thumbnailMap[thumbnail]}
-                  className="card-thumbnail-img"
+                  className={`card-thumbnail-img${thumbnailClassName ? ` ${thumbnailClassName}` : ''}`}
                   alt={`Thumbnail of ${titleText}`}
                 />
               </div>

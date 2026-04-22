@@ -9,6 +9,7 @@ import Work from './Work';
 import Footer from './Footer';
 
 function Home() {
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
 
     return (

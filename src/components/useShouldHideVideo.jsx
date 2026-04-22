@@ -18,6 +18,7 @@ const useShouldHideVideo = (breakpoint = 640) => {
       window.removeEventListener("resize", handleChange);
       window.removeEventListener("orientationchange", handleChange);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [breakpoint]);
 
   return shouldHide;

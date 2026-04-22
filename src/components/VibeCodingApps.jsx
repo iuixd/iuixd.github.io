@@ -1,15 +1,19 @@
 import React from "react";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import myPhoto from "../assets/myPhoto.webp";
+// eslint-disable-next-line no-unused-vars
 import linkArrw from "../assets/external-link-arrow.svg";
 import lovableLogo from "../assets/lovable-logo.svg";
 import reactIcon from "../assets/react-icon.svg";
 import supabaseLogo from "../assets/supabase-logo.svg";
+// eslint-disable-next-line no-unused-vars
 import figmaLogo from "../assets/figma-logo.svg";
+// eslint-disable-next-line no-unused-vars
 import githubLogo from "../assets/github-logo.svg";
 import tailwindLogo from "../assets/tailwind-logo.svg";
 import Consultant from "../assets/Consultant.svg";

@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import myPhoto from "../assets/myPhoto.webp";
 
 const NotFound = () => {
   const navigate = useNavigate();
 
+  // eslint-disable-next-line no-unused-vars
   const handleGoBack = () => {
     navigate(-1); // Navigates one step back in history
   };
