@@ -1,5 +1,5 @@
 import React from "react";
-import copilotLogo from "../assets/copilotLogo.png";
+import copilotLogo from "../assets/copilotLogo.svg";
 
 const IxuidCopilotCard = () => {
   return (
@@ -7,12 +7,12 @@ const IxuidCopilotCard = () => {
       href="https://chatgpt.com/g/g-6a1d86d7cd6c8191b31aab1208a9f622-iuixd-copilot"
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-white/40 hover:bg-turquoise-50 transition-all duration-300 w-full max-w-[520px] select-none text-left no-underline"
+      className="group flex items-center gap-4 p-4 sm:p-5 rounded-2xl border border-white/40 transition-all duration-300 w-full max-w-[520px] select-none text-left no-underline"
       aria-label="Welcome to iuixd Copilot - a synthetic user testing GPT. By K K Srikumar"
     >
       {/* Outer Circular Logo */}
-      <div className="w-12 h-12 rounded-full border border-white/40 flex items-center justify-center bg-white p-1.5 shrink-0 shadow-inner group-hover:scale-105 transition-transform duration-300 overflow-hidden">
-        <img src={copilotLogo} alt="iuixd Copilot Logo" className="w-full h-full object-contain rounded-full" width="50" height="50" loading="lazy" />
+      <div className="w-12 h-12 rounded-full border border-white/40 flex items-center justify-center p-1.5 shrink-0 group-hover:bg-turquoise-50 group-hover:scale-105 transition-all duration-300 overflow-hidden">
+        <img src={copilotLogo} alt="iuixd Copilot Logo" className="w-full h-full object-contain" width="48" height="48" loading="lazy" />
       </div>
 
       {/* Text Content */}
