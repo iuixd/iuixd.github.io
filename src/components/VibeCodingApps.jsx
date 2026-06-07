@@ -37,7 +37,7 @@ const VibeCodingApps = () => {
             to="/"
             className="max-md:ml-[50px] md:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
-            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
+            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" width="48" height="48" />
           </Link>
         </div>
       </div>
@@ -88,6 +88,9 @@ const VibeCodingApps = () => {
                           className="w-full z-0 group-hover:scale-110 transition-transform duration-300"
                           src={thumbnailLeakShield}
                           alt="Thubmnail to LeakShield - Vibe-Coding App"
+                          width="640"
+                          height="360"
+                          loading="lazy"
                         />
 
                         <span
@@ -126,7 +129,7 @@ const VibeCodingApps = () => {
                                 data-tooltip-content="Lovable AI"
                                 className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                               >
-                                <img src={lovableLogo} alt="Figma Logo" />
+                                <img src={lovableLogo} alt="Figma Logo" width="24" height="24" loading="lazy" />
                               </div>
                               <Tooltip
                                 id="lovable"
@@ -140,7 +143,7 @@ const VibeCodingApps = () => {
                                 data-tooltip-content="React"
                                 className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                               >
-                                <img src={reactIcon} alt="React Logo" />
+                                <img src={reactIcon} alt="React Logo" width="24" height="24" loading="lazy" />
                               </div>
                               <Tooltip
                                 id="react"
@@ -154,7 +157,7 @@ const VibeCodingApps = () => {
                                 data-tooltip-content="Tailwind CSS"
                                 className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                               >
-                                <img src={tailwindLogo} alt="Tailwind Logo" />
+                                <img src={tailwindLogo} alt="Tailwind Logo" width="24" height="24" loading="lazy" />
                               </div>
                               <Tooltip
                                 id="tailwind"
@@ -168,7 +171,7 @@ const VibeCodingApps = () => {
                                 data-tooltip-content="Supabase"
                                 className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
                               >
-                                <img src={supabaseLogo} alt="Supabase Logo" />
+                                <img src={supabaseLogo} alt="Supabase Logo" width="24" height="24" loading="lazy" />
                               </div>
                               <Tooltip
                                 id="supabase"

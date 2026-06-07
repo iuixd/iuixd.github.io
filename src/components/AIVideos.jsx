@@ -22,7 +22,7 @@ const AIVideos = () => {
             to="/"
             className="max-md:ml-[50px] md:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
-            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
+            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" width="48" height="48" />
           </Link>
         </div>
       </div>

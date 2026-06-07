@@ -11,6 +11,8 @@ const VideoCard = ({
   responsibilityContent,
   casestudyLabel,
   casestudyLink,
+  width = 801,
+  height = 450,
 }) => {
   const showVideoLink = youtubeLink && youtubeLink !== null;
   const showCaseStudy = casestudyLink && casestudyLink !== null;
@@ -41,6 +43,9 @@ const VideoCard = ({
             src={thumbnailSrc}
             className="card-thumbnail-img !w-full"
             alt="Thumbnail"
+            width={width}
+            height={height}
+            loading="lazy"
           />
         </div>
 

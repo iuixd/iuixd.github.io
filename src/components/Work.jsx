@@ -12,6 +12,8 @@ import dbsLogo from "../assets/dbsLogo.svg";
 import fireeyeLogo from "../assets/fireeyeLogo.svg";
 import mcafeeLogo from "../assets/mcafeeLogo.svg";
 import aztecLogo from "../assets/aztecLogo.svg";
+import lightbeamaiLogo from "../assets/lightbeamaiLogo.webp";
+import eucloidLogo from "../assets/eucloidLogo.webp";
 
 const logoMap = {
   Consultant,
@@ -24,13 +26,22 @@ const logoMap = {
   fireeyeLogo,
   mcafeeLogo,
   aztecLogo,
+  lightbeamaiLogo,
+  eucloidLogo,
 };
 
 const jobs = [
   {
+    companyName: "Eucloid Data Solutions",
+    designation: "UX Architect",
+    duration: "Dec 2025 to Present",
+    logo: "eucloidLogo",
+    alt: "Eucloid Data Solutions",
+  },
+  {
     companyName: "Independent Consultant",
     designation: "UX Design Consultant",
-    duration: "Oct 2024 to Present",
+    duration: "Oct 2023 to Dec 2025",
     logo: "Consultant",
     alt: "Independent Consultant Work",
   },
@@ -40,13 +51,6 @@ const jobs = [
     duration: "Apr 2024 to Oct 2024",
     logo: "IBMLogo",
     alt: "IBM Logo",
-  },
-  {
-    companyName: "Independent Consultant",
-    designation: "UX Design Consultant",
-    duration: "May 2023 to Mar 2024",
-    logo: "Consultant",
-    alt: "Independent Consultant Work",
   },
   {
     companyName: "Target Corp",
@@ -63,10 +67,10 @@ const jobs = [
     alt: "Innominds Logo",
   },
   {
-    companyName: "Stealth Startups",
+    companyName: "Lightbeam",
     designation: "UX Design Consultant",
     duration: "Mar 2020 to Sep 2021",
-    logo: "Consultant",
+    logo: "lightbeamaiLogo",
     alt: "Independent Consultant Work",
   },
   {
@@ -138,6 +142,9 @@ const Work = () => (
                   src={logoMap[logo]}
                   className="w-8 h-8"
                   alt={alt}
+                  width="32"
+                  height="32"
+                  loading="lazy"
                 />
               </div>
               <div>
@@ -155,7 +162,7 @@ const Work = () => (
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.1 }}
         className="group download-btn"
-        href="https://www.dropbox.com/scl/fi/kwmmcy7gqupi6s01kwl3e/Srikumar-Krishnan-Kutty-Resume.pdf?rlkey=3p5z1piwypi62iva7t6z61090&st=gwczh4ja&dl=0"
+        href="https://www.dropbox.com/scl/fi/cwbwx8227xmfk59f1ur6z/Srikumar_Krishnan_Kutty_Resume.pdf?rlkey=obqcykrc97fa3grw9elatcm45&st=05s3lzm9&dl=0"
         target="_blank"
         rel="noopener noreferrer"
       >

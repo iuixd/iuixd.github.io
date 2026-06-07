@@ -33,6 +33,9 @@ function Home() {
                   src={certBadges}
                   className="w-full max-w-2xl h-auto px-4 sm:px-0 object-contain mx-auto"
                   alt="Srikumar's Certificates"
+                  width="882"
+                  height="180"
+                  loading="lazy"
                 />
               </Reveal>
               </div>

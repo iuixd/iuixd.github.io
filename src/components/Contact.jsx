@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import myPhoto from "../assets/myPhoto.webp";
-// eslint-disable-next-line no-unused-vars
-import contactBG from "../assets/contact-bg.webp";
-import Consultant from "../assets/Consultant.svg";
 import Reveal from "./Reveal";
 import Footer from "./Footer";
 
@@ -26,7 +23,7 @@ const Contact = () => {
             to="/"
             className="max-md:ml-[50px] md:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
-            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
+            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" width="48" height="48" />
           </Link>
         </div>
       </div>

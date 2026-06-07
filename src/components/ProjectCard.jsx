@@ -22,6 +22,17 @@ const thumbnailMap = {
   thumbnailPetAdoption,
 };
 
+const thumbnailDims = {
+  thumbnailWealthMgmt: { width: 402, height: 874 },
+  userResearch: { width: 1170, height: 775 },
+  LumenaiLogo: { width: 120, height: 120 },
+  thumbnailLumenAI: { width: 800, height: 500 },
+  thumbnailDataPrivacy: { width: 800, height: 450 },
+  thumbnailUnifiedDashboard: { width: 760, height: 497 },
+  thumbnailZeroTrust: { width: 734, height: 560 },
+  thumbnailPetAdoption: { width: 800, height: 523 },
+};
+
 const projects = [
   {
     thumbnail: "userResearch",
@@ -295,6 +306,9 @@ const ProjectCard = () => {
                   src={thumbnailMap[thumbnail]}
                   className={`card-thumbnail-img${thumbnailClassName ? ` ${thumbnailClassName}` : ''}`}
                   alt={`Thumbnail of ${titleText}`}
+                  width={thumbnailDims[thumbnail]?.width || 800}
+                  height={thumbnailDims[thumbnail]?.height || 500}
+                  loading="lazy"
                 />
               </div>
 

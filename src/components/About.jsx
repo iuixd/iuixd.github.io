@@ -45,7 +45,7 @@ const About = () => {
             to="/"
             className="max-md:ml-[52px] md:ml-[100px] lg:ml-[6px] mt-[12px] self-start relative z-101"
           >
-            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" />
+            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" width="48" height="48" />
           </Link>
         </div>
       </div>
@@ -85,6 +85,9 @@ const About = () => {
                         src={college}
                         className="w-auto h-auto rounded-3xl"
                         alt="Goverment College of Arts and Crafts, Chennai"
+                        width="1200"
+                        height="922"
+                        loading="lazy"
                       />
                       <p>
                         I'm a Product Designer and Design Leader with a
@@ -108,6 +111,9 @@ const About = () => {
                         src={designStudio}
                         className="w-auto h-auto rounded-3xl"
                         alt="Goverment College of Arts and Crafts, Chennai"
+                        width="937"
+                        height="720"
+                        loading="lazy"
                       />
                       <p>
                         Over the years, I have evolved from{" "}
@@ -134,6 +140,9 @@ const About = () => {
                         src={productDesign}
                         className="w-auto h-auto rounded-3xl"
                         alt="Goverment College of Arts and Crafts, Chennai"
+                        width="1200"
+                        height="922"
+                        loading="lazy"
                       />
                       <p>
                         Designing meaningful human&ndash;AI interactions and

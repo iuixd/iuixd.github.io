@@ -47,7 +47,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "www.linkedin.com/in/srikumarkk",
+    href: "https://www.linkedin.com/in/srikumarkk",
     svg: (
       <svg
         viewBox="0 0 16 16"
