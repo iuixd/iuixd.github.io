@@ -30,6 +30,10 @@
     --icon-size: 24px;
     --min-target: 44px;
   }
+
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 @layer components {

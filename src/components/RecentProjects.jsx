@@ -83,7 +83,7 @@ const RecentProjects = () => {
 
             <section className="flex h-full max-md:pl-[52px] md:pl-[120px] ">
               <ol className="h-full border-s border-turquoise-500">
-                <li className="ml-22 font-extrabold text-7xl">
+                <li className="ml-6 sm:ml-10 md:ml-22 font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   <Reveal>
                     Recent <br />
                     <span className="opacity-60">Projects</span>
@@ -91,7 +91,7 @@ const RecentProjects = () => {
                 </li>
                 <li className="mb-16">
                   <Reveal>
-                    <div className="flex-start flex items-center pt-8">
+                    <div className="flex-start flex flex-wrap items-center gap-y-4 pt-8">
                       <div className="-ms-[7px] me-0 h-[14px] w-[14px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
                       <p className="flex mx-6 text-sm text-turquoise-700">
                         2025
@@ -111,13 +111,13 @@ const RecentProjects = () => {
                 </li>
                 <li className="mb-16">
                   <Reveal>
-                    <div className="flex-start flex items-center pt-8">
+                    <div className="flex-start flex flex-wrap items-center gap-y-4 pt-8">
                       <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
                       <p className="flex mx-6 text-sm text-turquoise-700">
                         2026
                       </p>
 
-                      <div className="flex flex-row flex-wrap gap-6">
+                      <div className="flex flex-col sm:flex-row flex-wrap gap-6">
                         <TimelineProjectCard
                           href="https://chatgpt.com/g/g-6a1d86d7cd6c8191b31aab1208a9f622-iuixd-copilot"
                           thumbnail={thumbnailiuixdCopilot}

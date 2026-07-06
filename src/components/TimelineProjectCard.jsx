@@ -8,7 +8,7 @@ const TimelineProjectCard = ({ href, thumbnail, thumbnailAlt, titleLines, tools,
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative group flex flex-col w-[350px] h-fit items-center rounded-[24px] overflow-hidden bg-turquoise-600 shadow-turquoise-900/10
+      className="relative group flex flex-col w-[min(85vw,350px)] h-fit items-center rounded-[24px] overflow-hidden bg-turquoise-600 shadow-turquoise-900/10
       shadow-l hover:shadow-xl hover:scale-101 transition-all duration-300"
     >
       <img
