@@ -112,7 +112,7 @@ const RecentProjects = () => {
                 <li className="mb-16">
                   <Reveal>
                     <div className="flex-start flex items-center pt-8">
-                      <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/50 border-3 border-turquoise-300/50"></div>
+                      <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
                       <p className="flex mx-6 text-sm text-turquoise-700">
                         2026
                       </p>
