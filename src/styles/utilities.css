@@ -63,7 +63,7 @@
   }
 
   .nav-menubar {
-    @apply relative flex items-center md:px-4 rounded-[8px] font-medium border border-[rgba(255,255,255,0.20)] md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.20)_0%,_rgba(255,_255,_255,_0.00)_100%)] md:backdrop-filter backdrop-blur-[21px] max-md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.60)_0%,_rgba(255,_255,_255,_0.00)_100%)] max-md:backdrop-filter max-md:drop-shadow-xl;
+    @apply relative flex items-center md:px-4 rounded-[28px] font-medium border border-[rgba(255,255,255,0.35)] md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.30)_0%,_rgba(255,_255,_255,_0.05)_100%)] md:backdrop-filter backdrop-blur-[28px] max-md:bg-[linear-gradient(153deg,_rgba(255,_255,_255,_0.70)_0%,_rgba(255,_255,_255,_0.15)_100%)] max-md:backdrop-filter shadow-[0_8px_30px_rgba(15,_23,_42,_0.18),_inset_0_1px_0_rgba(255,_255,_255,_0.55)];
   }
 
   .nav-menuitem {

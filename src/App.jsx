@@ -2,7 +2,7 @@ import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import { lazy, Suspense } from "react";
 const About = lazy(() => import("./components/About"));
-const VibeCodingApps = lazy(() => import("./components/VibeCodingApps"));
+const RecentProjects = lazy(() => import("./components/RecentProjects"));
 const AIVideos = lazy(() => import("./components/AIVideos"));
 const GitHub = lazy(() => import("./components/GitHub"));
 const Contact = lazy(() => import("./components/Contact"));
@@ -36,10 +36,10 @@ const router = createHashRouter([
         ),
       },
       {
-        path: "vibe-coding-apps",
+        path: "recent-projects",
         element: (
           <Suspense fallback={<div>Loading...</div>}>
-            <VibeCodingApps />
+            <RecentProjects />
           </Suspense>
         ),
       },

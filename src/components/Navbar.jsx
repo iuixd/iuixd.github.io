@@ -46,7 +46,7 @@ const Navbar = () => {
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "GitHub", path: "/github" },
-    { label: "Vibe-Coding Apps", path: "/vibe-coding-apps" },
+    { label: "Recent Projects", path: "/recent-projects" },
     { label: "Gen AI Videos", path: "/GenAI-Videos" },
     { label: "Contact", path: "/contact" },
   ];
