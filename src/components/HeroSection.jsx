@@ -3,7 +3,8 @@ import SocialLinks from './SocialLinks';
 import myPhoto from '../assets/myPhoto.webp';
 import Alpine from 'alpinejs';
 import Reveal from './Reveal';
-import IxuidCopilotCard from './IuixdCopilotCard';
+import MiniProjectCard from './MiniProjectCard';
+import iuixdLogo from '../assets/copilotLogo.svg';
 
 window.Alpine = Alpine
 
@@ -47,7 +48,24 @@ const Hero = () => {
       </p>
       <div className="min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <SocialLinks />
-        <IxuidCopilotCard />
+        <div className="flex flex-col sm:flex-row gap-3">
+          <MiniProjectCard
+            href="https://chatgpt.com/g/g-6a1d86d7cd6c8191b31aab1208a9f622-iuixd-copilot"
+            logo={iuixdLogo}
+            logoAlt="iuixd Copilot Logo"
+            title="iuixd Copilot"
+            subtitle="Synthetic user-testing GPT"
+            ariaLabel="iuixd Copilot - Synthetic user-testing GPT"
+          />
+          <MiniProjectCard
+            href="https://www.figma.com/community/plugin/1654850184639725883"
+            logo={iuixdLogo}
+            logoAlt="iuixd Design Converter Logo"
+            title="iuixd Design Converter"
+            subtitle="Docs → Figma Variables"
+            ariaLabel="iuixd Design Converter - Docs to Figma Variables"
+          />
+        </div>
       </div>
       </Reveal>
     </>
