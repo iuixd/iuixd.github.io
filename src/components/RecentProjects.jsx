@@ -124,7 +124,7 @@ const RecentProjects = () => {
                           thumbnailAlt="Thubmnail to iuixd Copilot - UX Research Assistant"
                           titleLines={["iuixd Copilot: UX Research Assistant"]}
                           tools={iuixdCopilotTools}
-                          date="Jul 2025"
+                          date="May 2026"
                           idPrefix="2026-a"
                         />
                         <TimelineProjectCard
@@ -133,7 +133,7 @@ const RecentProjects = () => {
                           thumbnailAlt="Thubmnail to iuixd Design Converter - Figma Styles & Variables Converter"
                           titleLines={["Convert designs to Figma Styles & Variables"]}
                           tools={iuixdDesignConverterTools}
-                          date="Jul 2025"
+                          date="Jun 2026"
                           idPrefix="2026-b"
                         />
                       </div>
