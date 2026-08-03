@@ -13,13 +13,15 @@ import chatgptLogo from "../assets/chatgpt-logo.svg";
 import typescriptLogo from "../assets/ts-logo.svg";
 import cssLogo from "../assets/css-logo.svg";
 import figmaLogo from "../assets/figma-logo.svg";
-// eslint-disable-next-line no-unused-vars
 import githubLogo from "../assets/github-logo.svg";
+import javascriptLogo from "../assets/javascript-logo.svg";
+import claudeLogo from "../assets/claude-logo.svg";
 import tailwindLogo from "../assets/tailwind-logo.svg";
 import Consultant from "../assets/Consultant.svg";
 import thumbnailLeakShield from "../assets/leakshield-thumbnail.webp";
 import thumbnailiuixdCopilot from "../assets/iuixd-copilot-thumbnail.webp";
 import thumbnailiuixdDesignConverter from "../assets/iuixd-design-converter-thumbnail.webp";
+import thumbnailLumenAIDS from "../assets/lumen-ai-ds-thumbnail.webp";
 import Reveal from "./Reveal";
 import Footer from "./Footer";
 import TimelineProjectCard from "./TimelineProjectCard";
@@ -38,6 +40,14 @@ const iuixdDesignConverterTools = [
   { key: "chatgpt", name: "ChatGPT", logo: chatgptLogo },
   { key: "typescript", name: "TypeScript", logo: typescriptLogo },
   { key: "css", name: "CSS", logo: cssLogo },
+];
+
+const lumenAIDSTools = [
+  { key: "figma", name: "Figma", logo: figmaLogo },
+  { key: "claude", name: "Claude", logo: claudeLogo },
+  { key: "typescript", name: "TypeScript", logo: typescriptLogo },
+  { key: "javascript", name: "JavaScript", logo: javascriptLogo },
+  { key: "github", name: "GitHub", logo: githubLogo },
 ];
 
 const RecentProjects = () => {
@@ -111,9 +121,9 @@ const RecentProjects = () => {
                 </li>
                 <li className="mb-16">
                   <Reveal>
-                    <div className="flex-start flex flex-wrap items-center gap-y-4 pt-8">
-                      <div className="-ms-[7px] me-0 h-[12px] w-[12px] rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
-                      <p className="flex mx-6 text-sm text-turquoise-700">
+                    <div className="flex-start flex flex-wrap sm:flex-nowrap items-start gap-y-4 pt-8">
+                      <div className="-ms-[7px] me-0 mt-[5px] h-[12px] w-[12px] shrink-0 rounded-full bg-turquoise-700/75 border-3 border-turquoise-300/75"></div>
+                      <p className="flex shrink-0 mx-6 text-sm text-turquoise-700">
                         2026
                       </p>
 
@@ -128,13 +138,23 @@ const RecentProjects = () => {
                           idPrefix="2026-a"
                         />
                         <TimelineProjectCard
-                          href="https://www.figma.com/community/plugin/1654850184639725883"
+                          href="https://www.figma.com/community/plugin/1654212030415795938/iuixd-styles-converter?q_id=6550b2b2-f334-415a-bbf8-1062847dfca6"
                           thumbnail={thumbnailiuixdDesignConverter}
-                          thumbnailAlt="Thubmnail to iuixd Design Converter - Figma Styles & Variables Converter"
+                          thumbnailAlt="Thubmnail to iuixd style converter - Figma Styles & Variables Converter"
                           titleLines={["Convert designs to Figma Styles & Variables"]}
                           tools={iuixdDesignConverterTools}
                           date="Jun 2026"
                           idPrefix="2026-b"
+                        />
+                        <TimelineProjectCard
+                          href="https://github.com/iuixd/Lumen-AI-DS"
+                          thumbnail={thumbnailLumenAIDS}
+                          thumbnailAlt="Thubmnail to Lumen AI Design System"
+                          titleLines={["Lumen AI Design System"]}
+                          tools={lumenAIDSTools}
+                          date="Jul 2026"
+                          idPrefix="2026-c"
+                          arrowColorClass="text-turquoise-900 group-hover:text-white"
                         />
                       </div>
                     </div>

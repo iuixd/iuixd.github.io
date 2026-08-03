@@ -58,12 +58,12 @@ const Hero = () => {
             ariaLabel="iuixd Copilot - Synthetic user-testing GPT"
           />
           <MiniProjectCard
-            href="https://www.figma.com/community/plugin/1654850184639725883"
+            href="https://www.figma.com/community/plugin/1654212030415795938/iuixd-styles-converter?q_id=6550b2b2-f334-415a-bbf8-1062847dfca6"
             logo={iuixdLogo}
-            logoAlt="iuixd Design Converter Logo"
-            title="iuixd Design Converter"
+            logoAlt="iuixd style converter Logo"
+            title="iuixd style converter"
             subtitle="Docs → Figma Variables"
-            ariaLabel="iuixd Design Converter - Docs to Figma Variables"
+            ariaLabel="iuixd style converter - Docs to Figma Variables"
           />
         </div>
       </div>

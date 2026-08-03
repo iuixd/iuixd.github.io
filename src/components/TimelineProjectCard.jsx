@@ -2,7 +2,7 @@ import React from "react";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
-const TimelineProjectCard = ({ href, thumbnail, thumbnailAlt, titleLines, tools, date, idPrefix }) => {
+const TimelineProjectCard = ({ href, thumbnail, thumbnailAlt, titleLines, tools, date, idPrefix, arrowColorClass = "text-white" }) => {
   return (
     <a
       href={href}
@@ -21,17 +21,17 @@ const TimelineProjectCard = ({ href, thumbnail, thumbnailAlt, titleLines, tools,
       />
 
       <span
-        className="absolute flex justify-center items-center w-12 h-12 top-[16px] right-[24px]
+        className={`absolute flex justify-center items-center w-12 h-12 top-[16px] right-[24px]
         group-hover:motion-preset-fade-lg
-        group-hover:-translate-y-4 group-hover:translate-x-6 transition-transform duration-300
-        rounded-full bg-transparent group-hover:bg-violet-300/50 -rotate-45"
+        group-hover:-translate-y-4 group-hover:translate-x-6 transition-all duration-300
+        rounded-full bg-transparent group-hover:bg-violet-300/50 -rotate-45 ${arrowColorClass}`}
       >
         <svg
           width="24"
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="rgb(255, 255, 255)"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -61,7 +61,7 @@ const TimelineProjectCard = ({ href, thumbnail, thumbnailAlt, titleLines, tools,
                   <div
                     data-tooltip-id={tooltipId}
                     data-tooltip-content={tool.name}
-                    className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer"
+                    className="w-6 h-6 rounded-full bg-turquoise-800 flex justify-center items-center cursor-pointer overflow-hidden"
                   >
                     <img src={tool.logo} alt={`${tool.name} Logo`} width="24" height="24" loading="lazy" />
                   </div>

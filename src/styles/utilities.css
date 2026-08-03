@@ -1,29 +1,5 @@
 @import "tailwindcss";
 
-@property --nav-shimmer-angle {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-
-@property --nav-shimmer-angle-2 {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-
-@property --nav-shimmer-width {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 6%;
-}
-
-@property --nav-shimmer-center2 {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-
 @layer base {
   :root {
     --icon-gap: 12px;
@@ -94,8 +70,19 @@
     @apply relative flex items-center md:px-4 rounded-[28px] font-medium border border-white/25 bg-[radial-gradient(46px_46px_at_96%_6%,_rgba(255,_255,_255,_0.95)_0%,_rgba(255,_255,_255,_0.00)_75%),radial-gradient(46px_46px_at_4%_94%,_rgba(255,_255,_255,_0.95)_0%,_rgba(255,_255,_255,_0.00)_75%),linear-gradient(135deg,_rgba(255,_255,_255,_0.22)_0%,_rgba(255,_255,_255,_0.08)_100%)] backdrop-filter backdrop-blur-[28px] shadow-[0_10px_28px_rgba(15,_23,_42,_0.20)];
   }
 
-  .nav-menubar::before,
-  .nav-menubar::after {
+  /* The pill-shaped desktop nav is short and wide, so the 46px corner blobs above read as
+     a glossy edge highlight. The mobile dropdown is tall, so the same fixed-size, high-opacity
+     blob instead looks like a flat sticker in the corner. Use a larger, softer, more gradual
+     falloff so it reads as a diffuse light bloom that blends into the frosted glass. */
+  @media (max-width: 767px) {
+    .nav-menubar {
+      background: radial-gradient(160px 160px at 100% 0%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0) 75%),
+        radial-gradient(160px 160px at 0% 100%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0) 75%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 100%);
+    }
+  }
+
+  .nav-menubar::before {
     content: "";
     position: absolute;
     inset: -1.5px;
@@ -106,46 +93,18 @@
     mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     mask-composite: exclude;
     pointer-events: none;
+    background: radial-gradient(70px 70px at 0% 0%, rgba(255, 255, 255, 0.95) 0%, transparent 70%),
+      radial-gradient(70px 70px at 100% 100%, rgba(255, 255, 255, 0.95) 0%, transparent 70%);
+    opacity: 0.25;
+    animation: nav-glow-breathe 4s ease-in-out infinite;
   }
 
-  .nav-menubar::before {
-    background: conic-gradient(from var(--nav-shimmer-angle), transparent 0%, rgba(255, 255, 255, 0.95) var(--nav-shimmer-width), transparent calc(var(--nav-shimmer-width) + 10%), transparent calc(var(--nav-shimmer-center2) - var(--nav-shimmer-width) - 10%), rgba(255, 255, 255, 0.95) var(--nav-shimmer-center2), transparent calc(var(--nav-shimmer-center2) + var(--nav-shimmer-width) + 10%), transparent 100%);
-    animation: nav-shimmer-rotate 7s linear infinite, nav-shimmer-width-pulse 9s ease-in-out infinite alternate, nav-shimmer-spread-pulse 13s ease-in-out infinite alternate;
-  }
-
-  .nav-menubar::after {
-    background: conic-gradient(from var(--nav-shimmer-angle-2), transparent 0%, rgba(255, 255, 255, 0.6) 3%, transparent 10%, transparent 25%, rgba(255, 255, 255, 0.6) 28%, transparent 35%, transparent 50%, rgba(255, 255, 255, 0.6) 53%, transparent 60%, transparent 75%, rgba(255, 255, 255, 0.6) 78%, transparent 85%, transparent 100%);
-    animation: nav-shimmer-rotate-reverse 11s linear infinite;
-    opacity: 0.7;
-  }
-
-  @keyframes nav-shimmer-rotate {
-    to {
-      --nav-shimmer-angle: 360deg;
-    }
-  }
-
-  @keyframes nav-shimmer-rotate-reverse {
-    to {
-      --nav-shimmer-angle-2: -360deg;
-    }
-  }
-
-  @keyframes nav-shimmer-width-pulse {
+  @keyframes nav-glow-breathe {
     0%, 100% {
-      --nav-shimmer-width: 4%;
+      opacity: 0.2;
     }
     50% {
-      --nav-shimmer-width: 10%;
-    }
-  }
-
-  @keyframes nav-shimmer-spread-pulse {
-    0%, 100% {
-      --nav-shimmer-center2: 42%;
-    }
-    50% {
-      --nav-shimmer-center2: 58%;
+      opacity: 0.6;
     }
   }
 
