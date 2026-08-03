@@ -53,7 +53,11 @@ const router = createHashRouter([
       },
       {
         path: "github",
-        element: <GitHub />,
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <GitHub />
+          </Suspense>
+        ),
       },
       {
         path: "contact",

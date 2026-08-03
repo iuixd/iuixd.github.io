@@ -5,7 +5,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node --env-file-if-exists=.env scripts/fetch-repos.mjs",
     "dev": "vite",
+    "prebuild": "node --env-file-if-exists=.env scripts/fetch-repos.mjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

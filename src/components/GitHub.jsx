@@ -1,31 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import myPhoto from "../assets/myPhoto.webp";
 import Footer from "./Footer";
 import Reveal from "./Reveal";
+import repos from "../data/repos.json";
 
 const GitHub = () => {
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchRepos = async () => {
-      try {
-        const response = await fetch("https://api.github.com/users/iuixd/repos?sort=updated&per_page=15");
-        if (response.ok) {
-          const data = await response.json();
-          // Filter out forks to keep portfolio clean, taking top 15 most recently updated
-          setRepos(data.sort((a,b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()).slice(0, 15));
-        }
-      } catch (error) {
-        console.error("Failed to fetch Github repos", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchRepos();
-  }, []);
-
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const now = new Date();
@@ -109,11 +89,7 @@ const GitHub = () => {
                   <Reveal>
                     <div className="p-6 md:p-8 bg-white rounded-2xl md:rounded-3xl shadow-md flex flex-col w-full text-[#24292f] font-sans antialiased">
                       
-                      {loading ? (
-                        <div className="flex items-center justify-center min-h-[400px]">
-                          <p className="text-turquoise-800 animate-pulse text-lg">Loading repositories...</p>
-                        </div>
-                      ) : repos.length > 0 ? (
+                      {repos.length > 0 ? (
                         <div className="flex flex-col">
                           {repos.map((repo, index) => (
                             <div key={repo.id} className={`py-4 md:py-5 flex flex-col gap-1.5 ${index !== repos.length - 1 ? 'border-b border-[#d0d7de]' : ''}`}>
@@ -122,7 +98,7 @@ const GitHub = () => {
                                   href={repo.html_url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-[20px] md:text-[22px] font-semibold text-[#0969da] hover:underline hover:text-[#0969da] break-all leading-tight"
+                                  className="text-[20px] md:text-[22px] font-semibold text-violet-500 hover:underline hover:text-violet-500 break-all leading-tight"
                                 >
                                   {repo.name}
                                 </a>
