@@ -19,34 +19,38 @@ function Home() {
 
         <div className="body-wrapper"
           data-page-name="home"
-          x-data="{ pageName: $root.dataset.pageName }" 
-          x-init="$store.page.name = pageName" 
+          x-data="{ pageName: $root.dataset.pageName }"
+          x-init="$store.page.name = pageName"
         >
           <div className="body-container">
-            
-            <HeroSection />
-            
-            <div className="content-wrapper">
-              <div className="cert-wrapper">
-              <Reveal>
-                <img
-                  src={certBadges}
-                  className="w-full max-w-2xl h-auto px-4 sm:px-0 object-contain mx-auto"
-                  alt="Srikumar's Certificates"
-                  width="882"
-                  height="180"
-                  loading="lazy"
-                />
-              </Reveal>
-              </div>
-              
-              <section id="projects-and-works" className='projects-and-works'>
-                <ProjectCard />
-                <Work />
-              </section>
 
+            <main className="footer-reveal-content">
+              <HeroSection />
+
+              <div className="content-wrapper">
+                <div className="cert-wrapper">
+                <Reveal>
+                  <img
+                    src={certBadges}
+                    className="w-full max-w-2xl h-auto px-4 sm:px-0 object-contain mx-auto"
+                    alt="Srikumar's Certificates"
+                    width="882"
+                    height="180"
+                    loading="lazy"
+                  />
+                </Reveal>
+                </div>
+
+                <section id="projects-and-works" className='projects-and-works'>
+                  <ProjectCard />
+                  <Work />
+                </section>
+
+              </div>
+            </main>
+            <div className="footer-reveal-layer">
+              <Footer withGame />
             </div>
-            <Footer />
           </div>
         </div>
       </>
@@ -54,4 +58,3 @@ function Home() {
 }
 
 export default Home;
-

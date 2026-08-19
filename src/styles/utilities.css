@@ -201,7 +201,18 @@
   }
 
   .body-container {
-    @apply static flex flex-col min-[360px]:pt-24 md:pt-40 min-[360px]:w-full md:w-full lg:w-[1000px] xl:w-[1200px] text-white;
+    @apply relative isolate flex flex-col min-[360px]:pt-24 md:pt-40 min-[360px]:w-full md:w-full lg:w-[1000px] xl:w-[1200px] text-white;
+  }
+
+  /* Keep the page above the footer while it scrolls away. The footer remains in the
+     document and uses native sticky positioning, so its existing responsive height is
+     also the exact amount of scroll space reserved for it. */
+  .footer-reveal-content {
+    @apply relative z-1;
+  }
+
+  .footer-reveal-layer {
+    @apply sticky bottom-0 z-0 w-full;
   }
 
   .cert-wrapper {
@@ -281,7 +292,7 @@
   }
 
   .footer {
-    @apply flex flex-col gap-6 w-full h-fit py-8 items-center justify-center text-[12px] text-turquoise-300/60 bg-turquoise-900;
+    @apply flex flex-col gap-6 w-full h-fit pt-0 pb-8 items-center justify-center text-[12px] text-turquoise-300/80 bg-turquoise-900;
   }
 
   .footer .btn-social {
