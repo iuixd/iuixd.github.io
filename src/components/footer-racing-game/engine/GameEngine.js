@@ -24,6 +24,7 @@ import {
   SCREEN_SHAKE_INTENSITY,
   SECTOR_COUNT,
   MAX_SPEED,
+  AUTO_PAUSE_STOP_SPEED,
   DUST_SPAWN_INTERVAL_MS,
   DUST_PARTICLE_LIFETIME_MS,
   DUST_MAX_PARTICLES,
@@ -110,6 +111,8 @@ export class GameEngine {
     this.countdownValue = 3;
     this.sectorIndex = 0;
     this.sectorHadCollision = false;
+    this.resultStatus = null;
+    this.resultReason = null;
 
     this.running = false;
     this.frameId = null;
@@ -133,6 +136,8 @@ export class GameEngine {
     this.tick = this.tick.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleFocusOut = this.handleFocusOut.bind(this);
+    this.clearInput = this.clearInput.bind(this);
   }
 
   attach(canvas, themeSourceElement, controlsElement) {
@@ -149,11 +154,26 @@ export class GameEngine {
     this.controlsElement = element;
     element.addEventListener("keydown", this.handleKeyDown);
     element.addEventListener("keyup", this.handleKeyUp);
+    element.addEventListener("focusout", this.handleFocusOut);
+    window.addEventListener("blur", this.clearInput);
+  }
+
+  clearInput() {
+    this.inputState = createInputState();
+    this.externalInput = { throttle: false, brake: false, steerX: 0 };
+    this.lastInput = { throttle: false, brake: false, steerX: 0 };
+  }
+
+  handleFocusOut(event) {
+    if (!this.controlsElement?.contains(event.relatedTarget)) this.clearInput();
   }
 
   handleKeyDown(event) {
     if (event.key === "Escape") {
-      this.controlsElement?.blur();
+      if (this.state === GAME_STATES.RACING) {
+        event.preventDefault();
+        this.pause();
+      }
       return;
     }
     if (event.key === " ") {
@@ -168,8 +188,10 @@ export class GameEngine {
     }
     if (event.key === "p" || event.key === "P") {
       if (this.state === GAME_STATES.RACING) {
+        event.preventDefault();
         this.pause();
       } else if (this.state === GAME_STATES.PAUSED) {
+        event.preventDefault();
         this.resume();
       }
       return;
@@ -282,6 +304,7 @@ export class GameEngine {
   }
 
   resetRace() {
+    this.clearInput();
     this.player = createPlayer();
     this.camera = createCamera();
     this.opponents = createOpponents(this.level.ai);
@@ -303,14 +326,18 @@ export class GameEngine {
     this.lap = 1;
     this.sectorIndex = 0;
     this.sectorHadCollision = false;
+    this.resultStatus = null;
+    this.resultReason = null;
     this.crashWobble = 0;
   }
 
   /** Pauses gameplay. If a race is in progress it becomes resumable via resume(). */
-  pause() {
-    if (this.state === GAME_STATES.RACING) {
+  pause(reason = null) {
+    if (this.state === GAME_STATES.RACING || this.state === GAME_STATES.CRASHED) {
+      this.clearInput();
       this.state = GAME_STATES.PAUSED;
       this.emitSnapshot(true);
+      if (reason) this.onEvent({ type: "paused", reason });
     }
     this.stopLoop();
     // Stopping the rAF loop doesn't stop an already-playing Web Audio graph — it runs
@@ -340,6 +367,21 @@ export class GameEngine {
     this.resetRace();
     this.state = GAME_STATES.IDLE;
     this.emitSnapshot(true);
+  }
+
+  retireRace() {
+    if (this.state !== GAME_STATES.PAUSED && this.state !== GAME_STATES.RACING && this.state !== GAME_STATES.CRASHED) {
+      return false;
+    }
+    this.clearInput();
+    this.stopLoop();
+    this.state = GAME_STATES.RETIRED;
+    this.resultStatus = "dnf";
+    this.resultReason = "retired";
+    this.audio.silence();
+    this.onEvent({ type: "retired", reason: this.resultReason });
+    this.emitSnapshot(true);
+    return true;
   }
 
   startLoop() {
@@ -384,7 +426,7 @@ export class GameEngine {
       this.emitSnapshot();
     }
 
-    this.frameId = requestAnimationFrame(this.tick);
+    if (this.running) this.frameId = requestAnimationFrame(this.tick);
   }
 
   update(dt) {
@@ -427,6 +469,10 @@ export class GameEngine {
     if (this.state === GAME_STATES.RACING || this.state === GAME_STATES.CRASHED) {
       this.elapsedMs += dt * 1000;
       this.advancePlayer(dt);
+      if (this.lastIsOffRoad && this.player.speed <= AUTO_PAUSE_STOP_SPEED) {
+        this.pause("stopped-off-road");
+        return;
+      }
       this.advanceOpponents(dt);
       this.updateCollisionTimers(dt);
       this.checkCollisions();
@@ -590,6 +636,8 @@ export class GameEngine {
   finishRace() {
     this.score = applyFinishBonus(this.score, this.position);
     this.state = GAME_STATES.FINISHED;
+    this.resultStatus = "finished";
+    this.resultReason = null;
 
     if (this.score > this.bestScore) {
       this.bestScore = this.score;
@@ -718,6 +766,8 @@ export class GameEngine {
       circuitSectors: this.level.sectors,
       elapsedMs: this.elapsedMs,
       countdownValue: this.countdownValue,
+      resultStatus: this.resultStatus,
+      resultReason: this.resultReason,
     };
   }
 
@@ -727,6 +777,8 @@ export class GameEngine {
     if (this.controlsElement) {
       this.controlsElement.removeEventListener("keydown", this.handleKeyDown);
       this.controlsElement.removeEventListener("keyup", this.handleKeyUp);
+      this.controlsElement.removeEventListener("focusout", this.handleFocusOut);
+      window.removeEventListener("blur", this.clearInput);
       this.controlsElement = null;
     }
     this.canvas = null;

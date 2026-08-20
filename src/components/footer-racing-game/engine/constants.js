@@ -42,6 +42,7 @@ export const BIKE_LEAN_MAX_DEGREES = 14; // visible cockpit lean, spec range 12�
 export const CAMERA_COUNTER_ROLL_MAX_DEGREES = 3; // horizon roll, spec range 2–4°
 
 export const SPEED_KPH_MAX = 280;
+export const AUTO_PAUSE_STOP_SPEED = 1; // effectively stationary in world units/sec
 
 // Opponent AI. No pathfinding — each bot just reacts to whoever is directly ahead of it.
 export const OPPONENT_COUNT = 5;
@@ -104,6 +105,7 @@ export const GAME_STATES = {
   RACING: "racing",
   CRASHED: "crashed",
   FINISHED: "finished",
+  RETIRED: "retired",
   PAUSED: "paused",
 };
 

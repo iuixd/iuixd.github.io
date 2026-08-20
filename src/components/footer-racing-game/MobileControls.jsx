@@ -60,6 +60,7 @@ export default function MobileControls({ styles, visible, onInputChange }) {
         onPointerDown={press("left")}
         onPointerUp={release("left")}
         onPointerCancel={release("left")}
+        onLostPointerCapture={release("left")}
       >
         &larr;
       </button>
@@ -70,6 +71,7 @@ export default function MobileControls({ styles, visible, onInputChange }) {
         onPointerDown={press("brake")}
         onPointerUp={release("brake")}
         onPointerCancel={release("brake")}
+        onLostPointerCapture={release("brake")}
       >
         BRAKE
       </button>
@@ -80,6 +82,7 @@ export default function MobileControls({ styles, visible, onInputChange }) {
         onPointerDown={press("right")}
         onPointerUp={release("right")}
         onPointerCancel={release("right")}
+        onLostPointerCapture={release("right")}
       >
         &rarr;
       </button>

@@ -201,6 +201,11 @@
 @media (max-width: 480px) {
   .startHeading {
     gap: 2rem;
+    transform: none;
+  }
+
+  .startActions {
+    top: 0;
   }
 
   .gameTitle {
@@ -259,9 +264,13 @@
   transition: filter 150ms ease, transform 150ms ease;
 }
 
-.startButton {
+.startActions {
   position: relative;
   top: -200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .primaryButton:hover {
@@ -270,6 +279,16 @@
 
 .primaryButton:active {
   transform: scale(0.97);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible,
+.dangerButton:focus-visible,
+.muteButton:focus-visible,
+.touchButton:focus-visible,
+.touchButtonBrake:focus-visible {
+  outline: 3px solid var(--retro-gp-text);
+  outline-offset: 3px;
 }
 
 .countdownOverlay {
@@ -308,6 +327,39 @@
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.12em;
+}
+
+.confirmScrim {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(4, 15, 16, 0.82);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.confirmPanel {
+  width: min(100%, 440px);
+  padding: 1.5rem;
+  border: 1px solid var(--retro-gp-border);
+  border-radius: 18px;
+  background: var(--retro-gp-bg);
+  text-align: center;
+}
+
+.confirmTitle {
+  margin: 0 0 0.65rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.confirmDescription {
+  margin: 0 0 1.25rem;
+  color: var(--retro-gp-text-muted);
+  line-height: 1.55;
 }
 
 .mobileControls {
@@ -569,8 +621,8 @@
 }
 
 .muteButton {
-  min-width: 32px;
-  min-height: 32px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 0;
   border: 1px solid var(--retro-gp-border);
   border-radius: 6px;
@@ -616,6 +668,32 @@
   gap: 1rem 2rem;
   margin: 0;
   max-width: 420px;
+}
+
+.resultsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(100%, 420px);
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--retro-gp-border);
+  border-radius: 10px;
+  background: rgba(4, 15, 16, 0.58);
+}
+
+.resultsRider {
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.dnfStatus {
+  color: #ffb3a7;
+  letter-spacing: 0.08em;
+}
+
+.finishedStatus {
+  color: var(--retro-gp-text-muted);
 }
 
 .finishStat {
@@ -664,6 +742,25 @@
 
 .secondaryButton:hover {
   background: rgba(255, 255, 255, 0.16);
+}
+
+.dangerButton {
+  min-height: 56px;
+  padding: 0 1.75rem;
+  border: 1px solid rgba(255, 150, 135, 0.65);
+  border-radius: 999px;
+  background: rgba(150, 35, 28, 0.72);
+  color: var(--retro-gp-text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.dangerButton:hover {
+  background: rgba(180, 42, 32, 0.86);
 }
 
 .visuallyHidden {

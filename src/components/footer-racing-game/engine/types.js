@@ -1,5 +1,5 @@
 /**
- * @typedef {"idle"|"ready"|"countdown"|"racing"|"crashed"|"finished"|"paused"} GameState
+ * @typedef {"idle"|"ready"|"countdown"|"racing"|"crashed"|"finished"|"retired"|"paused"} GameState
  */
 
 /**

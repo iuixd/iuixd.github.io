@@ -6,6 +6,7 @@ import GameHUD from "./GameHUD";
 import FinishOverlay from "./FinishOverlay";
 import MobileControls from "./MobileControls";
 import AccessibilityStatus from "./AccessibilityStatus";
+import RetireConfirmation from "./RetireConfirmation";
 import useGameVisibility from "./hooks/useGameVisibility";
 import useResponsiveCanvas from "./hooks/useResponsiveCanvas";
 import useReducedMotion from "./hooks/useReducedMotion";
@@ -22,6 +23,7 @@ export default function FooterRacingGame() {
   const [snapshot, setSnapshot] = useState(null);
   const [announcement, setAnnouncement] = useState("");
   const [muted, setMuted] = useState(true);
+  const [showRetireConfirmation, setShowRetireConfirmation] = useState(false);
 
   const reducedMotion = useReducedMotion();
   const { isActive } = useGameVisibility(wrapperRef);
@@ -37,6 +39,10 @@ export default function FooterRacingGame() {
           setAnnouncement("Collision. Recovering.");
         } else if (event.type === "finish") {
           setAnnouncement(`Race finished. ${ordinal(event.position)} place.`);
+        } else if (event.type === "retired") {
+          setAnnouncement("Race ended. Result: DNF, retired.");
+        } else if (event.type === "paused" && event.reason === "stopped-off-road") {
+          setAnnouncement("Motorcycle stopped beside the track. Race paused.");
         }
       },
     });
@@ -78,7 +84,7 @@ export default function FooterRacingGame() {
   const handleStart = useCallback(() => {
     engineRef.current?.start();
     wrapperRef.current?.focus();
-    setAnnouncement("Race started.");
+    setAnnouncement("Get ready. Race begins after the countdown.");
   }, []);
 
   const handleResume = useCallback(() => {
@@ -104,6 +110,16 @@ export default function FooterRacingGame() {
     setAnnouncement("");
   }, []);
 
+  const handleConfirmRetire = useCallback(() => {
+    engineRef.current?.retireRace();
+    setShowRetireConfirmation(false);
+  }, []);
+
+  const handleCancelRetire = useCallback(() => {
+    setShowRetireConfirmation(false);
+    wrapperRef.current?.focus();
+  }, []);
+
   const handleMobileInput = useCallback((input) => {
     engineRef.current?.setInput(input);
   }, []);
@@ -114,7 +130,13 @@ export default function FooterRacingGame() {
       engineRef.current?.setMuted(next);
       return next;
     });
-  }, []);
+    // HUD controls take DOM focus when clicked. Return it to an active game on the next
+    // frame so keyboard steering continues without requiring an extra click. On the start
+    // screen, retain normal button focus for keyboard and assistive-technology users.
+    if (state === GAME_STATES.RACING || state === GAME_STATES.CRASHED) {
+      requestAnimationFrame(() => wrapperRef.current?.focus());
+    }
+  }, [state]);
 
   const showHud =
     state === GAME_STATES.RACING ||
@@ -135,22 +157,42 @@ export default function FooterRacingGame() {
 
       <GameCanvas canvasRef={canvasRef} className={styles.canvas} />
 
-      {state === GAME_STATES.IDLE && <StartOverlay styles={styles} onStart={handleStart} />}
+      {state === GAME_STATES.IDLE && (
+        <StartOverlay
+          styles={styles}
+          muted={muted}
+          onStart={handleStart}
+          onToggleMute={handleToggleMute}
+        />
+      )}
 
       {(state === GAME_STATES.READY || state === GAME_STATES.COUNTDOWN) && (
         <CountdownOverlay styles={styles} value={snapshot?.countdownValue ?? 3} />
       )}
 
-      {state === GAME_STATES.PAUSED && (
-        <div className={styles.pausedOverlay}>
-          <p className={styles.pausedLabel}>PAUSED</p>
+      {state === GAME_STATES.PAUSED && !showRetireConfirmation && (
+        <div className={styles.pausedOverlay} role="dialog" aria-modal="true" aria-labelledby="retro-gp-paused-title">
+          <p id="retro-gp-paused-title" className={styles.pausedLabel}>PAUSED</p>
           <button type="button" className={styles.primaryButton} onClick={handleResume}>
             Resume Race
+          </button>
+          <button type="button" className={styles.secondaryButton} onClick={handleRaceAgain}>
+            Restart Race
+          </button>
+          <button type="button" className={styles.dangerButton} onClick={() => setShowRetireConfirmation(true)}>
+            Retire from Race
+          </button>
+          <button type="button" className={styles.secondaryButton} onClick={handleExit}>
+            Exit
           </button>
         </div>
       )}
 
-      {state === GAME_STATES.FINISHED && snapshot && (
+      {state === GAME_STATES.PAUSED && showRetireConfirmation && (
+        <RetireConfirmation styles={styles} onCancel={handleCancelRetire} onConfirm={handleConfirmRetire} />
+      )}
+
+      {(state === GAME_STATES.FINISHED || state === GAME_STATES.RETIRED) && snapshot && (
         <FinishOverlay
           styles={styles}
           snapshot={snapshot}
