@@ -164,6 +164,41 @@ export default function FooterRacingGame() {
         Retro GP
       </h2>
 
+      {/* Defs-only SVG (0x0, no visual footprint) for the idle-state flag-wave filter.
+          Verified in isolation against several alternatives (raw turbulence alone was too
+          speckly; displacing a smooth/striped gradient barely showed any warp since there
+          was no contrast for the eye to track) before landing here: fractalNoise turbulence
+          is turned into an organic, cloud-shaped alpha mask for the brand-colour gradient
+          (so the colour patches themselves are irregular, not geometric), then the SAME
+          noise drives feDiffuseLighting for genuine light/shadow modulation — masked to that
+          same cloud shape so the lighting never leaks into the fully-transparent gaps, which
+          is what keeps the game content visible through it. Present once, referenced by
+          url(#footerFlagRippleFilter) from the CSS. */}
+      <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
+        <defs>
+          <filter id="footerFlagRippleFilter" x="-25%" y="-25%" width="150%" height="150%" colorInterpolationFilters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency="0.007 0.011" numOctaves="3" seed="7" result="noise">
+              <animate
+                attributeName="baseFrequency"
+                dur="26s"
+                values="0.007 0.011;0.010 0.008;0.007 0.011"
+                repeatCount="indefinite"
+              />
+            </feTurbulence>
+            <feColorMatrix in="noise" type="luminanceToAlpha" result="alpha" />
+            <feComponentTransfer in="alpha" result="cloudAlpha">
+              <feFuncA type="linear" slope="2.4" intercept="-0.35" />
+            </feComponentTransfer>
+            <feComposite in="SourceGraphic" in2="cloudAlpha" operator="in" result="coloredClouds" />
+            <feDiffuseLighting in="noise" lightingColor="#ffffff" surfaceScale="9" diffuseConstant="1.25" result="light">
+              <feDistantLight azimuth="235" elevation="52" />
+            </feDiffuseLighting>
+            <feComposite in="light" in2="coloredClouds" operator="in" result="maskedLight" />
+            <feBlend in="maskedLight" in2="coloredClouds" mode="overlay" />
+          </filter>
+        </defs>
+      </svg>
+
       <GameCanvas canvasRef={canvasRef} className={styles.canvas} />
 
       {state === GAME_STATES.IDLE && (

@@ -79,45 +79,56 @@
   backdrop-filter: blur(2px) saturate(105%);
 }
 
-/* Ambient flag-like wave: a very low-opacity brand-color sweep sitting behind the dark
-   legibility scrim above (z-index -1), so it only ever tints the already-blurred photo —
-   it never touches the scrim that keeps overlay text readable. transform-only animation
-   (no gradient-stop or background-position changes) keeps this compositor-only/GPU-cheap.
-   Oversized (-30% inset) so the alternating translate never reveals a hard edge; alternate
-   direction reads as a gentle back-and-forth ripple and needs no seam-matched tiling math. */
+/* Ambient flag-like wave: a real fractalNoise-turbulence filter (defined once in
+   FooterRacingGame.jsx, referenced here by id) turns this gradient into organic,
+   irregularly-shaped colour clouds with genuine feDiffuseLighting light/shadow depth — no
+   CSS gradient technique can produce this, since gradients are inherently geometric/regular.
+   Verified in isolation against several alternatives first (raw displacement of a smooth
+   gradient barely showed any warp; this cloud-shaped-alpha + masked-lighting combination is
+   what actually reads as lit, rippling fabric). Sits behind the dark legibility scrim above
+   (z-index -1), so it only ever tints the already-blurred photo, never the scrim that keeps
+   overlay text readable. opacity (not just the gradient's own internal alpha) is the primary
+   see-through control — keep it low enough that the racers/road/HUD stay clearly readable
+   through it; this is a wash of atmosphere, not a curtain.
+   A gentle outer drift (much smaller amplitude than the filter's own internal motion)
+   suggests the whole sheet billowing, on top of the fold texture morphing in place. */
 .flagWave {
   position: absolute;
-  inset: -30%;
+  inset: -15%;
   z-index: -2;
   pointer-events: none;
+  opacity: 0.55;
   background: linear-gradient(
-    115deg,
+    100deg,
     transparent 0%,
-    oklch(0.7339 0.124768 199.4425 / 38%) 22%,
-    transparent 42%,
-    oklch(0.6 0.29 295 / 32%) 64%,
-    transparent 86%
+    oklch(0.7339 0.124768 199.4425 / 70%) 25%,
+    transparent 50%,
+    oklch(0.6 0.29 295 / 70%) 75%,
+    transparent 100%
   );
-  mix-blend-mode: soft-light;
-  animation: flagWaveSweep 17s ease-in-out infinite alternate;
+  filter: url(#footerFlagRippleFilter);
+  mix-blend-mode: overlay;
+  animation: flagWaveSweep 24s ease-in-out infinite alternate;
   will-change: transform;
 }
 
 .flagWave.flagWavePaused {
   animation-play-state: paused;
+  filter: none;
 }
 
 @keyframes flagWaveSweep {
   from {
-    transform: translate3d(-12%, -3%, 0);
+    transform: translate3d(-8%, -2%, 0);
   }
   to {
-    transform: translate3d(12%, 3%, 0);
+    transform: translate3d(8%, 2%, 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .flagWave {
+    filter: none;
     animation: none;
     transform: none;
   }
