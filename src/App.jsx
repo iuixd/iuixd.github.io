@@ -8,13 +8,14 @@ const GitHub = lazy(() => import("./components/GitHub"));
 const Contact = lazy(() => import("./components/Contact"));
 import NotFound from "./components/NotFound";
 import Navbar from "./components/Navbar";
+import { AvatarProvider } from "./context/AvatarContext";
 
 // Define layout with navbar
 const Layout = () => (
-  <>
+  <AvatarProvider>
     <Navbar />
     <Outlet />
-  </>
+  </AvatarProvider>
 );
 
 const router = createHashRouter([

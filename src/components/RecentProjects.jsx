@@ -2,8 +2,6 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
-import myPhoto from "../assets/myPhoto.webp";
 // eslint-disable-next-line no-unused-vars
 import linkArrw from "../assets/external-link-arrow.svg";
 import lovableLogo from "../assets/lovable-logo.svg";
@@ -55,21 +53,16 @@ const RecentProjects = () => {
     <>
       <div
         data-page-name="articles"
-        x-data="{ pageName: $root.dataset.pageName }"
-        x-init="$store.page.name = pageName"
-        className="fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0 border-1"
+        x-data="{ pageName: $root.dataset.pageName, scrolledFromTop: false }"
+        x-init="
+          $store.page.name = pageName;
+          window.addEventListener('scroll', () => {
+            scrolledFromTop = window.scrollY > 180;
+          });
+        "
+        x-bind:class="!scrolledFromTop ? 'opacity-0' : (window.innerWidth >= 768 ? 'opacity-50' : 'opacity-90')"
+        className="fixed h-[74px] z-2 top-0 self-auto w-full bg-turquoise-500 opacity-0 transition-opacity duration-300 ease-in-out"
       ></div>
-
-      <div className="relative flex flex-col max-[360px]:items-start min-[360px]:items-center">
-        <div className="static flex flex-col self-auto min-[360px]:w-full md:w-full lg:w-[1024px] h-auto text-white">
-          <Link
-            to="/"
-            className="max-md:ml-[50px] md:ml-[90px] lg:ml-[6px] mt-[12px] self-start relative z-101"
-          >
-            <img src={myPhoto} className="w-12 h-12" alt="Srikumar's Photo" width="48" height="48" />
-          </Link>
-        </div>
-      </div>
 
       <div className="body-wrapper h-full">
         <div className="subpage-body-container">

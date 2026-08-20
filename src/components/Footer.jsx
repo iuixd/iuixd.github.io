@@ -29,7 +29,7 @@ export default function Footer({ withGame = false, gameEnabled = true }) {
   }, [withGame, gameEnabled, shouldLoadGame]);
 
   return (
-    <section className="footer">
+    <section className={`footer${withGame ? "" : " footer-subpage"}`}>
       {withGame && (
         <>
           {!shouldLoadGame && (

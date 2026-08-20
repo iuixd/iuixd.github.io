@@ -11,6 +11,15 @@
     overflow-x: hidden;
   }
 
+  /* Subpages have genuinely different content heights, so whether the native vertical
+     scrollbar is needed differs per page/route. Without reserving its space up front, the
+     scrollbar appearing/disappearing on navigation shifts the centered content and the
+     fixed-position nav/header-avatar by the scrollbar's own width, producing a visible
+     layout jump. Reserving it unconditionally keeps that width constant everywhere. */
+  html {
+    scrollbar-gutter: stable;
+  }
+
   /* Unlike hidden, clip does not establish a secondary scroll container that can
      interfere with position: sticky. Keep hidden above as the compatibility fallback. */
   @supports (overflow: clip) {
@@ -68,6 +77,38 @@
 
   .nav-container {
     @apply fixed z-100 top-0 w-full;
+  }
+
+  /* Header-state profile photo: sits fixed to the viewport (not nested inside .nav-container,
+     so its own scroll-persistence never depends on that element's layout). The track spans
+     the full viewport and centers a body-container-width column exactly like .body-wrapper
+     does for the real content, so .header-avatar-link's ml offset (see HeaderAvatar.jsx)
+     lands at the same x as the hero photo at every breakpoint instead of one fixed pixel
+     value. top:15px centers the 40px image on the nav's actual rendered vertical center
+     (menubar/hamburger both center on y=35 regardless of breakpoint: 35 - 40/2 = 15). */
+  .header-avatar-track {
+    position: fixed;
+    top: 15px;
+    inset-inline: 0;
+    z-index: 201;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  /* inline-block (not block) is required here: a block-level anchor with no explicit width
+     stretches to fill its full container instead of shrink-wrapping the image, which
+     silently intercepted clicks on the nav pill sitting underneath that invisible stretched
+     hit-area. */
+  .header-avatar-link {
+    display: inline-block;
+    pointer-events: auto;
+  }
+
+  .header-avatar-img {
+    display: block;
+    width: 40px;
+    height: 40px;
   }
 
   .nav-wrapper {
@@ -200,8 +241,11 @@
     @apply flex flex-row py-4;
   }
 
+  /* Explicit w-24/h-24 (matching the hero <img> itself) keeps this box's footprint stable
+     even while the header-state transition hides the image inside it, so the heading/body
+     text below never shifts when the photo swaps to the sticky header and back. */
   .photo-link {
-    @apply relative z-100 block min-[360px]:mx-[10%] md:mx-24 lg:mx-24;
+    @apply relative z-100 block w-24 h-24 min-[360px]:mx-[10%] md:mx-24 lg:mx-24;
   }
 
   .body-wrapper {
@@ -295,7 +339,7 @@
   }
 
   .sub-content-wrapper {
-    @apply flex flex-col w-full h-fit max-[540px]:mt-[0px] md:-mt-[60px] max-[540px]:pt-[30px] py-[100px] bg-turquoise-400/40;
+    @apply flex flex-col w-full h-fit max-[540px]:mt-[0px] max-[540px]:pt-[30px] py-[100px] bg-turquoise-400/40;
   }
 
   .sub-backhome-link {
@@ -356,6 +400,13 @@
 
   .footer {
     @apply flex flex-col gap-6 w-full h-fit pt-0 pb-8 items-center justify-center text-[12px] text-turquoise-300/80 bg-turquoise-900;
+  }
+
+  /* Subpages (About, GitHub, Recent Projects, Gen AI Videos, Contact) render the footer
+     without the racing game above it, so it needs its own top breathing room; the homepage
+     footer sits directly under the game and stays flush (pt-0) above. */
+  .footer-subpage {
+    @apply pt-[24px];
   }
 
   .footer .btn-social {

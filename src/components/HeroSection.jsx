@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SocialLinks from './SocialLinks';
 import myPhoto from '../assets/myPhoto.webp';
 import Alpine from 'alpinejs';
 import Reveal from './Reveal';
 import MiniProjectCard from './MiniProjectCard';
 import iuixdLogo from '../assets/copilotLogo.svg';
+// eslint-disable-next-line no-unused-vars
+import { motion, useReducedMotion } from 'framer-motion';
+import { useAvatarMode } from '../context/AvatarContext';
 
 window.Alpine = Alpine
 
@@ -13,19 +16,47 @@ Alpine.store('page', { name: '' })
 Alpine.start()
 
 const Hero = () => {
+  const heroPhotoRef = useRef(null);
+  const { avatarMode, setAvatarMode } = useAvatarMode();
+  const shouldReduceMotion = useReducedMotion();
+
+  // Tracks the hero photo's own position (not a magic scroll distance) so the swap to the
+  // sticky-header avatar happens exactly when it would visually reach that region. The
+  // anchor itself (not the conditionally-rendered image inside it) is observed, and it
+  // keeps its w-24/h-24 footprint via CSS regardless of avatarMode, so this target never
+  // disappears and the layout never shifts.
+  useEffect(() => {
+    const node = heroPhotoRef.current;
+    if (!node || typeof IntersectionObserver === "undefined") {
+      setAvatarMode("hero");
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setAvatarMode(entry.isIntersecting ? "hero" : "header"),
+      { rootMargin: "-74px 0px 0px 0px", threshold: 0 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [setAvatarMode]);
+
   return (
     <>
-      <a href="#" className="photo-link">
-      <Reveal>
-        <img
-          src={myPhoto}
-          className="w-24 h-24"
-          alt="Srikumar's Photo"
-          width="288"
-          height="288"
-          fetchPriority="high"
-        />
-      </Reveal>
+      <a href="#" ref={heroPhotoRef} className="photo-link">
+      {avatarMode === "hero" && (
+        <Reveal>
+          <motion.img
+            layoutId="profile-avatar"
+            transition={shouldReduceMotion ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 30 }}
+            src={myPhoto}
+            className="w-24 h-24"
+            alt="Srikumar's Photo"
+            width="288"
+            height="288"
+            fetchPriority="high"
+          />
+        </Reveal>
+      )}
       </a>
       <Reveal>
       <div className="hero-heading">

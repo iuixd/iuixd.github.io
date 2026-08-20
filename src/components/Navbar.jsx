@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import Reveal from "./Reveal";
-// eslint-disable-next-line no-unused-vars
-import myPhoto from "../assets/myPhoto.webp";
+import HeaderAvatar from "./HeaderAvatar";
+import { useAvatarMode } from "../context/AvatarContext";
 
 const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -31,6 +31,9 @@ const Navbar = () => {
   }, []);
 
   const location = useLocation();
+  const isHome = location.pathname === "/";
+  const { avatarMode } = useAvatarMode();
+  const showHeaderAvatar = !isHome || avatarMode === "header";
   const navRef = useRef(null);
   const itemRefs = useRef({});
 
@@ -114,6 +117,8 @@ const Navbar = () => {
   };
 
   return (
+    <>
+    {showHeaderAvatar && <HeaderAvatar />}
     <nav
       className={`nav-container transition-all duration-300 ease-in-out z-[200] ${
         isMenuOpen ? "max-md:z-[200]" : "max-md:z-3"
@@ -226,6 +231,7 @@ const Navbar = () => {
         </div>
       </Reveal>
     </nav>
+    </>
   );
 };
 
