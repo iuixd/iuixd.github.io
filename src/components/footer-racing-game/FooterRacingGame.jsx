@@ -175,6 +175,7 @@ export default function FooterRacingGame() {
           onToggleMute={handleToggleMute}
           onModeChange={handleModeChange}
           onLevelChange={handleLevelChange}
+          isActive={isActive}
         />
       )}
 

@@ -37,11 +37,15 @@ function SoundIcon({ muted }) {
   );
 }
 
-export default function StartOverlay({ styles, muted, snapshot, onStart, onToggleMute, onModeChange, onLevelChange }) {
+export default function StartOverlay({ styles, muted, snapshot, onStart, onToggleMute, onModeChange, onLevelChange, isActive = true }) {
   const estimatedDuration = snapshot?.mode === "grand-prix" ? "~2 min" : "~40 sec";
 
   return (
     <div className={`${styles.overlay} ${styles.startScrim}`}>
+      <div
+        className={`${styles.flagWave} ${isActive ? "" : styles.flagWavePaused}`}
+        aria-hidden="true"
+      />
       <div className={styles.startHeading}>
         <p className={styles.gameTitle} aria-hidden="true">Victory Lap!</p>
         <p className={styles.startIntro}>Choose your mode and circuit to begin your ride.</p>
