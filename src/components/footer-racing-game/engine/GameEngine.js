@@ -25,6 +25,8 @@ import {
   SECTOR_COUNT,
   MAX_SPEED,
   AUTO_PAUSE_STOP_SPEED,
+  RACE_MODES,
+  MODE_LAPS,
   DUST_SPAWN_INTERVAL_MS,
   DUST_PARTICLE_LIFETIME_MS,
   DUST_MAX_PARTICLES,
@@ -32,7 +34,17 @@ import {
   CRASH_WOBBLE_RECOVERY_RATE,
   OPPONENT_HIT_WOBBLE_MAGNITUDE,
 } from "./constants";
-import { getBestScore, getBestTime, setBestScore, setBestTime } from "./storage";
+import {
+  getBestScore,
+  getBestTime,
+  setBestScore,
+  setBestTime,
+  getProgression,
+  setProgression,
+  recordKey,
+  mergeRaceRecord,
+} from "./storage";
+import { calculateMedal, nextUnlockedLevel, describeNextTarget } from "./progression";
 import { createCamera } from "./camera";
 import { findBaseSegmentIndex, getGroundElevation } from "./road";
 import { renderBackdrop, renderRoad, renderOpponents, renderCockpit } from "./renderer";
@@ -57,7 +69,6 @@ import { AudioController } from "./audio";
 const PLAYER_ID = "player";
 const IDLE_SWAY_PERIOD_MS = 2800;
 const IDLE_SWAY_AMPLITUDE = 0.06;
-const TOTAL_LAPS = 3;
 
 const noop = () => {};
 
@@ -86,6 +97,8 @@ export class GameEngine {
     this.dpr = 1;
 
     this.levelIndex = 0;
+    this.mode = RACE_MODES.SPRINT;
+    this.progression = getProgression();
     this.level = getLevel(this.levelIndex);
     this.track = this.level.buildTrack();
     this.camera = createCamera();
@@ -99,20 +112,35 @@ export class GameEngine {
     this.lastIsOffRoad = false;
 
     this.score = 0;
-    this.bestScore = getBestScore();
-    this.bestTime = getBestTime();
+    const initialRecord = this.getCurrentRecord();
+    this.bestScore = initialRecord.bestScore || 0;
+    this.bestTime = initialRecord.bestTime || 0;
     this.speedKph = 0;
     this.position = 1;
     this.previousPosition = 1;
     this.racers = 6;
     this.lap = 1;
-    this.totalLaps = TOTAL_LAPS;
+    this.totalLaps = MODE_LAPS[this.mode];
     this.elapsedMs = 0;
     this.countdownValue = 3;
     this.sectorIndex = 0;
     this.sectorHadCollision = false;
     this.resultStatus = null;
     this.resultReason = null;
+    this.medal = null;
+    this.newBestTime = false;
+    this.newBestScore = false;
+    this.nextTarget = "";
+    this.lapStartMs = 0;
+    this.lapTimes = [];
+    this.lastLapTime = 0;
+    this.bestLap = 0;
+    this.lapDelta = 0;
+    this.collisionCount = 0;
+    this.overtakeCount = 0;
+    this.cleanSectorCount = 0;
+    this.feedback = "";
+    this.feedbackExpiresMs = 0;
 
     this.running = false;
     this.frameId = null;
@@ -284,11 +312,43 @@ export class GameEngine {
     this.beginCountdown();
   }
 
+  setRaceMode(mode) {
+    if (!MODE_LAPS[mode] || this.state !== GAME_STATES.IDLE) return false;
+    this.mode = mode;
+    this.totalLaps = MODE_LAPS[mode];
+    this.refreshCurrentRecords();
+    this.emitSnapshot(true);
+    return true;
+  }
+
+  selectLevel(index) {
+    if (this.state !== GAME_STATES.IDLE) return false;
+    const boundedIndex = Math.max(0, Math.min(LEVELS.length - 1, index));
+    if (boundedIndex > this.progression.unlockedLevelIndex) return false;
+    this.levelIndex = boundedIndex;
+    this.level = getLevel(this.levelIndex);
+    this.track = this.level.buildTrack();
+    this.refreshCurrentRecords();
+    this.emitSnapshot(true);
+    return true;
+  }
+
+  getCurrentRecord() {
+    return this.progression.records[recordKey(this.level.number, this.mode)] || {};
+  }
+
+  refreshCurrentRecords() {
+    const record = this.getCurrentRecord();
+    this.bestScore = record.bestScore || 0;
+    this.bestTime = record.bestTime || 0;
+  }
+
   advanceLevel() {
-    if (this.levelIndex >= LEVELS.length - 1) return false;
+    if (this.levelIndex >= LEVELS.length - 1 || this.levelIndex >= this.progression.unlockedLevelIndex) return false;
     this.levelIndex += 1;
     this.level = getLevel(this.levelIndex);
     this.track = this.level.buildTrack();
+    this.refreshCurrentRecords();
     this.beginCountdown();
     return true;
   }
@@ -328,6 +388,20 @@ export class GameEngine {
     this.sectorHadCollision = false;
     this.resultStatus = null;
     this.resultReason = null;
+    this.medal = null;
+    this.newBestTime = false;
+    this.newBestScore = false;
+    this.nextTarget = "";
+    this.lapStartMs = 0;
+    this.lapTimes = [];
+    this.lastLapTime = 0;
+    this.bestLap = 0;
+    this.lapDelta = 0;
+    this.collisionCount = 0;
+    this.overtakeCount = 0;
+    this.cleanSectorCount = 0;
+    this.feedback = "";
+    this.feedbackExpiresMs = 0;
     this.crashWobble = 0;
   }
 
@@ -503,6 +577,10 @@ export class GameEngine {
     });
     this.speedKph = speedToKph(this.player.speed);
     this.lastInput = input; // read by the audio update in tick(), after this frame's physics
+    if (this.player.cornerOverspeed > 0.12 && this.elapsedMs > this.feedbackExpiresMs) {
+      this.feedback = "TOO FAST · BRAKE BEFORE THE TURN";
+      this.feedbackExpiresMs = this.elapsedMs + 1100;
+    }
 
     const groundY = getGroundElevation(segments, this.player.z);
     this.camera.x = this.player.x * this.level.roadWidth;
@@ -586,6 +664,9 @@ export class GameEngine {
     );
 
     this.score = applyCollisionPenalty(this.score);
+    this.collisionCount += 1;
+    this.feedback = "COLLISION · SCORE PENALTY";
+    this.feedbackExpiresMs = this.elapsedMs + 1800;
     this.sectorHadCollision = true;
 
     this.state = GAME_STATES.CRASHED;
@@ -611,11 +692,26 @@ export class GameEngine {
 
     if (this.position < this.previousPosition) {
       this.score = applyOvertakeBonus(this.score);
+      this.overtakeCount += 1;
+      this.feedback = `OVERTAKE · P${this.position}`;
+      this.feedbackExpiresMs = this.elapsedMs + 1500;
       this.onEvent({ type: "overtake", position: this.position });
     }
     this.previousPosition = this.position;
 
-    this.lap = Math.min(this.totalLaps, Math.floor(this.player.z / this.track.length) + 1);
+    const completedLaps = Math.min(this.totalLaps, Math.floor(this.player.z / this.track.length));
+    if (completedLaps > this.lapTimes.length) {
+      const lapTime = this.elapsedMs - this.lapTimes.reduce((sum, value) => sum + value, 0);
+      const previousBest = this.bestLap || this.getCurrentRecord().bestLap || 0;
+      this.lastLapTime = lapTime;
+      this.lapTimes.push(lapTime);
+      this.bestLap = this.bestLap ? Math.min(this.bestLap, lapTime) : lapTime;
+      this.lapDelta = previousBest ? lapTime - previousBest : 0;
+      this.feedback = previousBest && lapTime < previousBest ? "NEW BEST LAP" : `LAP ${completedLaps} COMPLETE`;
+      this.feedbackExpiresMs = this.elapsedMs + 2200;
+      this.onEvent({ type: "lap", lap: completedLaps, time: lapTime, delta: this.lapDelta });
+    }
+    this.lap = Math.min(this.totalLaps, completedLaps + 1);
 
     const sectorLength = this.track.length / SECTOR_COUNT;
     const totalSectors = SECTOR_COUNT * this.totalLaps;
@@ -623,6 +719,9 @@ export class GameEngine {
     if (currentSector > this.sectorIndex) {
       if (!this.sectorHadCollision) {
         this.score = applyCleanSectorBonus(this.score);
+        this.cleanSectorCount += 1;
+        this.feedback = "CLEAN SECTOR · BONUS";
+        this.feedbackExpiresMs = this.elapsedMs + 1400;
       }
       this.sectorIndex = currentSector;
       this.sectorHadCollision = false;
@@ -634,19 +733,43 @@ export class GameEngine {
   }
 
   finishRace() {
+    if (!this.sectorHadCollision) {
+      this.score = applyCleanSectorBonus(this.score);
+      this.cleanSectorCount += 1;
+    }
     this.score = applyFinishBonus(this.score, this.position);
     this.state = GAME_STATES.FINISHED;
     this.resultStatus = "finished";
     this.resultReason = null;
 
-    if (this.score > this.bestScore) {
-      this.bestScore = this.score;
-      setBestScore(this.bestScore);
-    }
-    if (this.bestTime === 0 || this.elapsedMs < this.bestTime) {
-      this.bestTime = this.elapsedMs;
-      setBestTime(this.bestTime);
-    }
+    const previousRecord = this.getCurrentRecord();
+    this.medal = calculateMedal({ position: this.position, collisionCount: this.collisionCount });
+    this.newBestTime = !previousRecord.bestTime || this.elapsedMs < previousRecord.bestTime;
+    this.newBestScore = !previousRecord.bestScore || this.score > previousRecord.bestScore;
+    const key = recordKey(this.level.number, this.mode);
+    this.progression.records[key] = mergeRaceRecord(previousRecord, {
+      time: this.elapsedMs,
+      score: this.score,
+      bestLap: this.bestLap || this.elapsedMs,
+      medal: this.medal,
+    });
+    this.progression.unlockedLevelIndex = nextUnlockedLevel(
+      this.progression.unlockedLevelIndex,
+      this.levelIndex,
+      this.medal
+    );
+    setProgression(this.progression);
+    this.nextTarget = describeNextTarget({
+      medal: this.medal,
+      position: this.position,
+      collisionCount: this.collisionCount,
+    });
+    this.bestScore = this.progression.records[key].bestScore;
+    this.bestTime = this.progression.records[key].bestTime;
+
+    setBestScore(Math.max(getBestScore(), this.score));
+    const legacyBestTime = getBestTime();
+    if (!legacyBestTime || this.elapsedMs < legacyBestTime) setBestTime(this.elapsedMs);
 
     this.audio.playFinish();
     this.onEvent({ type: "finish", position: this.position, racers: this.racers });
@@ -743,10 +866,12 @@ export class GameEngine {
   }
 
   getSnapshot() {
+    const currentRecord = this.getCurrentRecord();
     return {
       state: this.state,
       score: this.score,
       bestScore: this.bestScore,
+      bestTime: this.bestTime,
       speedKph: this.speedKph,
       position: this.position,
       racers: this.racers,
@@ -756,7 +881,19 @@ export class GameEngine {
       totalLevels: LEVELS.length,
       difficulty: this.level.name,
       circuit: this.level.circuit,
-      hasNextLevel: this.levelIndex < LEVELS.length - 1,
+      mode: this.mode,
+      modeLabel: this.mode === RACE_MODES.SPRINT ? "Quick Sprint" : "Grand Prix",
+      hasNextLevel:
+        this.levelIndex < LEVELS.length - 1 && this.levelIndex < this.progression.unlockedLevelIndex,
+      unlockedLevelIndex: this.progression.unlockedLevelIndex,
+      availableLevels: LEVELS.map((level, index) => ({
+        index,
+        number: level.number,
+        circuit: level.circuit,
+        difficulty: level.name,
+        unlocked: index <= this.progression.unlockedLevelIndex,
+        medal: this.progression.records[recordKey(level.number, this.mode)]?.medal || "none",
+      })),
       trackProgress:
         this.state === GAME_STATES.FINISHED
           ? 1
@@ -766,6 +903,19 @@ export class GameEngine {
       circuitSectors: this.level.sectors,
       elapsedMs: this.elapsedMs,
       countdownValue: this.countdownValue,
+      currentLapTime: this.elapsedMs - this.lapTimes.reduce((sum, value) => sum + value, 0),
+      lastLapTime: this.lastLapTime,
+      bestLap: this.bestLap || currentRecord.bestLap || 0,
+      lapDelta: this.lapDelta,
+      collisionCount: this.collisionCount,
+      overtakeCount: this.overtakeCount,
+      cleanSectorCount: this.cleanSectorCount,
+      totalSectors: SECTOR_COUNT * this.totalLaps,
+      medal: this.medal,
+      newBestTime: this.newBestTime,
+      newBestScore: this.newBestScore,
+      nextTarget: this.nextTarget,
+      feedback: this.elapsedMs <= this.feedbackExpiresMs ? this.feedback : "",
       resultStatus: this.resultStatus,
       resultReason: this.resultReason,
     };

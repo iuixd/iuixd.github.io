@@ -43,6 +43,8 @@ export default function FooterRacingGame() {
           setAnnouncement("Race ended. Result: DNF, retired.");
         } else if (event.type === "paused" && event.reason === "stopped-off-road") {
           setAnnouncement("Motorcycle stopped beside the track. Race paused.");
+        } else if (event.type === "lap") {
+          setAnnouncement(`Lap ${event.lap} complete.`);
         }
       },
     });
@@ -85,6 +87,14 @@ export default function FooterRacingGame() {
     engineRef.current?.start();
     wrapperRef.current?.focus();
     setAnnouncement("Get ready. Race begins after the countdown.");
+  }, []);
+
+  const handleModeChange = useCallback((mode) => {
+    engineRef.current?.setRaceMode(mode);
+  }, []);
+
+  const handleLevelChange = useCallback((index) => {
+    engineRef.current?.selectLevel(index);
   }, []);
 
   const handleResume = useCallback(() => {
@@ -141,8 +151,7 @@ export default function FooterRacingGame() {
   const showHud =
     state === GAME_STATES.RACING ||
     state === GAME_STATES.CRASHED ||
-    state === GAME_STATES.PAUSED ||
-    state === GAME_STATES.FINISHED;
+    state === GAME_STATES.PAUSED;
 
   return (
     <section
@@ -161,8 +170,11 @@ export default function FooterRacingGame() {
         <StartOverlay
           styles={styles}
           muted={muted}
+          snapshot={snapshot}
           onStart={handleStart}
           onToggleMute={handleToggleMute}
+          onModeChange={handleModeChange}
+          onLevelChange={handleLevelChange}
         />
       )}
 

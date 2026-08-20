@@ -15,16 +15,11 @@ Alpine.start()
 const Hero = () => {
   return (
     <>
-      <a
-        href="#"
-        className="photo-link"
-        x-bind:class="{'relative': !scrolledFromTop, 'sticky top-[12px]': scrolledFromTop}"
-      >
+      <a href="#" className="photo-link">
       <Reveal>
         <img
           src={myPhoto}
-          className="transition-all duration-500 ease-in-out"
-          x-bind:class="{'w-24 h-24': !scrolledFromTop, 'w-12 h-12': scrolledFromTop}"
+          className="w-24 h-24"
           alt="Srikumar's Photo"
           width="288"
           height="288"

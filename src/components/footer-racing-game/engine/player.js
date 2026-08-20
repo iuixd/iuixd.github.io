@@ -1,5 +1,5 @@
 import { ROAD_EDGE, MAX_SPEED } from "./constants";
-import { updateSpeed, updateSteering, computeCurveInfluence, computeTargetLean, updateLean } from "./physics";
+import { clamp, updateSpeed, updateSteering, computeCurveInfluence, computeTargetLean, updateLean } from "./physics";
 
 export function createPlayer() {
   return {
@@ -8,7 +8,13 @@ export function createPlayer() {
     speed: 0,
     lean: 0,
     distance: 0,
+    cornerOverspeed: 0,
   };
+}
+
+export function computeCornerOverspeed(curve, speedPercent) {
+  const safeSpeed = clamp(0.96 - Math.abs(curve) * 0.075, 0.5, 0.96);
+  return Math.max(0, speedPercent - safeSpeed);
 }
 
 /** One frame of player physics: speed, steering, and lean, given the curve of the road
@@ -24,17 +30,20 @@ export function updatePlayer(player, { input, curve, dt, authorityScale = 1, roa
     dt,
   });
   const speedPercent = speed / MAX_SPEED;
+  const cornerOverspeed = computeCornerOverspeed(curve, speedPercent);
+  const gripAuthority = Math.max(0.52, 1 - cornerOverspeed * 1.8);
+  const loadedCurve = curve * (1 + cornerOverspeed * 2.4);
 
   const x = updateSteering(player.x, {
     inputX: input.steerX,
-    curve,
+    curve: loadedCurve,
     speedPercent,
     offRoad: isOffRoad,
     dt,
-    authorityScale,
+    authorityScale: authorityScale * gripAuthority,
   });
 
-  const curveInfluence = computeCurveInfluence(curve, speedPercent);
+  const curveInfluence = computeCurveInfluence(loadedCurve, speedPercent);
   const targetLean = computeTargetLean(input.steerX, curveInfluence);
   const lean = updateLean(player.lean, targetLean, dt);
 
@@ -44,5 +53,6 @@ export function updatePlayer(player, { input, curve, dt, authorityScale = 1, roa
     speed,
     lean,
     distance: player.distance + speed * dt,
+    cornerOverspeed,
   };
 }

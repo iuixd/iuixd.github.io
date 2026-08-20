@@ -10,6 +10,14 @@
   html, body {
     overflow-x: hidden;
   }
+
+  /* Unlike hidden, clip does not establish a secondary scroll container that can
+     interfere with position: sticky. Keep hidden above as the compatibility fallback. */
+  @supports (overflow: clip) {
+    html, body {
+      overflow-x: clip;
+    }
+  }
 }
 
 @layer components {
@@ -193,7 +201,7 @@
   }
 
   .photo-link {
-    @apply relative z-100 self-start min-[360px]:mx-[10%] md:mx-24 lg:mx-24 transition-all duration-600 ease-in-out;
+    @apply relative z-100 block min-[360px]:mx-[10%] md:mx-24 lg:mx-24;
   }
 
   .body-wrapper {
@@ -204,15 +212,70 @@
     @apply relative isolate flex flex-col min-[360px]:pt-24 md:pt-40 min-[360px]:w-full md:w-full lg:w-[1000px] xl:w-[1200px] text-white;
   }
 
-  /* Keep the page above the footer while it scrolls away. The footer remains in the
-     document and uses native sticky positioning, so its existing responsive height is
-     also the exact amount of scroll space reserved for it. */
+  /* The main page and footer stay in the same width-owning container. Native sticky
+     positioning pins the footer beneath the final content while the document remains
+     the only vertical scroller. */
   .footer-reveal-content {
-    @apply relative z-1;
+    @apply relative z-1 w-full;
+  }
+
+  .footer-reveal-sentinel {
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
   }
 
   .footer-reveal-layer {
-    @apply sticky bottom-0 z-0 w-full;
+    @apply sticky bottom-0 z-0 w-full self-stretch;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 220ms ease-out,
+      visibility 0s linear 220ms;
+  }
+
+  .footer-reveal-layer-visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-reveal-layer,
+    .footer-reveal-layer-visible {
+      transition: none;
+    }
+  }
+
+  /* Reserve the same responsive block size as the lazy game. This prevents the page
+     height and scroll position from jumping when its JavaScript bundle finishes loading. */
+  .footer-game-placeholder {
+    width: 100%;
+    height: clamp(560px, 68vh, 760px);
+    flex: none;
+    background: var(--color-turquoise-900);
+  }
+
+  @media (max-width: 1023px) {
+    .footer-game-placeholder {
+      height: clamp(500px, 62vh, 680px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .footer-game-placeholder {
+      height: clamp(520px, 72svh, 680px);
+      min-height: 500px;
+    }
+  }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+    .footer-game-placeholder {
+      height: clamp(280px, 88svh, 420px);
+      min-height: 240px;
+    }
   }
 
   .cert-wrapper {

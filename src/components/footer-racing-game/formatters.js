@@ -10,6 +10,12 @@ export function formatScore(score) {
   return Math.round(score).toLocaleString("en-US");
 }
 
+export function formatDelta(ms) {
+  if (!ms) return "±0.0s";
+  const sign = ms < 0 ? "−" : "+";
+  return `${sign}${(Math.abs(ms) / 1000).toFixed(1)}s`;
+}
+
 export function ordinal(n) {
   const suffixes = ["th", "st", "nd", "rd"];
   const remainder = n % 100;

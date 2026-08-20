@@ -3,12 +3,12 @@ import SocialLinks from './SocialLinks';
 
 const FooterRacingGame = lazy(() => import('./footer-racing-game/FooterRacingGame'));
 
-export default function Footer({ withGame = false }) {
+export default function Footer({ withGame = false, gameEnabled = true }) {
   const sentinelRef = useRef(null);
   const [shouldLoadGame, setShouldLoadGame] = useState(false);
 
   useEffect(() => {
-    if (!withGame || shouldLoadGame) return undefined;
+    if (!withGame || !gameEnabled || shouldLoadGame) return undefined;
     const node = sentinelRef.current;
     if (!node || typeof IntersectionObserver === "undefined") {
       setShouldLoadGame(true);
@@ -26,15 +26,17 @@ export default function Footer({ withGame = false }) {
     );
     observer.observe(node);
     return () => observer.disconnect();
-  }, [withGame, shouldLoadGame]);
+  }, [withGame, gameEnabled, shouldLoadGame]);
 
   return (
     <section className="footer">
       {withGame && (
         <>
-          {!shouldLoadGame && <div ref={sentinelRef} aria-hidden="true" />}
+          {!shouldLoadGame && (
+            <div ref={sentinelRef} className="footer-game-placeholder" aria-hidden="true" />
+          )}
           {shouldLoadGame && (
-            <Suspense fallback={<div aria-hidden="true" />}>
+            <Suspense fallback={<div className="footer-game-placeholder" aria-hidden="true" />}>
               <FooterRacingGame />
             </Suspense>
           )}

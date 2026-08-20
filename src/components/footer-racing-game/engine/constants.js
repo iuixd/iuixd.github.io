@@ -80,13 +80,23 @@ export const COLLISION_STEER_PENALTY = 0.5; // steering authority scale while re
 export const SCREEN_SHAKE_INTENSITY = 0.02; // fraction of viewport width, at full shake
 
 // Scoring.
-export const DISTANCE_SCORE_RATE = 12; // points/sec at full speed
-export const OVERTAKE_BONUS = 500;
-export const CLEAN_SECTOR_BONUS = 250;
-export const FINISH_BONUS = 2000;
-export const COLLISION_PENALTY = 300;
+export const DISTANCE_SCORE_RATE = 4; // small continuity reward; skill events drive the result
+export const OVERTAKE_BONUS = 400;
+export const CLEAN_SECTOR_BONUS = 300;
+export const FINISH_BONUS = 750;
+export const COLLISION_PENALTY = 350;
 export const SECTOR_COUNT = 4; // track divided into this many "clean sector" bonus zones
 export const POSITION_BONUS = { 1: 3000, 2: 2000, 3: 1200, 4: 700, 5: 350, 6: 0 };
+
+export const RACE_MODES = {
+  SPRINT: "sprint",
+  GRAND_PRIX: "grand-prix",
+};
+
+export const MODE_LAPS = {
+  [RACE_MODES.SPRINT]: 1,
+  [RACE_MODES.GRAND_PRIX]: 3,
+};
 
 // Decorative scenery — purely visual, never affects physics/collision.
 export const MOUNTAIN_PARALLAX_FACTOR = 0.015; // fraction of camera.x the silhouette drifts by
@@ -116,6 +126,7 @@ export const COUNTDOWN_DURATION_MS = 3200;
 // Three-lap records are not comparable with the original single-lap race records.
 export const BEST_SCORE_STORAGE_KEY = "retro-gp-3lap-best-score";
 export const BEST_TIME_STORAGE_KEY = "retro-gp-3lap-best-time";
+export const PROGRESSION_STORAGE_KEY = "retro-gp-progression-v2";
 
 // React-facing snapshot updates are throttled to this interval so the animation loop never
 // drives React state at 60fps.
