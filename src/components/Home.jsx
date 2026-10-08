@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Reveal from './Reveal';
 import HeroSection from './HeroSection';
@@ -11,25 +11,6 @@ import Footer from './Footer';
 function Home() {
   // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
-  const footerRevealSentinelRef = useRef(null);
-  const [isFooterRevealActive, setIsFooterRevealActive] = useState(false);
-
-  useEffect(() => {
-    const sentinel = footerRevealSentinelRef.current;
-    if (!sentinel) return undefined;
-    if (typeof IntersectionObserver === 'undefined') {
-      setIsFooterRevealActive(true);
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsFooterRevealActive(entry.isIntersecting),
-      { threshold: 0 }
-    );
-    observer.observe(sentinel);
-    return () => observer.disconnect();
-  }, []);
-
     return (
       <>
 
@@ -65,14 +46,9 @@ function Home() {
                 </section>
 
               </div>
-              <div ref={footerRevealSentinelRef} className="footer-reveal-sentinel" aria-hidden="true" />
             </main>
-            <div
-              className={`footer-reveal-layer${isFooterRevealActive ? ' footer-reveal-layer-visible' : ''}`}
-              aria-hidden={!isFooterRevealActive}
-              inert={isFooterRevealActive ? undefined : ''}
-            >
-              <Footer withGame gameEnabled={isFooterRevealActive} />
+            <div className="footer-reveal-layer">
+              <Footer withGame />
             </div>
           </div>
         </div>

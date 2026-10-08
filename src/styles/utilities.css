@@ -256,9 +256,10 @@
     @apply relative isolate flex flex-col min-[360px]:pt-24 md:pt-40 min-[360px]:w-full md:w-full lg:w-[1000px] xl:w-[1200px] text-white;
   }
 
-  /* The main page and footer stay in the same width-owning container. Native sticky
-     positioning pins the footer beneath the final content while the document remains
-     the only vertical scroller. */
+  /* The main page and footer stay in the same width-owning container. The footer
+     must remain in normal flow because the responsive particle artwork can be taller
+     than the viewport; a sticky footer of that height creates scrollable space after
+     the footer has visually moved away. */
   .footer-reveal-content {
     @apply relative z-1 w-full;
   }
@@ -270,20 +271,16 @@
   }
 
   .footer-reveal-layer {
-    @apply sticky bottom-0 z-0 w-full self-stretch;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition:
-      opacity 220ms ease-out,
-      visibility 0s linear 220ms;
+    @apply relative z-0 w-full self-stretch;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .footer-reveal-layer-visible {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    transition-delay: 0s;
   }
 
   @media (prefers-reduced-motion: reduce) {
