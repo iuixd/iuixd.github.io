@@ -253,41 +253,27 @@
   }
 
   .body-container {
+    --footer-game-height: clamp(560px, 68vh, 760px);
     @apply relative isolate flex flex-col min-[360px]:pt-24 md:pt-40 min-[360px]:w-full md:w-full lg:w-[1000px] xl:w-[1200px] text-white;
   }
 
   /* The main page and footer stay in the same width-owning container. The footer
-     must remain in normal flow because the responsive particle artwork can be taller
-     than the viewport; a sticky footer of that height creates scrollable space after
-     the footer has visually moved away. */
+     remains in normal flow so its responsive game and particle artwork can be taller
+     than the viewport without creating empty scroll space. */
   .footer-reveal-content {
-    @apply relative z-1 w-full;
+    @apply relative z-2 w-full;
   }
 
-  .footer-reveal-sentinel {
+  .footer-game-reveal {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    height: 1px;
-    pointer-events: none;
+    height: var(--footer-game-height);
+    flex: none;
   }
 
-  .footer-reveal-layer {
-    @apply relative z-0 w-full self-stretch;
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .footer-reveal-layer-visible {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .footer-reveal-layer,
-    .footer-reveal-layer-visible {
-      transition: none;
-    }
+  .footer-game-reveal > section {
+    height: 100%;
   }
 
   /* Reserve the same responsive block size as the lazy game. This prevents the page
@@ -300,12 +286,20 @@
   }
 
   @media (max-width: 1023px) {
+    .body-container {
+      --footer-game-height: clamp(500px, 62vh, 680px);
+    }
+
     .footer-game-placeholder {
       height: clamp(500px, 62vh, 680px);
     }
   }
 
   @media (max-width: 767px) {
+    .body-container {
+      --footer-game-height: clamp(520px, 72svh, 680px);
+    }
+
     .footer-game-placeholder {
       height: clamp(520px, 72svh, 680px);
       min-height: 500px;
@@ -313,6 +307,10 @@
   }
 
   @media (max-height: 500px) and (orientation: landscape) {
+    .body-container {
+      --footer-game-height: clamp(280px, 88svh, 420px);
+    }
+
     .footer-game-placeholder {
       height: clamp(280px, 88svh, 420px);
       min-height: 240px;
@@ -345,6 +343,10 @@
 
   .hero-heading {
     @apply min-[360px]:mx-[10%] md:mx-24 lg:mx-24 min-[360px]:w-[80%] md:w-[620px] lg:w-[750px] xl:w-[950px] px-0 py-4 min-[360px]:text-[1.6rem] sm:text-[2rem] md:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] font-medium leading-[1.1em] text-shadow-md md:text-shadow-lg;
+  }
+
+  .hero-heading span {
+    @apply inline-block min-[360px]:text-[3.5rem] sm:text-[5rem] md:text-[5rem] lg:text-[5rem] xl:text-[8rem] leading-[0] text-shadow-none;
   }
 
   .hero-content {
@@ -396,12 +398,21 @@
   }
 
   .footer {
-    @apply flex flex-col gap-6 w-full h-fit pt-0 pb-8 items-center justify-center text-[12px] text-turquoise-300/80 bg-turquoise-900;
+    @apply sticky top-0 z-0 isolate flex flex-col gap-6 w-full h-fit pt-0 pb-8 items-center justify-center text-[12px] text-turquoise-300/80 bg-turquoise-900;
+    bottom: auto;
   }
 
-  /* Subpages (About, GitHub, Recent Projects, Gen AI Videos, Contact) render the footer
-     without the racing game above it, so it needs its own top breathing room; the homepage
-     footer sits directly under the game and stays flush (pt-0) above. */
+  .footer-meta {
+    @apply relative z-1 flex flex-col gap-3 pt-6 w-full items-center justify-center bg-turquoise-900;
+  }
+
+  .footer-particle-artwork {
+    @apply relative z-1 w-full h-auto bg-turquoise-900;
+  }
+
+
+  /* Subpages use the same complete footer composition and retain a small top inset when
+     they do not participate in the homepage's overlapping reveal. */
   .footer-subpage {
     @apply pt-[24px];
   }

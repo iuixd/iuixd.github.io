@@ -47,9 +47,7 @@ function Home() {
 
               </div>
             </main>
-            <div className="footer-reveal-layer">
-              <Footer withGame />
-            </div>
+            <Footer />
           </div>
         </div>
       </>

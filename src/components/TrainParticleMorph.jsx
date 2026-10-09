@@ -169,10 +169,18 @@ export default function TrainParticleMorph({
       captionCanvas.height = artworkTop;
       const captionCtx = captionCanvas.getContext("2d", { willReadFrequently: true });
       const caption = "Clarity Emerges from Complexity";
-      let captionSize = clamp(width * 0.038, 17, 42);
+      const compactCaption = width < 768;
+      const captionLines = compactCaption
+        ? ["Clarity Emerges", "from Complexity"]
+        : [caption];
+      let captionSize = compactCaption
+        ? clamp(width * 0.058, 19, 30)
+        : clamp(width * 0.038, 24, 42);
       captionCtx.font = `700 ${captionSize}px "Poppins", sans-serif`;
-      const maxCaptionWidth = width * 0.9;
-      const measuredWidth = captionCtx.measureText(caption).width;
+      const maxCaptionWidth = width * (compactCaption ? 0.88 : 0.9);
+      const measuredWidth = Math.max(
+        ...captionLines.map((line) => captionCtx.measureText(line).width)
+      );
       if (measuredWidth > maxCaptionWidth) {
         captionSize *= maxCaptionWidth / measuredWidth;
         captionCtx.font = `700 ${captionSize}px "Poppins", sans-serif`;
@@ -180,14 +188,20 @@ export default function TrainParticleMorph({
       captionCtx.textAlign = "center";
       captionCtx.textBaseline = "middle";
       captionCtx.fillStyle = "white";
-      const captionCenterY = 100 + captionSize / 2;
-      captionCtx.fillText(caption, width / 2, captionCenterY);
+      const captionLineHeight = captionSize * 1.22;
+      const captionCenterY = compactCaption ? 105 : 100 + captionSize / 2;
+      const captionStartY = captionCenterY - ((captionLines.length - 1) * captionLineHeight) / 2;
+      captionLines.forEach((line, index) => {
+        captionCtx.fillText(line, width / 2, captionStartY + index * captionLineHeight);
+      });
       const captionData = captionCtx.getImageData(0, 0, width, artworkTop).data;
-      const captionGap = Math.max(2, gap);
+      // Text needs a finer, deterministic particle grid than the illustration:
+      // sparse/randomly missing dots quickly make small letterforms illegible.
+      const captionGap = 2;
       for (let y = captionGap / 2; y < artworkTop; y += captionGap) {
         for (let x = captionGap / 2; x < width; x += captionGap) {
           const alpha = captionData[(Math.floor(y) * width + Math.floor(x)) * 4 + 3] / 255;
-          if (alpha < 0.2 || Math.random() > 0.9) continue;
+          if (alpha < 0.16) continue;
           const centerX = width * 0.5;
           const centerY = artworkTop + artworkHeight * 0.58;
           const radialAngle = Math.atan2(y - centerY, x - centerX);
@@ -201,8 +215,8 @@ export default function TrainParticleMorph({
             phase: Math.random() * Math.PI * 2,
             delay: Math.random() * 0.28,
             energy: alpha,
-            size: 0.48 + alpha * 0.7,
-            alpha: 0.34 + alpha * 0.66,
+            size: 0.62 + alpha * 0.82,
+            alpha: 0.52 + alpha * 0.48,
             // The caption intentionally behaves opposite to the monument: it
             // is assembled at rest and disperses locally beneath the lens.
             reverseReveal: true,

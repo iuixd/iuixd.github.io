@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from "react";
+import TrainParticleMorph from "./TrainParticleMorph";
 
 export function LegacyTrainParticleFooter({
   imageSrc = "/assets/teal-pointillist-train-station-wreck.png",
@@ -553,4 +554,6 @@ export function LegacyTrainParticleFooter({
   );
 }
 
-export { default } from "./TrainParticleMorph";
+export default function TrainParticleFooter(props) {
+  return <TrainParticleMorph {...props} />;
+}

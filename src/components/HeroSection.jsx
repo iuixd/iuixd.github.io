@@ -60,7 +60,7 @@ const Hero = () => {
       </a>
       <Reveal>
       <div className="hero-heading">
-        Product designer, vibe coder, and amateur developer
+        Design leader, enterprise product strategist and Human-AI experience specialist
         <span className="text-turquoise-500">.</span>
       </div>
       <p className="hero-content">
