@@ -398,7 +398,7 @@
   }
 
   .footer {
-    @apply sticky top-0 z-0 isolate flex flex-col gap-6 w-full h-fit pt-0 pb-8 items-center justify-center text-[12px] text-turquoise-300/80 bg-turquoise-900;
+    @apply sticky top-0 z-0 isolate flex flex-col gap-6 w-full h-fit pt-0 pb-0 items-center justify-center text-[12px] text-turquoise-300/80 bg-turquoise-900;
     bottom: auto;
   }
 
@@ -407,7 +407,28 @@
   }
 
   .footer-particle-artwork {
-    @apply relative z-1 w-full h-auto bg-turquoise-900;
+    @apply relative z-1 isolate w-full h-auto bg-turquoise-900;
+  }
+
+  .footer-signature-artwork {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .footer-particle-layer {
+    position: relative;
+    z-index: 1;
   }
 
 

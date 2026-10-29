@@ -2,6 +2,7 @@ import React from "react";
 import SocialLinks from './SocialLinks';
 import TrainParticleFooter from "./TrainParticleFooter";
 import FooterRacingGame from './footer-racing-game/FooterRacingGame';
+import footerSignature from '../assets/SRIKUMAR.DESIGN.svg';
 
 export default function Footer({ withGame = true, gameEnabled = true }) {
   return (
@@ -25,7 +26,14 @@ export default function Footer({ withGame = true, gameEnabled = true }) {
           marginTop: "-24px",
         }}
       >
+        <img
+          className="footer-signature-artwork"
+          src={footerSignature}
+          alt=""
+          aria-hidden="true"
+        />
         <TrainParticleFooter
+          className="footer-particle-layer"
           imageSrc="/assets/tajmahal-clean-reference.png"
           desktopDensity={3}
           mobileDensity={4}
